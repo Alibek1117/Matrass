@@ -9,7 +9,7 @@ function AksiyaProducts() {
       <div className="product__card container flex p-8">
         <div className="card__left w-[45%]">
           <div className="left__top flex items-center">
-            <span className="type">YANGI MAHSULOT</span>
+            {/* <span className="type">YANGI MAHSULOT</span> */}
             <span className="aksiya">AKSIYA</span>
             <div className="zoom rounded-full bg-[#D9E1E7]  p-3 ">
               <Zoom />
@@ -68,7 +68,7 @@ function AksiyaProducts() {
       <div className="product__card container flex p-8">
         <div className="card__left w-[45%]">
           <div className="left__top flex items-center">
-            <span className="type">YANGI MAHSULOT</span>
+            {/* <span className="type">YANGI MAHSULOT</span> */}
             <span className="aksiya">AKSIYA</span>
             <div className="zoom rounded-full bg-[#D9E1E7]  p-3 ">
               <Zoom />

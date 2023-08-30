@@ -137,3 +137,50 @@
     font-weight: 700;
   }
 }
+
+
+// Home-two stillari boshlanvotti 
+.home-card-title{
+  color: var(--title-color, #01384D);
+text-align: center;
+font-family: Raleway;
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.home-boxs{
+  display: flex;
+  justify-content: space-evenly;
+  
+  
+  h1{
+    color: var(--title-color, #01384D);
+text-align: center;
+font-family: Raleway;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+padding: 15px 0;
+  }
+  p{
+    color: var(--title-color, #01384D);
+text-align: center;
+font-family: Open Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 300;
+line-height: 26px; /* 144.444% */
+padding: 15px 0;
+  }
+  img{
+    width: 407px;
+height: 300px;
+flex-shrink: 0;
+  }
+  
+}
+.home-box{
+  width: 400px;
+}

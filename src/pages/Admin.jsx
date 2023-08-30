@@ -2,6 +2,7 @@
 import React from "react";
 import AdminHeader from "../components/AdminHeader";
 import AdminBtn from "../components/AdminBtn";
+import { Outlet } from "react-router-dom";
 
 
 function Admin() {
@@ -10,10 +11,12 @@ function Admin() {
       <div>
         <AdminHeader />
         <div className="container m-auto flex justify-between">
-          <div>
+          <div className="m-0">
             <AdminBtn />
           </div>
-          <div>kkkkkkk</div>
+          <div className=" w-[100%] h-[100%] " >
+            <Outlet />
+          </div>
         </div>
       </div>
     </>

@@ -209,6 +209,52 @@ function Iconlocation() {
     </svg>
   );
 }
+function IconDelete () {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+    >
+      <g clipPath="url(#clip0_452_257)">
+        <path
+          d="M5.25 14.625C5.25 15.5875 6.0375 16.375 7 16.375H14C14.9625 16.375 15.75 15.5875 15.75 14.625V5.875C15.75 4.9125 14.9625 4.125 14 4.125H7C6.0375 4.125 5.25 4.9125 5.25 5.875V14.625ZM15.75 1.5H13.5625L12.9412 0.87875C12.7837 0.72125 12.5563 0.625 12.3288 0.625H8.67125C8.44375 0.625 8.21625 0.72125 8.05875 0.87875L7.4375 1.5H5.25C4.76875 1.5 4.375 1.89375 4.375 2.375C4.375 2.85625 4.76875 3.25 5.25 3.25H15.75C16.2312 3.25 16.625 2.85625 16.625 2.375C16.625 1.89375 16.2312 1.5 15.75 1.5Z"
+          fill="#D61F1F"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_452_257">
+          <rect width="21" height="21" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
+function IconMell () {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+    >
+      <g clipPath="url(#clip0_452_355)">
+        <path
+          d="M2.625 15.2775V17.9375C2.625 18.1825 2.8175 18.375 3.0625 18.375H5.7225C5.83625 18.375 5.95 18.3312 6.02875 18.2437L15.5837 8.69749L12.3025 5.41624L2.75625 14.9625C2.66875 15.05 2.625 15.155 2.625 15.2775ZM18.1212 6.15999C18.4625 5.81874 18.4625 5.26749 18.1212 4.92624L16.0738 2.87874C15.7325 2.53749 15.1812 2.53749 14.84 2.87874L13.2388 4.47999L16.52 7.76124L18.1212 6.15999Z"
+          fill="black"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_452_355">
+          <rect width="21" height="21" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
 
 export {
   IconAdmin,
@@ -218,5 +264,7 @@ export {
   Iconkorzina,
   Icontexno,
   Iconlocation,
-  IconProfile
+  IconProfile,
+  IconDelete,
+  IconMell
 };
