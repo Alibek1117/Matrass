@@ -30,7 +30,10 @@ function App() {
           <Route path="modelA" element={<ModelA/>} />
         </Route>
         <Route index element={<Home />} />
-        <Route path="admin" element={<Admin />} />
+        <Route path="admin" element={<Admin />} >
+          
+        </Route>
+
         <Route path="login" element={<Login />} />
       </Route>,
     ),
