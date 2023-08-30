@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 function AdminHeader() {
   return (
     <div className="admin__nav  bg-[#01384D]">
-      <div className="container mx-auto      text-white">
+      <div className="     text-white">
       <nav className="flex items-center justify-between">
         <NavLink to='Buyurtmalar'>
           <div className="flex h-[70px] w-[220px] items-center justify-center gap-2  border border-black">
