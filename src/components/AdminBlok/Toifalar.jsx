@@ -80,7 +80,7 @@ function Toifalar() {
           </tr>
         </tbody>
       </table>
-      <div className="mt-20 w-full text-end">
+      <div className="mt-10 w-full text-end">
         <NavLink>
           <button className="w-[135] h-[40px] text-white rounded border bg-[#01384D] px-7 py-2">
             Qo'shish
