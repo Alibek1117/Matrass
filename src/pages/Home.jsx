@@ -11,7 +11,7 @@ function Home() {
     <div>
       <section className="hero__full">
         <Header />
-        <div className="hero container flex items-center">
+        <div className="hero container  flex items-center">
           <div className="hero__left">
             <div className="hero__title">Kechalari sokin dam oling</div>
             <div className="categ__btn">
@@ -27,7 +27,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="statistics">
+      <section className="statistics container">
         <div className="stat__card">
           <div className="stat__number">7</div>
           <p className="number__subtitle">yillik tajriba</p>

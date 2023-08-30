@@ -130,7 +130,7 @@ function Mahsulotlar() {
           </tr>
         </tbody>
       </table>
-      <div className="mt-20 w-full text-end">
+      <div className="mt-10 w-full text-end">
         <NavLink>
           <button className="h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white">
             Qo'shish
