@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import {  Iconhome,
-  Iconman,
+  IconMan,
   Iconfilter,
   Iconkorzina,
   Icontexno,
@@ -11,23 +11,28 @@ import React from 'react'
 function AdminBtn() {
   return (
     <div className="h-[1000%] w-[220px] bg-[#01384D] text-white  ">
-      <button className="flex ju h-[60px] w-[100%] border-spacing-0 bg-[#01384D] p-3">
-        <Iconhome/>
+      <button className=" flex h-[60px]  w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3 pl-10 hover:bg-[#EABF9F]">
+        <Iconhome />
         Buyurtmalar
       </button>
-      <button className="btn h-[60px] w-[100%] border-spacing-0 bg-[#01384D] p-3 ">
+      <button className="flex  h-[60px] w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3 pl-10  hover:bg-[#EABF9F] ">
+        <IconMan />
         Сustomers
       </button>
-      <button className="btn h-[60px] w-[100%] border-spacing-0 bg-[#01384D] p-3 ">
+      <button className="flex h-[60px] w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3 pl-10  hover:bg-[#EABF9F] ">
+        <Iconfilter />
         Toifalar
       </button>
-      <button className="btn h-[60px] w-[100%] border-spacing-0 bg-[#01384D] p-3 ">
+      <button className="flex h-[60px] w-[100%] border-spacing-0 scale-100  items-center gap-2 bg-[#01384D] p-3 pl-10 hover:bg-[#EABF9F]  ">
+        <Iconkorzina />
         Mahsulotlar
       </button>
-      <button className="btn h-[60px] w-[100%] border-spacing-0 bg-[#01384D] p-3">
+      <button className="flex h-[60px] w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3 pl-10 hover:bg-[#EABF9F] ">
+        <Icontexno />
         Texnologiyalar
       </button>
-      <button className="btn h-[60px] w-[100%] border-spacing-0 bg-[#01384D] p-3 ">
+      <button className="flex  h-[60px] w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3  pl-10 hover:bg-[#EABF9F] ">
+        <Iconlocation />
         Manzil
       </button>
     </div>
