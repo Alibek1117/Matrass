@@ -14,8 +14,6 @@ import ModelYevro from "./components/modelType/ModelYevro";
 import YangiTovarlar from "./components/modelType/RangiTovarlar";
 import ModelA from "./components/modelType/ModelA";
 
-
-
 function App() {
   const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -31,16 +29,15 @@ function App() {
           <Route path="yangiTovarlar" element={<YangiTovarlar/>} />
           <Route path="modelA" element={<ModelA/>} />
         </Route>
+        <Route index element={<Home />} />
         <Route path="admin" element={<Admin />} />
         <Route path="login" element={<Login />} />
       </Route>,
     ),
   );
-
   return (
     <div className="App">
-     <RouterProvider router ={routes}/>
-
+      <RouterProvider router={routes} />
     </div>
   );
 }

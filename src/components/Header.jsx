@@ -1,5 +1,5 @@
 import './_Header.scss'
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { LogoIcon, TelIcon } from '../assets/style/imgs/icons/icons';
 
 function Header() {
