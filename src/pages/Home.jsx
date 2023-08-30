@@ -46,6 +46,7 @@ function Home() {
       </section>
       <OurProducts/>
       <AksiyaProducts/>
+      
     </div>
   );
 }
