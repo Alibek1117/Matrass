@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 
-function ModelA() {
+function Texnology() {
   return (
-    <div>ModelA</div>
+    <div>Texnology</div>
   )
 }
 
-export default ModelA
+export default Texnology
