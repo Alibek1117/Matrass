@@ -3,6 +3,7 @@ import bed from "../assets/style/imgs/bed.png";
 import Header from "../components/Header";
 import { ArrowRight } from "../assets/style/imgs/icons/icons";
 import OurProducts from "../components/OurProducts";
+import AksiyaProducts from "../components/AksiyaProducts";
 
 function Home() {
   return (
@@ -44,6 +45,7 @@ function Home() {
         </div>
       </section>
       <OurProducts/>
+      <AksiyaProducts/>
     </div>
   );
 }

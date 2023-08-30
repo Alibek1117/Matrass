@@ -1,15 +1,16 @@
 import React from 'react'
-import { Karzinka, Zoom } from '../../assets/style/imgs/icons/icons';
-// import './All.scss'
-import matrasImg from '../../assets/style/imgs/matras.png'
+import { Karzinka, Zoom } from '../assets/style/imgs/icons/icons';
+import matrasImg from "../assets/style/imgs/matras.png";
 
-function All() {
+function AksiyaProducts() {
   return (
     <>
-      <div className="product__card flex p-8">
+      <div className="products__title">Aksiyadagi mahsulotlar</div>
+      <div className="product__card container flex p-8">
         <div className="card__left w-[45%]">
           <div className="left__top flex items-center">
             <span className="type">YANGI MAHSULOT</span>
+            <span className="aksiya">AKSIYA</span>
             <div className="zoom rounded-full bg-[#D9E1E7]  p-3 ">
               <Zoom />
             </div>
@@ -52,7 +53,9 @@ function All() {
           <div className="cost">
             <span className="cost__title">Narxi</span>
             <h2 className="cost__quantity">
-              <span className="number">1 699 999</span>{" "}
+              <del className="number__del">1 699 999</del>{" "}
+              <del className="num__title__del">so'm</del>
+              <span className="number">1 299 999</span>{" "}
               <span className="num__title">so'm</span>
             </h2>
           </div>
@@ -62,7 +65,7 @@ function All() {
           </button>
         </div>
       </div>
-      <div className="product__card flex p-8">
+      <div className="product__card container flex p-8">
         <div className="card__left w-[45%]">
           <div className="left__top flex items-center">
             <span className="type">YANGI MAHSULOT</span>
@@ -125,4 +128,4 @@ function All() {
   );
 }
 
-export default All
+export default AksiyaProducts
