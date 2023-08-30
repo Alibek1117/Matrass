@@ -1,3 +1,9 @@
+.product__card {
+  border: 1px solid #c7dff5;
+  background: #f6fbff;
+  margin-bottom: 20px;
+}
+
 .type {
   padding: 10px 30px;
   border-radius: 5px;
@@ -10,4 +16,141 @@
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
+}
+.aksiya {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: var(--green, #1fca25);
+  color: #fff;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+.card__left {
+  position: relative;
+  .zoom {
+    position: absolute;
+    right: 80px;
+  }
+}
+
+.card__right {
+  .card__title {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 33px;
+  }
+  .product__info {
+    .info__card {
+      p {
+        color: var(--title-color, #01384d);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.6;
+      }
+      .info__number {
+        .number {
+          color: var(--title-color, #01384d);
+          font-family: Raleway;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        sub {
+          color: var(--title-color, #01384d);
+          font-family: Raleway;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  .card__subtitle {
+    margin-top: 20px;
+    width: 636px;
+    color: var(--title-color, #01384d);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px; /* 162.5% */
+    opacity: 0.6;
+  }
+  .cost {
+    margin-top: 25px;
+    .cost__title {
+      color: var(--title-color, #01384d);
+      font-family: Raleway;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      orphans: 0.6;
+    }
+    .cost__quantity {
+      .number {
+        color: var(--title-color, #01384d);
+        font-family: Raleway;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .number__del {
+        color: #ff5d5d;
+        font-family: Raleway;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration-line: strikethrough;
+      }
+      .num__title {
+        color: var(--title-color, #01384d);
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .num__title__del {
+        margin-right: 20px;
+        color: #ff5d5d;
+        font-family: Raleway;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration-line: strikethrough;
+      }
+    }
+  }
+  .order__btn {
+    margin-top: 25px;
+    padding: 13px 20px;
+    border-radius: 5px;
+    border: 2px solid var(--title-color, #01384d);
+    background: #fff;
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 }
