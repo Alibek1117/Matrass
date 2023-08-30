@@ -1,4 +1,30 @@
-.headercha{
-    color: yellow;
-    font-size: 40px;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
+  .header__naw {
+    a {
+      color: var(--title-color, #01384d);
+      font-family: Raleway;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin: 0 15px;
+    }
+  }
+  .order__btn {
+    width: 180px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 2px solid var(--title-color, #01384d);
+    background: #fff;
+  }
 }
+
+
+
