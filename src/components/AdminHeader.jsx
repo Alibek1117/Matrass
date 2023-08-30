@@ -4,15 +4,15 @@ import { IconAdmin, IconProfile, Iconhome } from "../assets/style/imgAdmin/IconA
 import { NavLink } from 'react-router-dom';
 function AdminHeader() {
   return (
-    <div className="admin__nav  bg-[#01384D]">
-      <div className="     text-white">
-      <nav className="flex items-center justify-between">
-        <NavLink to='Buyurtmalar'>
-          <div className="flex h-[70px] w-[220px] items-center justify-center gap-2  border border-black">
-            <IconAdmin />
-            <h3 className="font-sail text-[22px] font-normal ">Matrassue</h3>
-          </div>
-        </NavLink>
+    <div className=" bg-[#01384D]  ">
+      <div className="mx-auto w-[1500px]  text-white">
+        <nav className="flex items-center justify-between">
+          <NavLink to="Buyurtmalar">
+            <div className="flex h-[70px] w-[220px] items-center justify-center gap-2  border border-black">
+              <IconAdmin />
+              <h3 className="font-sail text-[22px] font-normal ">Matrassue</h3>
+            </div>
+          </NavLink>
           <form>
             <input
               className=" h-[40px]  w-[400px] rounded-[7px] p-2"

@@ -8,13 +8,13 @@ import { Outlet } from "react-router-dom";
 function Admin() {
   return (
     <>
-      <div className=" ">
+      <div className=" mx-auto bg-[#01384D]">
         <AdminHeader />
-        <div className=" m-auto flex justify-between">
-          <div className="m-0">
+        <div className=" m-auto flex w-[1500px] justify-between">
+          <div className=" ">
             <AdminBtn />
           </div>
-          <div className=" w-[100%] h-[100%] " >
+          <div className=" h-[85vh] w-[100%] bg-white ">
             <Outlet />
           </div>
         </div>

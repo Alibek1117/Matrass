@@ -12,7 +12,7 @@ import React from 'react'
 
 function AdminBtn() {
   return (
-    <div className="h-[1000%] w-[220px] bg-[#01384D] text-white  ">
+    <div className="h-[85vh] w-[220px] bg-[#01384D] text-white  ">
       <NavLink to="Buyurtmalar">
         <button className=" flex h-[60px]  w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3 pl-10 hover:bg-[#EABF9F]">
           <Iconhome />
