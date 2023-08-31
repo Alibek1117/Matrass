@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
 import AdminHeader from "../components/AdminHeader";
 import AdminBtn from "../components/AdminBtn";
 import { Outlet } from "react-router-dom";
@@ -8,7 +7,7 @@ import { Outlet } from "react-router-dom";
 function Admin() {
   return (
     <>
-      <div className=" mx-auto bg-[#01384D]">
+      <div className=" mx-auto bg-[#01384D] ">
         <AdminHeader />
         <div className=" m-auto flex w-[1500px] justify-between">
           <div className=" ">

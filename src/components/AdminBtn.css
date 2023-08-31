@@ -1,8 +1,9 @@
 
 .active{
-    background: #EABF9F;
+    background-color: #fff;
 }
 .adminbtn{
+    background-color: #01384D;
     padding-left: 40px;
     display: flex;
     width: 100%;

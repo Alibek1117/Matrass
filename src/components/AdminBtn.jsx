@@ -13,7 +13,7 @@ import './AdminBtn.css'
 
 function AdminBtn() {
   return (
-    <div className="h-[85vh] w-[220px]  text-white  ">
+    <div className="h-[85vh] w-[220px] bg-[#01384D]   text-white  ">
       <NavLink to="Buyurtmalar">
         <button className="adminbtn">
           <Iconhome />
