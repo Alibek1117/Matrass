@@ -12,9 +12,10 @@ const Footer = () => {
                         <h1>Sizni qiziqtirdimi?</h1>
                         <p>Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz</p>
                   </div>
-                  <div className="">
-                        <div className=" bg-white"> +998
-                              <input type="tel" name="tel" id="" placeholder="raqamingizni yozing" />
+                  <div className=" flex items-center ">
+                        <div className=" bg-white items-center flex"> <span>+998</span>
+                              <div className=" bg-slate-600 w-[1px] h-[12px]"></div>
+                              <input className="p-2" type="tel" name="tel" id="" placeholder="Raqamingizni yozing" />
 
                               </div>
                         <button>Yuborish</button>
