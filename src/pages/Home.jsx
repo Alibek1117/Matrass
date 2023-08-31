@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { ArrowRight } from "../assets/style/imgs/icons/icons";
 import OurProducts from "../components/OurProducts";
 import AksiyaProducts from "../components/AksiyaProducts";
+import Hometwo from "../components/Hometwo";
 
 function Home() {
   return (
@@ -46,7 +47,10 @@ function Home() {
       </section>
       <OurProducts/>
       <AksiyaProducts/>
+      <Hometwo />
+
       
+
     </div>
   );
 }
