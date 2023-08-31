@@ -7,6 +7,7 @@ import Cloud2 from "../assets/style/imgNurjon/Cloud2.png"
 import Card from "../assets/style/imgNurjon/Card.png"
 import Card2 from "../assets/style/imgNurjon/Card2.png"
 import Card3 from "../assets/style/imgNurjon/Card3.png"
+import "../index.css"
 
 import Homeabout from "../assets/style/imgNurjon/home-about.png"
 import Footer from "./Footer"
@@ -45,7 +46,7 @@ const Hometwo = () => {
                   <div className="w-[55%] mt-4">
                         <h1>Dream Cloud <br /> kompaniyasi haqida</h1>
                         <p>Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a est. Habitant adipiscing ut sed pulvinar tellus, ut urna, fermentum:</p>
-                        <ul>
+                        <ul className="home-two-ul1">
                               <li>Penatibus viverra gravida rhoncus in.</li>
                               <li>Dolor integer in interdum viverra risus dolor enim.</li>
                               <li>Turpis senectus eu, eget aenean nulla pellentesque sed ut tempor.</li>
@@ -61,7 +62,7 @@ const Hometwo = () => {
                   </div>
                   <div className="w-[45%]  mt-6">
                         <p>Libero erat praesent ullamcorper eget tortor sed et. Nec id lobortis gravida vitae. Scelerisque id fusce vitae ut. Integer sed vulputate sed nec. Arcu id mattis erat et id. </p>
-                        <ul className="home-two-ul">
+                        <ul className="home-two-ul ">
                               <li>Id risus phasellus laoreet eget. A nec pulvinar.</li>
                               <li>Eu justo, tincidunt fringilla diam nulla.</li>
                               <li>Amet, nullam cras lacus, fermentum leo tellus sagittis.</li>
@@ -73,18 +74,18 @@ const Hometwo = () => {
             <div className="home-cards">
                   <h1 className="home-cards-title my-16">Nega bizni tanlashadi</h1>
                   <div className="home-cardss">
-                        <div>
+                        <div className="home-two-card rounded">
                               <img src={Card} alt="" />
                               <h1>Yetkazib Berish</h1>
                               <p>Toshkent bo'ylab bepul o'lchov <br /> va etkazib berish</p>
                         </div>
-                        <div>
+                        <div className="home-two-card">
                               <img src={Card2} alt="" />
                               <h1>Qo'llab quvvatlash</h1>
                               <p>TBizning qo'llab-quvvatlash xizmati sizga har qanday savolda yordam beradi va menejerlarning </p>
                               <a className="input-tel" >+998 97 144-24-42 </a>
                         </div>
-                        <div>
+                        <div className="home-two-card">
                               <img src={Card3} alt="" />
                               <h1>Kafolat</h1>
                               <p>Biz matraslarimiz uchun 8 yilgacha kafolat beramiz. Agar matras kamida 25 mm qisqartirilsa.</p>
@@ -92,12 +93,12 @@ const Hometwo = () => {
                   </div>
             </div>
 
-            <div className="home-about flex justify-center gap-10 mt-10">
+            <div className="home-about flex justify-center gap-56 mt-10">
                   <div>
                         <h1>Manzilimiz</h1>
                         <h3>Toshkent, Parkent ko'chasi, 176-uy</h3>
                         <p>Mo’ljal: Qoraqamish 2/1, Tursunxodjayeva ro’parasi, Milliy <br /> bog’ metro bekati.</p>
-                        <button className=" flex items-center justify-center gap-8">
+                        <button className=" flex items-center justify-center gap-2">
                               <Img /> <span>Geolokatsiya</span>
                         </button>
                   </div>
