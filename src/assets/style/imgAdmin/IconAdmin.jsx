@@ -297,6 +297,72 @@ function Iconsearch () {
     </svg>
   );
 }
+function LoginManicon () {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+    >
+        <rect width="20" height="20"  />
+      <g mask="url(#mask0_452_162)">
+        <circle
+          cx="9.64869"
+          cy="5.64795"
+          r="3.98169"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M3.33302 15.1676C3.33195 14.8877 3.39455 14.6112 3.51609 14.3591C3.89748 13.5963 4.97299 13.192 5.86544 13.009C6.50907 12.8716 7.1616 12.7799 7.81815 12.7344C9.03371 12.6276 10.2563 12.6276 11.4718 12.7344C12.1283 12.7804 12.7808 12.8721 13.4246 13.009C14.317 13.192 15.3925 13.5582 15.7739 14.3591C16.0183 14.8731 16.0183 15.4698 15.7739 15.9838C15.3925 16.7847 14.317 17.1509 13.4246 17.3263C12.7817 17.4693 12.1289 17.5637 11.4718 17.6085C10.4825 17.6924 9.4885 17.7077 8.49702 17.6543C8.26819 17.6543 8.04698 17.6543 7.81815 17.6085C7.16353 17.5642 6.51327 17.4699 5.87307 17.3263C4.97299 17.1509 3.9051 16.7847 3.51609 15.9838C3.39517 15.7287 3.33263 15.4499 3.33302 15.1676Z"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+    </svg>
+  );
+}
+function LoginLockicon () {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+    >
+        <rect width="20" height="20"  />
+      <g mask="url(#mask0_452_154)">
+        <path
+          d="M13.4773 8.0817V6.29254C13.4773 4.19837 11.779 2.50004 9.6848 2.50004C7.59063 2.49087 5.88563 4.18087 5.87646 6.27587V6.29254V8.0817"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12.8605 17.9166H6.49301C4.74801 17.9166 3.33301 16.5025 3.33301 14.7566V11.1825C3.33301 9.43663 4.74801 8.02246 6.49301 8.02246H12.8605C14.6055 8.02246 16.0205 9.43663 16.0205 11.1825V14.7566C16.0205 16.5025 14.6055 17.9166 12.8605 17.9166Z"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9.67692 12.0442V13.895"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+    </svg>
+  );
+}
 
 export {
   IconAdmin,
@@ -310,6 +376,8 @@ export {
   IconDelete,
   IconMell,
   LocationIcon,
-  Iconsearch
+  Iconsearch,
+  LoginManicon,
+  LoginLockicon
 
 };
