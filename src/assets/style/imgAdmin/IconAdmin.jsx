@@ -255,6 +255,114 @@ function IconMell () {
     </svg>
   );
 }
+function LocationIcon () {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+    >
+      <g clipPath="url(#clip0_452_859)">
+        <path
+          d="M9 9C9.825 9 10.5 8.325 10.5 7.5C10.5 6.675 9.825 6 9 6C8.175 6 7.5 6.675 7.5 7.5C7.5 8.325 8.175 9 9 9ZM9 1.5C12.15 1.5 15 3.915 15 7.65C15 10.035 13.1625 12.84 9.495 16.0725C9.21 16.32 8.7825 16.32 8.4975 16.0725C4.8375 12.84 3 10.035 3 7.65C3 3.915 5.85 1.5 9 1.5Z"
+          fill="#D61F1F"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_452_859">
+          <rect width="18" height="18" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
+function Iconsearch () {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        id="Mask"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M2.58333 8.08333C2.58333 5.05008 5.05008 2.58333 8.08333 2.58333C11.1166 2.58333 13.5833 5.05008 13.5833 8.08333C13.5833 11.1166 11.1166 13.5833 8.08333 13.5833C5.05008 13.5833 2.58333 11.1166 2.58333 8.08333ZM16.9814 15.6852L13.8693 12.5723C14.8346 11.3311 15.4167 9.7755 15.4167 8.08333C15.4167 4.03992 12.1267 0.75 8.08333 0.75C4.03992 0.75 0.75 4.03992 0.75 8.08333C0.75 12.1267 4.03992 15.4167 8.08333 15.4167C9.7755 15.4167 11.3311 14.8346 12.5723 13.8693L15.6852 16.9814C15.864 17.1602 16.0987 17.25 16.3333 17.25C16.568 17.25 16.8027 17.1602 16.9814 16.9814C17.3398 16.623 17.3398 16.0437 16.9814 15.6852Z"
+        fill="#7F7F7F"
+      />
+    </svg>
+  );
+}
+function LoginManicon () {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+    >
+        <rect width="20" height="20"  />
+      <g mask="url(#mask0_452_162)">
+        <circle
+          cx="9.64869"
+          cy="5.64795"
+          r="3.98169"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M3.33302 15.1676C3.33195 14.8877 3.39455 14.6112 3.51609 14.3591C3.89748 13.5963 4.97299 13.192 5.86544 13.009C6.50907 12.8716 7.1616 12.7799 7.81815 12.7344C9.03371 12.6276 10.2563 12.6276 11.4718 12.7344C12.1283 12.7804 12.7808 12.8721 13.4246 13.009C14.317 13.192 15.3925 13.5582 15.7739 14.3591C16.0183 14.8731 16.0183 15.4698 15.7739 15.9838C15.3925 16.7847 14.317 17.1509 13.4246 17.3263C12.7817 17.4693 12.1289 17.5637 11.4718 17.6085C10.4825 17.6924 9.4885 17.7077 8.49702 17.6543C8.26819 17.6543 8.04698 17.6543 7.81815 17.6085C7.16353 17.5642 6.51327 17.4699 5.87307 17.3263C4.97299 17.1509 3.9051 16.7847 3.51609 15.9838C3.39517 15.7287 3.33263 15.4499 3.33302 15.1676Z"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+    </svg>
+  );
+}
+function LoginLockicon () {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+    >
+        <rect width="20" height="20"  />
+      <g mask="url(#mask0_452_154)">
+        <path
+          d="M13.4773 8.0817V6.29254C13.4773 4.19837 11.779 2.50004 9.6848 2.50004C7.59063 2.49087 5.88563 4.18087 5.87646 6.27587V6.29254V8.0817"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12.8605 17.9166H6.49301C4.74801 17.9166 3.33301 16.5025 3.33301 14.7566V11.1825C3.33301 9.43663 4.74801 8.02246 6.49301 8.02246H12.8605C14.6055 8.02246 16.0205 9.43663 16.0205 11.1825V14.7566C16.0205 16.5025 14.6055 17.9166 12.8605 17.9166Z"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9.67692 12.0442V13.895"
+          stroke="#01384D"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+    </svg>
+  );
+}
 
 export {
   IconAdmin,
@@ -266,5 +374,10 @@ export {
   Iconlocation,
   IconProfile,
   IconDelete,
-  IconMell
+  IconMell,
+  LocationIcon,
+  Iconsearch,
+  LoginManicon,
+  LoginLockicon
+
 };

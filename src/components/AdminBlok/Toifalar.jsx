@@ -1,10 +1,13 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import {IconDelete, IconMell } from '../../assets/style/imgAdmin/IconAdmin';
 import { NavLink } from 'react-router-dom';
+import AddModal from '../../components/modals/AddModal';
 
-function Toifalar() {
+function Toifalar ({complate, IsComplate}) {
+  //  const {complate, IsComplate} = Toifa
   return (
     <div className="m-auto mt-10 w-[1086px]">
       <table className="w-[1086px]  border ">
@@ -80,13 +83,17 @@ function Toifalar() {
           </tr>
         </tbody>
       </table>
-      <div className="mt-10 w-full text-end">
-        <NavLink>
-          <button className="w-[135] h-[40px] text-white rounded border bg-[#01384D] px-7 py-2">
+      <NavLink>
+        <div className="mt-10 w-full text-end">
+          <button
+            onClick={() => IsComplate(true)}
+            className="btn h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white"
+          >
             Qo'shish
           </button>
-        </NavLink>
-      </div>
+          { complate && <AddModal  />}
+        </div>
+      </NavLink>
     </div>
   );
 }

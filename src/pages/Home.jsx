@@ -5,6 +5,7 @@ import { ArrowRight } from "../assets/style/imgs/icons/icons";
 import OurProducts from "../components/OurProducts";
 import AksiyaProducts from "../components/AksiyaProducts";
 import ZoomModal from "../components/modals/ZoomModal";
+import Hometwo from "../components/Hometwo";
 
 function Home() {
   return (
@@ -48,7 +49,10 @@ function Home() {
       {/* <ZoomModal/> */}
       <OurProducts/>
       <AksiyaProducts/>
+      <Hometwo />
+
       
+
     </div>
   );
 }

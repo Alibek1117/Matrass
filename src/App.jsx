@@ -19,8 +19,11 @@ import LOcation from "./components/AdminBlok/LOcation";
 import Mahsulotlar from "./components/AdminBlok/Mahsulotlar";
 import Texnology from "./components/AdminBlok/Texnology";
 import Toifalar from "./components/AdminBlok/Toifalar";
+import { useState } from "react";
 
 function App() {
+  const [complate, IsComplate] = useState(false)
+  
   const routes = createBrowserRouter(
     createRoutesFromElements(
       <Route>
@@ -37,12 +40,15 @@ function App() {
         </Route>
         <Route index element={<Home />} />
         <Route path="admin" element={<Admin />}>
-          <Route path="Buyurtmalar" element={<Buyurtmalar />} />,
+          <Route  path="buyrtmalar" index element={<Buyurtmalar />} />,
           <Route path="Customers" element={<Customers />} />,
           <Route path="Location" element={<LOcation />} />,
           <Route path="Mahsulotlar" element={<Mahsulotlar />} />,
           <Route path="Texnology" element={<Texnology />} />,
-          <Route path="Toifalar" element={<Toifalar />} />
+          <Route
+            path="Toifalar"
+            element={<Toifalar  complate ={complate} IsComplate={IsComplate} />}
+          />
         </Route>
 
         <Route path="login" element={<Login />} />

@@ -9,46 +9,47 @@ import {  Iconhome,
   Iconlocation,}
   from '../assets/style/imgAdmin/IconAdmin'
 import React from 'react'
+import './AdminBtn.css'
 
 function AdminBtn() {
   return (
-    <div className="h-[85vh] w-[220px] bg-[#01384D] text-white  ">
-      <NavLink to="Buyurtmalar">
-        <button className=" flex h-[60px]  w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3 pl-10 hover:bg-[#EABF9F]">
+    <div className="h-[90vh] w-[220px]   text-white  ">
+      <button className="w-full">
+        <NavLink to="buyrtmalar" className="adminbtn">
           <Iconhome />
           Buyurtmalar
-        </button>
-      </NavLink>
-      <NavLink to="Customers">
-        <button className="flex  h-[60px] w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3 pl-10  hover:bg-[#EABF9F] ">
+        </NavLink>
+      </button>
+      <button className="w-full">
+        <NavLink to="Customers" className="adminbtn">
           <IconMan />
           Сustomers
-        </button>
-      </NavLink>
-      <NavLink to="Toifalar">
-        <button className="flex h-[60px] w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3 pl-10  hover:bg-[#EABF9F] ">
+        </NavLink>
+      </button>
+      <button className="w-full">
+        <NavLink to="Toifalar" className="adminbtn">
           <Iconfilter />
           Toifalar
-        </button>
-      </NavLink>
-      <NavLink to="Mahsulotlar">
-        <button className="flex h-[60px] w-[100%] border-spacing-0 scale-100  items-center gap-2 bg-[#01384D] p-3 pl-10 hover:bg-[#EABF9F]  ">
+        </NavLink>
+      </button>
+      <button className="w-full">
+        <NavLink to="Mahsulotlar" className="adminbtn">
           <Iconkorzina />
           Mahsulotlar
-        </button>
-      </NavLink>
-      <NavLink to="Texnology">
-        <button className="flex h-[60px] w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3 pl-10 hover:bg-[#EABF9F] ">
+        </NavLink>
+      </button>
+      <button className="w-full">
+        <NavLink to="Texnology" className="adminbtn">
           <Icontexno />
           Texnologiyalar
-        </button>
-      </NavLink>
-      <NavLink to="LOcation">
-        <button className="flex  h-[60px] w-[100%] border-spacing-0 scale-100 items-center gap-2 bg-[#01384D] p-3  pl-10 hover:bg-[#EABF9F] ">
+        </NavLink>
+      </button>
+      <button className="w-full pb-3">
+        <NavLink to="Location" className="adminbtn">
           <Iconlocation />
           Manzil
-        </button>
-      </NavLink>
+        </NavLink>
+      </button>
     </div>
   );
 }
