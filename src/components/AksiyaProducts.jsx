@@ -4,9 +4,9 @@ import matrasImg from "../assets/style/imgs/matras.png";
 
 function AksiyaProducts() {
   return (
-    <>
+    <div className='container'>
       <div className="products__title">Aksiyadagi mahsulotlar</div>
-      <div className="product__card container flex p-8">
+      <div className="product__card  flex p-8">
         <div className="card__left w-[45%]">
           <div className="left__top flex items-center">
             {/* <span className="type">YANGI MAHSULOT</span> */}
@@ -65,7 +65,7 @@ function AksiyaProducts() {
           </button>
         </div>
       </div>
-      <div className="product__card container flex p-8">
+      <div className="product__card  flex p-8">
         <div className="card__left w-[45%]">
           <div className="left__top flex items-center">
             {/* <span className="type">YANGI MAHSULOT</span> */}
@@ -124,7 +124,7 @@ function AksiyaProducts() {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

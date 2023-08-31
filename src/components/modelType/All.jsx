@@ -4,6 +4,7 @@ import React from 'react'
 import { Karzinka, Zoom } from '../../assets/style/imgs/icons/icons';
 // import './All.scss'
 import matrasImg from '../../assets/style/imgs/matras.png'
+import ZoomModal from '../modals/ZoomModal';
 
 function All() {
   return (
@@ -123,6 +124,7 @@ function All() {
           </button>
         </div>
       </div>
+      {/* <ZoomModal/> */}
     </>
   );
 }

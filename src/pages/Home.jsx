@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { ArrowRight } from "../assets/style/imgs/icons/icons";
 import OurProducts from "../components/OurProducts";
 import AksiyaProducts from "../components/AksiyaProducts";
+import ZoomModal from "../components/modals/ZoomModal";
 
 function Home() {
   return (
@@ -44,6 +45,7 @@ function Home() {
           <p className="number__subtitle">kunda yetkazish</p>
         </div>
       </section>
+      {/* <ZoomModal/> */}
       <OurProducts/>
       <AksiyaProducts/>
       

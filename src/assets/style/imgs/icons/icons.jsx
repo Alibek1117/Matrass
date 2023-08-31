@@ -20,6 +20,31 @@ function TelIcon() {
     </>
   );
 }
+function Cross() {
+  return (
+    <>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="54"
+        height="54"
+        viewBox="0 0 54 54"
+        fill="none"
+      >
+        <g clipPath="url(#clip0_34_480)">
+          <path
+            d="M41.1749 12.8476C40.2974 11.9701 38.8799 11.9701 38.0024 12.8476L26.9999 23.8276L15.9974 12.8251C15.1199 11.9476 13.7024 11.9476 12.8249 12.8251C11.9474 13.7026 11.9474 15.1201 12.8249 15.9976L23.8274 27.0001L12.8249 38.0026C11.9474 38.8801 11.9474 40.2976 12.8249 41.1751C13.7024 42.0526 15.1199 42.0526 15.9974 41.1751L26.9999 30.1726L38.0024 41.1751C38.8799 42.0526 40.2974 42.0526 41.1749 41.1751C42.0524 40.2976 42.0524 38.8801 41.1749 38.0026L30.1724 27.0001L41.1749 15.9976C42.0299 15.1426 42.0299 13.7026 41.1749 12.8476Z"
+            fill="#EABF9F"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_34_480">
+            <rect width="54" height="54" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    </>
+  );
+}
 function Zoom() {
   return (
     <>
@@ -147,4 +172,4 @@ function LogoIcon() {
   );
 }
 
-export {LogoIcon, ArrowRight, TelIcon, Zoom, Karzinka}
+export {LogoIcon, ArrowRight, TelIcon, Zoom, Karzinka, Cross}
