@@ -90,5 +90,15 @@ const Arrow = () => {
     </>
   )
 }
+const IconHeader = () => {
+  return(
+    <>
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="10" viewBox="0 0 23 10" fill="none">
+  <rect width="23" height="2" fill="#01384D"/>
+  <rect y="8" width="23" height="2" fill="#01384D"/>
+</svg>
+    </>
+  )
+}
 
-export {Icons , Img ,Abutech , Arrow} 
+export {Icons , Img ,Abutech , Arrow , IconHeader} 
