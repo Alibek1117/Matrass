@@ -20,6 +20,7 @@ import Mahsulotlar from "./components/AdminBlok/Mahsulotlar";
 import Texnology from "./components/AdminBlok/Texnology";
 import Toifalar from "./components/AdminBlok/Toifalar";
 import { useState } from "react";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [complate, IsComplate] = useState(false)
@@ -52,6 +53,7 @@ function App() {
         </Route>
 
         <Route path="login" element={<Login />} />
+        <Route path="*" element={<NotFound/>} />
       </Route>,
     ),
   );

@@ -416,3 +416,28 @@ span.ol__span__title {
   line-height: normal;
   opacity: 0.5;
 }
+
+.vizitka {
+  text-align: center;
+  transition: 0.5s;
+  h3 {
+    margin: 0 auto;
+    width: 455px;
+    color: var(--title-color, #01384d);
+    text-align: center;
+    font-family: Josefin Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px; /* 122.222% */
+  }
+  p {
+     margin-top: 15px;
+    color: var(--title-color, #01384d);
+    font-family: Josefin Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

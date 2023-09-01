@@ -20,7 +20,7 @@ function Address() {
                 <p>{item.destination && item.destination}</p>
                 <a
                   href={item.geolocation && item.geolocation}
-                  className=" mt-4 flex items-center justify-center gap-2 border border-slate-700 px-[50px] py-[10px]"
+                  className=" mt-4 flex items-center rounded justify-center gap-2 border border-slate-700 px-[50px] py-[10px]"
                 >
                   <Img /> <span>Geolokatsiya</span>
                 </a>
