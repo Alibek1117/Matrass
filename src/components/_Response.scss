@@ -5,18 +5,15 @@
             align-items: center;
 
       }
-      .header__naw{
-            display: none;
-      }
       .left__bottom{
             display: none;
       }
-      
-}
-@media only screen and (min-width:769px) {
       .Icon-Header{
+            display: flex;
+      }
+      .header__naw{
             display: none;
       }
-
+     
       
 }

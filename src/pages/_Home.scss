@@ -64,6 +64,12 @@
     // max-width: 100%;
   }
 }
+.left__bottom{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 10px;
+}
 
 // STATISTICS
 
@@ -440,4 +446,24 @@ span.ol__span__title {
     font-weight: 400;
     line-height: normal;
   }
+}
+
+
+//response styles start
+
+@media only screen and (max-width:768px) {
+  .hero__title{
+    font-size: 35px;
+    
+  }
+  .left__bottom{
+    display: none;
+  }
+  .categ__btn{
+    display: flex;
+    span{
+      display: block;
+    }
+  }
+  
 }
