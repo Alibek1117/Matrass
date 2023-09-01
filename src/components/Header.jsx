@@ -15,19 +15,19 @@ function Header() {
             <nav className="header__naw">
               <ul className="flex">
                 <li>
-                  <a href="#">Katalog</a>
+                  <a href="#katalog">Katalog</a>
                 </li>
                 <li>
-                  <a href="#">Aksiya</a>
+                  <a href="#aksiya">Aksiya</a>
                 </li>
                 <li>
-                  <a href="#">Biz haqimizda</a>
+                  <a href="#aboutUs">Biz haqimizda</a>
                 </li>
                 <li>
-                  <a href="#">Manzilimiz</a>
+                  <a href="#address">Manzilimiz</a>
                 </li>
                 <li>
-                  <a href="#">Aloqa</a>
+                  <a href="#aloqa">Aloqa</a>
                 </li>
                 <li>
                   <a href="#">Admin</a>
