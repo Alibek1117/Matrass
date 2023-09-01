@@ -105,8 +105,8 @@
 }
 
 .model__type {
-    position: relative;
-  color: #01384D;
+  position: relative;
+  color: #01384d;
   text-align: center;
   font-family: Raleway;
   font-size: 16px;
@@ -117,15 +117,15 @@
   box-sizing: border-box;
   opacity: 0.6;
 
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     top: 38px;
     left: 5px;
     // right: 0;
     width: 90%;
     height: 2px;
-    background: transparent ;
+    background: transparent;
   }
 
   &:hover {
@@ -133,247 +133,311 @@
     // opacity: 0.1;
     background: var(--title-color, #abbec5);
   }
-  &.active{
+  &.active {
     font-weight: 700;
   }
 }
 
-
-// Home-two stillari boshlanvotti 
-.home-card-title{
-  color: var(--title-color, #01384D);
-text-align: center;
-font-family: Raleway;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-padding: 40px 0;
+// Home-two stillari boshlanvotti
+.home-card-title {
+  color: var(--title-color, #01384d);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 40px 0;
 }
-.home-boxs{
+.home-boxs {
   display: flex;
   justify-content: space-evenly;
-  
-  
-  h1{
-    color: var(--title-color, #01384D);
-text-align: center;
-font-family: Raleway;
-font-size: 27px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-padding: 25px 0;
+
+  h1 {
+    color: var(--title-color, #01384d);
+    text-align: center;
+    font-family: Raleway;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 25px 0;
   }
-  p{
-    color: var(--title-color, #01384D);
-text-align: center;
-font-family: Open Sans;
-font-size: 18px;
-font-style: normal;
-font-weight: 300;
-line-height: 26px; /* 144.444% */
-padding: 20px 0;
+  p {
+    color: var(--title-color, #01384d);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px; /* 144.444% */
+    padding: 20px 0;
   }
-  img{
+  img {
     width: 407px;
-height: 300px;
-flex-shrink: 0;
+    height: 300px;
+    flex-shrink: 0;
   }
-  
 }
-.home-two-card:nth-child(2){
-  h1{
+.home-two-card:nth-child(2) {
+  h1 {
     padding: 5px;
   }
-  a{
+  a {
     padding-top: 10px;
   }
-  p{
+  p {
     padding: 10px;
   }
 }
-.home-box{
+.home-box {
   width: 400px;
 }
-.home-two-card{
-  border: 2px solid var(--title-color, #01384D);
+.home-two-card {
+  border: 2px solid var(--title-color, #01384d);
   border-radius: 5px;
-background: #FFF;
-img{
-  border-radius: 5px;
+  background: #fff;
+  img {
+    border-radius: 5px;
+  }
 }
-}
-.hometwo-hero{
+.hometwo-hero {
   display: flex;
   justify-content: space-between;
   padding: 0 40px;
-  h1{
-    color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 50px;
-font-style: normal;
-font-weight: 700;
-line-height: 64px; /* 128% */
+  h1 {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; /* 128% */
   }
-  p{
-    color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 26px; /* 162.5% */
-padding: 10px 0;
+  p {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 162.5% */
+    padding: 10px 0;
   }
-  .home-two-ul1{
-     border-radius: 8px;
-border: 2px solid var(--title-color, #01384D);
-background: #EABF9F;
-margin-right: 25px ;
-padding: 25px;li{
-  list-style:disc;
-}
+  .home-two-ul1 {
+    border-radius: 8px;
+    border: 2px solid var(--title-color, #01384d);
+    background: #eabf9f;
+    margin-right: 25px;
+    padding: 25px;
+    li {
+      list-style: disc;
+    }
   }
 }
-.home-two-ul{
-     border-radius: 8px;
-border: 2px solid var(--title-color, #01384D);
-background: #EABF9F;
-margin: 10px 0;
-padding: 25px;
-list-style: decimal;
-
+.home-two-ul {
+  border-radius: 8px;
+  border: 2px solid var(--title-color, #01384d);
+  background: #eabf9f;
+  margin: 10px 0;
+  padding: 25px;
+  list-style: disc;
+  li {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 14px;
+  }
 }
-.home-cards-title{
-  color: var(--title-color, #01384D);
-text-align: center;
-font-family: Raleway;
-font-size: 50px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+span.ol__span__title {
+  margin-top: 30px;
+  color: var(--title-color, #01384d);
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
 }
-.home-cardss{
+.home-cards-title {
+  color: var(--title-color, #01384d);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.home-cardss {
   display: flex;
   justify-content: center;
-  gap: 20px;div{
+  gap: 20px;
+  div {
     width: 400px;
     height: 400px;
     border-radius: 3px 3px 0 0;
-    h1{
-      color: var(--title-color, #01384D);
-text-align: center;
-font-family: Raleway;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-padding: 20px 0;
+    h1 {
+      color: var(--title-color, #01384d);
+      text-align: center;
+      font-family: Raleway;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding: 20px 0;
     }
-    p{
-      color: var(--title-color, #01384D);
-text-align: center;
-font-family: Raleway;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 25px; /* 138.889% */
+    p {
+      color: var(--title-color, #01384d);
+      text-align: center;
+      font-family: Raleway;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px; /* 138.889% */
     }
   }
 }
-.input-tel{
+.input-tel {
   padding: 35px 0;
-text-align: center;
-margin-left: 130px;
-margin-top: 20px;
+  text-align: center;
+  margin-left: 130px;
+  margin-top: 20px;
 }
 
-.input-tel:hover{
+.input-tel:hover {
   text-decoration: underline;
-  color: #01384D;
+  color: #01384d;
 }
-.home-about{
-  h1{
-    color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 50px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-padding: 20px 0;
+.home-about {
+  h1 {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 20px 0;
   }
-  h3{
-    color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 30px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-padding: 15px 0;
+  h3 {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 15px 0;
   }
-  p{
-    color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 155.556% */
-
+  p {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
   }
-  button{
+  button {
     border-radius: 5px;
-border: 2px solid var(--title-color, #01384D);
-background: #FFF;
-width: 300px;
-height: 50px;
-flex-shrink: 0;
-margin: 10px 0;
+    border: 2px solid var(--title-color, #01384d);
+    background: #fff;
+    width: 300px;
+    height: 50px;
+    flex-shrink: 0;
+    margin: 10px 0;
   }
 }
 
-// footer style started 
-.footer-big{
+// footer style started
+.footer-big {
   width: 100%;
 }
-.footer{
-  background: var(--yellow, #EABF9F);
-  
+.footer__nav {
+  color: #0a142f;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer {
+  background: var(--yellow, #eabf9f);
+
   height: 180px;
 }
-.footers{
+.footers {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
+
   gap: 250px;
-  h1{
-    color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-top: 30px;
+  h1 {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 30px;
   }
-  p{
-    color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 23px; /* 143.75% */
+  p {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px; /* 143.75% */
   }
-  
-  button{
+
+  button {
     border-radius: 5px;
-background: var(--title-color, #01384D);
-color: #FFF;
-font-family: Raleway;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-padding: 13px 20px;
+    background: var(--title-color, #01384d);
+    color: #fff;
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 13px 20px;
   }
- 
+  .tel__code {
+    color: #01384d;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+.footer-bottom-title {
+  color: var(--title-color, #01384d);
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.vizitka {
+  text-align: center;
+  transition: 0.5s;
+  h3 {
+    margin: 0 auto;
+    width: 455px;
+    color: var(--title-color, #01384d);
+    text-align: center;
+    font-family: Josefin Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px; /* 122.222% */
+  }
+  p {
+     margin-top: 15px;
+    color: var(--title-color, #01384d);
+    font-family: Josefin Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }

@@ -1,58 +1,43 @@
 import "./_Home.scss";
-import bed from "../assets/style/imgs/bed.png";
+
 import Header from "../components/Header";
-import { ArrowRight } from "../assets/style/imgs/icons/icons";
 import OurProducts from "../components/OurProducts";
 import AksiyaProducts from "../components/AksiyaProducts";
-import ZoomModal from "../components/modals/ZoomModal";
-import Hometwo from "../components/Hometwo";
+// import ZoomModal from "../components/modals/ZoomModal";
+import Statistics from "../components/Statistics";
+import Footer from "../components/Footer";
+import Technologies from "../components/Technologies";
+import AboutUs from "../components/AboutUs";
+import Address from "../components/Address";
+import Hero from "../components/Hero";
 
 function Home() {
+  
   return (
     <div>
       <section className="hero__full">
         <Header />
-        <div className="hero container  flex items-center">
-          <div className="hero__left">
-            <div className="hero__title">Kechalari sokin dam oling</div>
-            <div className="categ__btn">
-              <span>Kategoriyalar</span>
-              <ArrowRight />
-            </div>
-            <div className="line">
-              <div className="span"></div>
-            </div>
-          </div>
-          <div className="hero__right">
-            <img src={bed} alt="bed" />
-          </div>
-        </div>
+        <Hero/>
       </section>
-      <section className="statistics container">
-        <div className="stat__card">
-          <div className="stat__number">7</div>
-          <p className="number__subtitle">yillik tajriba</p>
-        </div>
-        <div className="stat__card">
-          <div className="stat__number">10k+</div>
-          <p className="number__subtitle">mamnun mijozlar</p>
-        </div>
-        <div className="stat__card">
-          <div className="stat__number">10</div>
-          <p className="number__subtitle">yillik kafolat</p>
-        </div>
-        <div className="stat__card">
-          <div className="stat__number">3</div>
-          <p className="number__subtitle">kunda yetkazish</p>
-        </div>
-      </section>
+      <Statistics />
       {/* <ZoomModal/> */}
-      <OurProducts/>
-      <AksiyaProducts/>
-      <Hometwo />
-
-      
-
+      <div id="katalog">
+        <OurProducts />
+      </div>
+      <div id="aksiya">
+        <AksiyaProducts />
+      </div>
+      <Technologies />
+      <div id="aboutUs">
+        <AboutUs />
+      </div>
+      <div id="address">
+        <Address />
+      </div>
+      {/* <Hometwo /> */}
+      <div id="aloqa">
+        <Footer />
+      </div>
     </div>
   );
 }
