@@ -23,12 +23,14 @@ import { useState } from "react";
 import NotFound from "./pages/NotFound";
 
 function App() {
+  const [token, setToken] = useState(JSON.parse(localStorage.getItem("token"))||'');
   const [complate, IsComplate] = useState(false)
   
   const routes = createBrowserRouter(
     createRoutesFromElements(
       <Route>
         <Route path="/" element={<Home />}>
+          <Route path="login" element={<Login data={{ token, setToken }} />} />
           <Route index element={<All />} />
           <Route path="modelA+" element={<ModelAPlus />} />
           <Route path="modelB+" element={<ModelBPlus />} />
@@ -40,15 +42,16 @@ function App() {
           <Route path="modelA" element={<ModelA />} />
         </Route>
         <Route index element={<Home />} />
+        token ?
         <Route path="admin" element={<Admin />}>
-          <Route  path="buyrtmalar" index element={<Buyurtmalar />} />,
+          <Route path="buyrtmalar" index element={<Buyurtmalar />} />,
           <Route path="Customers" element={<Customers />} />,
           <Route path="Location" element={<LOcation />} />,
           <Route path="Mahsulotlar" element={<Mahsulotlar />} />,
           <Route path="Texnology" element={<Texnology />} />,
           <Route
             path="Toifalar"
-            element={<Toifalar  complate ={complate} IsComplate={IsComplate} />}
+            element={<Toifalar complate={complate} IsComplate={IsComplate} />}
           />
         </Route>
 

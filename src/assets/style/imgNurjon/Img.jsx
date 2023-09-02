@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 const Img = () => {
   return (
     <>

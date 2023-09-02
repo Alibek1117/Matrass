@@ -61,6 +61,7 @@ import './_Header.scss';
 import './_Response.scss';
 import { LogoIcon, TelIcon } from '../assets/style/imgs/icons/icons';
 import { IconHeader } from '../assets/style/imgNurjon/Img';
+import {NavLink } from 'react-router-dom';
 
 function Header() {
   const [popoverOpen, setPopoverOpen] = useState(false);
@@ -110,7 +111,7 @@ function Header() {
                   <li><a href="#aboutUs">Biz haqimizda</a></li>
                   <li><a href="#address">Manzilimiz</a></li>
                   <li><a href="#aloqa">Aloqa</a></li>
-                  <li><a href="#">Admin</a></li>
+                  <li><NavLink to="login">Admin</NavLink></li>
                 </ul>
                 <div className="tel__number flex items-center mt-4  md:hidden">
                   <TelIcon className="w-5 h-5 mr-2" />
@@ -118,6 +119,7 @@ function Header() {
                 </div>
                 <button className="order__btn mt-4">Buyurtma berish</button>
               </div>
+<<<<<<< HEAD
             )}
             <div className="left__bottom  ">
               <div className="tel__number flex items-center">
@@ -126,6 +128,11 @@ function Header() {
               </div>
               <button className="order__btn ml-4">Buyurtma berish</button>
             </div>
+=======
+)}
+            
+
+>>>>>>> 1927fa30909b91f9026e9190d2d68631a96508ff
           </div>
         </div>
       </div>

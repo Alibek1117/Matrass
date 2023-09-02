@@ -10,6 +10,7 @@ import Technologies from "../components/Technologies";
 import AboutUs from "../components/AboutUs";
 import Address from "../components/Address";
 import Hero from "../components/Hero";
+// import Hometwo from "../components/Hometwo";
 
 function Home() {
   
