@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useState } from 'react'
 import { Karzinka, Zoom } from '../../assets/style/imgs/icons/icons';
 // import './All.scss'
 import matrasImg from '../../assets/style/imgs/matras.png'
@@ -8,11 +8,17 @@ import ZoomModal from '../modals/ZoomModal';
 import { useFetch } from '../../hook/useFetch';
 
 function All() {
-
+    
+  const [zoom, setZoom] = useState(false)
    const url = "http://localhost:1212/api/products";
    const { data, loader, error } = useFetch(url);
    const product = data && data.products;
-   console.log(product);
+  //  console.log(product);
+
+   const handleZoom = (e) => {
+    console.log(e);
+    setZoom(true)
+   }
   return (
     <>
       {loader && <h2>Loading...</h2>}
@@ -24,7 +30,7 @@ function All() {
               <div className="left__top flex items-center">
                 <span className="type">YANGI MAHSULOT</span>
                 {item.new_cost && <span className="aksiya">AKSIYA</span>}
-                <div className="zoom rounded-full bg-[#D9E1E7]  p-3 ">
+                <div className="zoom rounded-full bg-[#D9E1E7]  p-3 " onClick={() => handleZoom()}>
                   <Zoom />
                 </div>
               </div>
@@ -196,7 +202,7 @@ function All() {
           </button>
         </div>
       </div> */}
-      {/* <ZoomModal/> */}
+      {zoom && <ZoomModal setZoom = {setZoom}/>}
     </>
   );
 }
