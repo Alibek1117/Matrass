@@ -1,6 +1,7 @@
 import './_Header.scss'
 // import { NavLink } from 'react-router-dom';
 import { LogoIcon, TelIcon } from '../assets/style/imgs/icons/icons';
+import {NavLink } from 'react-router-dom';
 
 function Header() {
   return (
@@ -30,7 +31,7 @@ function Header() {
                   <a href="#">Aloqa</a>
                 </li>
                 <li>
-                  <a href="#">Admin</a>
+                  <NavLink to="login">Admin</NavLink>
                 </li>
               </ul>
             </nav>
