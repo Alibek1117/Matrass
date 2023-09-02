@@ -119,7 +119,7 @@ function Header() {
                 </div>
                 <button className="order__btn mt-4">Buyurtma berish</button>
               </div>
-<<<<<<< HEAD
+
             )}
             <div className="left__bottom  ">
               <div className="tel__number flex items-center">
@@ -128,11 +128,11 @@ function Header() {
               </div>
               <button className="order__btn ml-4">Buyurtma berish</button>
             </div>
-=======
-)}
+
+
             
 
->>>>>>> 1927fa30909b91f9026e9190d2d68631a96508ff
+
           </div>
         </div>
       </div>
