@@ -54,8 +54,6 @@ function App() {
             element={<Toifalar complate={complate} IsComplate={IsComplate} />}
           />
         </Route>
-
-        <Route path="login" element={<Login />} />
         <Route path="*" element={<NotFound/>} />
       </Route>,
     ),
