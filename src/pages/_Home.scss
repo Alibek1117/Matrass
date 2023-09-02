@@ -454,16 +454,129 @@ span.ol__span__title {
 @media only screen and (max-width:768px) {
   .hero__title{
     font-size: 35px;
+    padding-bottom: 50px;
     
   }
   .left__bottom{
     display: none;
   }
-  .categ__btn{
-    display: flex;
-    span{
-      display: block;
+  .hero{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+  }
+  .statistics{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .our__products{
+    display: grid;
+    grid-template-columns: repeat(1 , 1.25fr);
+    .products__title{
+      font-size: 28px;
     }
   }
+  .nav__model{
+    ul{
+      display: grid;
+      grid-template-columns: repeat(3 , 1fr);
+    }
+  }
+  .product__card{
+    display: grid;
+    grid-template-columns: repeat(1,600px);
+  }
+  .card__left{
+    width: 100%;
+  }
+  .card__right{
+    width: 120%;
+    .product__info{
+      display: grid;
+      grid-template-columns: repeat(2 ,0.85fr);
+    }
+    p{
+      font-size: 14px;
+      padding-right: 30px;
+      line-height: 23px;
+    }
+  }
+  .home-card{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 2fr);
+  }
+  .home-boxs{
+    display: block;
+  }
+  .home-box{
+   display: block;
+    width: 100%;
+  }
+  .hometwo-hero{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 100%;
+  }
+  .hometwo-hero-top{
+    display: grid;
+    grid-template-columns: repeat(1 , 2fr);
+    width: 100%;
+    h1{
+      color: var(--title-color, #01384D);
+font-family: Josefin Sans;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+text-align: left;
+line-height: 36px; /* 128.571% */
+    }
+    p{
+      color: var(--title-color, #01384D);
+font-family: Josefin Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px; /* 162.5% */
+    }
+    ul li{
+      color: var(--title-color, #01384D);
+font-family: Josefin Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 137.5% */
+    }
+  }
+  .home-card-title{
+    color: var(--title-color, #01384D);
+text-align: center;
+font-family: Josefin Sans;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px; /* 128.571% */
+
+  }
+  .home-cards{
+    .home-cards-title{
+      color: var(--title-color, #01384D);
+text-align: center;
+font-family: Josefin Sans;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    }
+    .home-cardss{
+      display: grid;
+      grid-template-columns: repeat(1 , 1fr);
+      width: 100%;
+      text-align: center;
+      margin: 0 100px;
+    }
+  }
+  
+ 
+ 
   
 }

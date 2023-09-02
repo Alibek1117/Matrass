@@ -17,7 +17,7 @@ function Hero() {
     
       <div className="hero container  flex items-center">
         <div className="hero__left">
-          <div className="hero__title md:text-4xl">Kechalari sokin dam oling!</div>
+          <div className="hero__title md:text-5xl">Kechalari sokin dam oling!</div>
           <div className="categ__btn">
             <div>
               <ArrowRight />

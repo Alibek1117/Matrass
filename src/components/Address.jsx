@@ -1,4 +1,3 @@
-import React from 'react'
 import { useFetch } from '../hook/useFetch';
 import { Img } from '../assets/style/imgNurjon/Img';
 import Homeabout from "../assets/style/imgNurjon/home-about.png";
@@ -9,8 +8,8 @@ function Address() {
      console.log(address);
   return (
     <div className='container'>
-      <div className="home-about mt-10  justify-center gap-56" id="address">
-        <h1>Manzillarimiz</h1>
+      <div className="home-about mt-10  justify-center gap-48" id="address">
+        <h1 className=''>Manzillarimiz</h1>
         {loaderr && <h2>Loading...</h2>}
         {address &&
           address.map((item) => (
