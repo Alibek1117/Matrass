@@ -5,7 +5,7 @@ import { useFetch } from '../hook/useFetch';
 function Technologies() {
     const url = "http://localhost:1212/api/technology";
     const { data: tech, loader, error } = useFetch(url);
-    console.log(tech);
+    // console.log(tech);
   return (
     <div className='container'>
       <div className="home-card">

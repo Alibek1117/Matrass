@@ -8,7 +8,7 @@ function AksiyaProducts() {
      const url = "http://localhost:1212/api/products";
      const { data, loader, error } = useFetch(url);
      const product = data && data.products;
-     console.log(product);
+    //  console.log(product);
 
   return (
     <>
