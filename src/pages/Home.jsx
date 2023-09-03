@@ -10,6 +10,7 @@ import Technologies from "../components/Technologies";
 import AboutUs from "../components/AboutUs";
 import Address from "../components/Address";
 import Hero from "../components/Hero";
+// import Zakaz from "../components/modals/Zakaz";
 // import Hometwo from "../components/Hometwo";
 
 function Home() {
@@ -39,7 +40,9 @@ function Home() {
       <div id="aloqa">
         <Footer />
       </div>
+      {/* <Zakaz /> */}
     </div>
+
   );
 }
 

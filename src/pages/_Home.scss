@@ -574,6 +574,38 @@ line-height: normal;
       text-align: center;
       margin: 0 100px;
     }
+    
+    
+  }
+  .footer{
+    height: 500px;
+  }
+  .footers{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    padding: 0;
+  }
+  .footer-center{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      padding: 20px 150px;
+      
+      ul{
+        gap: 3px;
+      
+        color: var(--title-color, #01384D);
+font-family: Josefin Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+      }
+    }
+  .footer-bottom{
+    display: grid;grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    padding-left: 150px;
+    padding-top: 10px;
   }
   
  
