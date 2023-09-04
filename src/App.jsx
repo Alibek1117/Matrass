@@ -37,10 +37,14 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route path="/" element={<Home />}>
+<<<<<<< HEAD
           <Route
             path="login"
             element={<Login token={token} setToken={setToken} />}
           />
+=======
+          <Route path="login" element={<Login token={token} setToken={setToken} />} />
+>>>>>>> 11a9e73292543a776c16f82d202a5bfbe0891cdf
           <Route index element={<All />} />
           <Route path="modelA+" element={<ModelAPlus />} />
           <Route path="modelB+" element={<ModelBPlus />} />

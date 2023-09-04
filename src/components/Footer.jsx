@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import Vizitka from "../components/Vizitka";
 import Social from "../assets/style/imgNurjon/social.png";
@@ -25,15 +26,16 @@ const Footer = () => {
         <div className="container mx-auto p-4 px-8 ">
           {!vizitka && (
             <div className="footers ">
-              <div>
+              <div className=" ">
                 <h1>Sizni qiziqtirdimi?</h1>
                 <p>Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz</p>
               </div>
-              <form
+              <div>
+                <form
                 onSubmit={ handleVizitka}
                 className=" flex items-center gap-5 "
-              >
-                <div className=" flex items-center justify-center gap-2 rounded-md bg-white ps-3">
+                >
+                <div className=" flex items-center justify-center gap-2 rounded-md bg-white ">
                   <span className="tel__code">+998</span>
                   <div className=" h-[12px] w-[1px] bg-slate-600"></div>
                   <input
@@ -42,13 +44,14 @@ const Footer = () => {
                     name="tel"
                     id=""
                     placeholder="Raqamingizni yozing"
-                    a
+                    
                     
                   />
                 </div>
                 <button>Yuborish</button>
               </form>
             </div>
+              </div>
           )}
           {vizitka && <Vizitka />}
         </div>
