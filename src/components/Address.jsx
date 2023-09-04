@@ -5,7 +5,7 @@ import Homeabout from "../assets/style/imgNurjon/home-about.png";
 function Address() {
      const urlAddress = "http://localhost:1212/api/address";
      const { data: address, loader: loaderr } = useFetch(urlAddress);
-     console.log(address);
+    //  console.log(address);
   return (
     <div className='container'>
       <div className="home-about mt-10  justify-center gap-48" id="address">
