@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/no-unescaped-entities */
 import { Karzinka, Zoom } from '../assets/style/imgs/icons/icons';
 import matrasImg from "../assets/style/imgs/matras.png";
 import { useFetch } from '../hook/useFetch';
@@ -8,7 +8,7 @@ function AksiyaProducts() {
      const url = "http://localhost:1212/api/products";
      const { data, loader, error } = useFetch(url);
      const product = data && data.products;
-     console.log(product);
+    //  console.log(product);
 
   return (
     <>
@@ -23,12 +23,14 @@ function AksiyaProducts() {
               <div className="card__left w-[45%]">
                 <div className="left__top flex items-center">
                   {/* <span className="type">YANGI MAHSULOT</span> */}
-                  {item.new_cost && <span className="aksiya">AKSIYA</span>}
+                 <div>
+                   {item.new_cost && <span className="aksiya">AKSIYA</span>}
+                 </div>
                   <div className="zoom rounded-full bg-[#D9E1E7]  p-3 ">
                     <Zoom />
                   </div>
                 </div>
-                <img className="mt-16" src={matrasImg} alt="matras" />
+                <img className="mt-16 md:justify-center" src={matrasImg} alt="matras" />
               </div>
               <div className="card__right w-[55%]">
                 <h2 className="card__title ">{item && item.name}</h2>

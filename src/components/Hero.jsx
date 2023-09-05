@@ -1,8 +1,8 @@
-import React from 'react'
 import { ArrowRight } from '../assets/style/imgs/icons/icons';
 import bed from "../assets/style/imgs/bed.png";
 // import AwesomeSlider from "react-awesome-slider";
 // import AwsSliderStyles from "react-awesome-slider/src/styles.scss";
+import "./_Response.scss"
 
 
 function Hero() {
@@ -17,10 +17,12 @@ function Hero() {
     
       <div className="hero container  flex items-center">
         <div className="hero__left">
-          <div className="hero__title">Kechalari sokin dam oling</div>
+          <div className="hero__title md:text-5xl">Kechalari sokin dam oling!</div>
           <div className="categ__btn">
+            <div>
+              <ArrowRight />
+            </div>
             <span>Kategoriyalar</span>
-            <ArrowRight />
           </div>
           <div className="line">
             <div className="span"></div>

@@ -1,10 +1,11 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-key */
 import { useFetch } from '../hook/useFetch';
 
 function Technologies() {
     const url = "http://localhost:1212/api/technology";
     const { data: tech, loader, error } = useFetch(url);
-    console.log(tech);
+    // console.log(tech);
   return (
     <div className='container'>
       <div className="home-card">
@@ -13,18 +14,25 @@ function Technologies() {
           {tech &&
             tech.map((item) => (
               <div className="home-box">
-                <h1>{item.name}</h1>
+                <div>
+                  <h1>{item.name}</h1>
+                </div>
                 {/* <img src={Memoriform} alt="" /> */}
-                <iframe
+               <div>
+                 <iframe
                   width="407"
                   height="300"
                   src={item.link}
                   title="YouTube video player"
+                  // eslint-disable-next-line react/no-unknown-property
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
-                <p>{item.description}</p>
+               </div>
+                <div>
+                  <p>{item.description}</p>
+                </div>
               </div>
             ))}
           {/* <div className="home-box">

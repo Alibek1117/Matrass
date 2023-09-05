@@ -1,7 +1,26 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import Zakaz from "../modals/Zakaz";
+import ZakazDone from "../modals/ZakazDone";
 
 function Buyurtmalar() {
+  const [order, setOrder] = useState(null);
+  useEffect(() => {
+    fetch("http://localhost:1212/admin/orders/1", {
+      method: "GET",
+
+      headers: {
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setOrder(data.data));
+  }, []);
+
+  console.log(order);
+
   return (
     <div className="m-auto mt-10 w-[1086px]">
       <table className="w-[1086px]  border ">
@@ -15,7 +34,27 @@ function Buyurtmalar() {
             <th>Qayta aloqa</th>
           </tr>
         </thead>
-        <tbody className="h-[59px] border text-center">
+        {order ? (
+          order.map((item) => (
+            <tbody className="h-[59px] border text-center">
+              <tr>
+                <td>{item.id}</td>
+                <td>{item.name}</td>
+                <td>{item.number}</td>
+                <td>{item.product_name}</td>
+                <td>4</td>
+                <td>
+                  <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
+                    <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          ))
+        ) : (
+          <h2>not Found</h2>
+        )}
+        {/* <tbody className="h-[59px] border text-center">
           <tr>
             <td>6</td>
             <td>Jenny Wilson</td>
@@ -70,10 +109,17 @@ function Buyurtmalar() {
               </div>
             </td>
           </tr>
-        </tbody>
+        </tbody> */}
       </table>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Zakaz />
+      <ZakazDone />
     </div>
   );
 }
 
-export default Buyurtmalar
+export default Buyurtmalar;

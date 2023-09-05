@@ -1,8 +1,25 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { IconDelete } from '../../assets/style/imgAdmin/IconAdmin';
 
 function Customers() {
+
+
+
+  // const [contact, setContact] = useState([])
+  // useEffect(() => {
+  //   fetch("http://localhost:1212/admin/contact/1", {
+  //     method: "GET",
+  //     headers: {
+  //       Authorization:
+  //         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQ3NzUwfQ.5UFeIeZhgdcOxLi-GZtJm_MIqdjcLgY7ixE6tN9h4E8",
+  //     },
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => setContact(data));
+  // }, []);
+// console.log(contact);
+
   return (
     <div className="m-auto mt-10 w-[1086px]">
       <table className="w-[1086px]  border ">

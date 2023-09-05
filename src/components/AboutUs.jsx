@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/no-unescaped-entities */
 import Cloud from "../assets/style/imgNurjon/Cloud.png";
 import Cloud2 from "../assets/style/imgNurjon/Cloud2.png";
 import Card from "../assets/style/imgNurjon/Card.png";
@@ -9,7 +9,7 @@ function AboutUs() {
   return (
     <div className="container">
       <div className="hometwo-hero" id="aboutUs">
-        <div className="mt-4 w-[45%]">
+        <div className="hometwo-hero-top mt-4 w-[45%]">
           <h1>
             Dream Cloud <br /> kompaniyasi haqida
           </h1>
@@ -33,18 +33,18 @@ function AboutUs() {
         <div>
           <img src={Cloud2} alt="" />
         </div>
-        <div className="mt-6  w-[45%]">
+        <div className="hometwo-hero-top mt-6  w-[45%]">
           <p>
             Libero erat praesent ullamcorper eget tortor sed et. Nec id lobortis
             gravida vitae. Scelerisque id fusce vitae ut. Integer sed vulputate
             sed nec. Arcu id mattis erat et id.{" "}
           </p>
-          <ol className="home-two-ul ">
+          <ul className="home-two-ul ">
             <li>Id risus phasellus laoreet eget. A nec pulvinar.</li>
             <li>Eu justo, tincidunt fringilla diam nulla.</li>
             <li>Amet, nullam cras lacus, fermentum leo tellus sagittis.</li>
             <li>Facilisi mauris condimentum sagittis odio rhoncus semper.</li>
-          </ol>
+          </ul>
           <span className="ol__span__title">
             Ac tortor volutpat pellentesque mauris nisi, praesent. Et tempus
             accumsan est elementum feugiat arcu mauris tincidunt. Eget faucibus
