@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
+import Zakaz from '../modals/Zakaz';
+import ZakazDone from '../modals/ZakazDone';
 
 function Buyurtmalar() {
 
@@ -10,7 +12,8 @@ function Buyurtmalar() {
       method: "GET",
 
       headers: {
-        Authorization:
+        "Content-Type": "application/json",
+        "Authorization":
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
       },
     })
@@ -33,16 +36,15 @@ function Buyurtmalar() {
             <th>Qayta aloqa</th>
           </tr>
         </thead>
-        {
-        order ? (
+        {order ? (
           order.map((item) => (
-            <tbody className="h-[59px] border text-center">
+            <tbody className="h-[59px] border text-center" key={item.id}>
               <tr>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.number}</td>
                 <td>{item.product_name}</td>
-                <td>4</td>
+                <td>{item.count}</td>
                 <td>
                   <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
                     <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
@@ -52,7 +54,11 @@ function Buyurtmalar() {
             </tbody>
           ))
         ) : (
-          <h2>not Found</h2>
+          <tbody>
+            <tr>
+              <td>not Found</td>
+            </tr>
+          </tbody>
         )}
         {/* <tbody className="h-[59px] border text-center">
           <tr>
@@ -111,6 +117,8 @@ function Buyurtmalar() {
           </tr>
         </tbody> */}
       </table>
+      {/* <Zakaz/>
+      <ZakazDone/> */}
     </div>
   );
 }

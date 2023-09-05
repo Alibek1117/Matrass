@@ -1,151 +1,138 @@
-.zakaz-title{
-      h1{
-            color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 34px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-align: center;
-      }
+.zakaz-title {
+  h1 {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
 }
-.zakaz{
-      width: 500px;
-      height: 430px;
-      border: 1px solid #01384D;
+.zakaz {
+  border: 1px solid #01384d;
 }
-.zakaz-input-tel{
-      display: flex;
-      justify-content: space-between;
-      width: 240px;
-      border-radius: 5px;
-      gap: 5px;
-border: 2px solid var(--title-color, #01384D);
-background: #FFF;
-      span{
-            background: var(--title-color, #01384D);
-            color: #FFF;
-font-family: Raleway;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-width: 70px;
-height: 30px;
-
-      }
-      input{
-            border-right: 2px solid var(--title-color, #01384D);
-            border-radius: 5px;
-            color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-
-height: 29px;
-outline: none;
-      }
+.zakaz-input-tel {
+  display: flex;
+  justify-content: start;
+  border-radius: 5px;
+  border: 2px solid var(--title-color, #01384d);
+  background: #fff;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--title-color, #01384d);
+    color: #fff;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  input {
+    border-radius: 5px;
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    outline: none;
+  }
 }
-.zakaz-input-one{
-      border-radius: 5px;
-border: 2px solid var(--title-color, #01384D);
-background: #FFF;
-color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding: 6px 28px;
+.zakaz-input-one {
+  border-radius: 5px;
+  border: 2px solid var(--title-color, #01384d);
+  background: #fff;
+  color: var(--title-color, #01384d);
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.zakaz-buttons{
-      display: flex;
-      justify-content: center;
+.zakaz-buttons {
+  display: flex;
+  justify-content: center;
 }
 .zakaz-button {
-      display: flex;
-                 border-radius: 5px;
-border: 2px solid var(--title-color, #01384D);
-background: #FFF;
-      button{
-            border-right: 1px solid var(--title-color, #01384D);
-            border-left: 1px solid var(--title-color, #01384D);
- 
-color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-width: 70px;
-height: 40px;
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid var(--title-color, #01384d);
+  background: #fff;
+  button {
+    border-right: 1px solid var(--title-color, #01384d);
+    border-left: 1px solid var(--title-color, #01384d);
 
-      }
-      span{
-color: var(--title-color, #01384D);
-font-family: Raleway;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-width: 90px;
-text-align: center;
-
-      }
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+//     width: 70px;
+//     height: 40px;
+  }
+  span {
+    color: var(--title-color, #01384d);
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
 }
-.buttons{
-      button{
-            border-radius: 5px;
-background: var(--title-color, #01384D);
-color: #FFF;
-font-family: Raleway;
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-padding: 12px 60px;
-      }
+.buttons {
+  button {
+    border-radius: 5px;
+    background: var(--title-color, #01384d);
+    color: #fff;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 12px 60px;
+  }
 }
-.zakaz-form{
-      text-align: center;
-    select{
-        border-radius: 5px;
-border: 2px solid var(--title-color, #01384D);
-background: #FFF;
-padding: 6px 10px;
-margin: 6px;
-    }
+.zakaz-form {
+//   text-align: center;
+  select {
+    border-radius: 5px;
+    border: 2px solid var(--title-color, #01384d);
+    background: #fff;
+  }
 }
 
 // logged
 
-.done-zakaz{
-      width: 500px;
-      height: 520px;
-      border: 1px solid #01384D;
-      margin-top: 40px;
+.done-zakaz {
+  width: 420px;
+  padding: 40px;
+  border-radius: 5px;
+  border: 1px solid #01384d;
 }
-.zakaz-p{
-      color: var(--title-color, #01384D);
-text-align: center;
-font-family: Raleway;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin: 10px 0;
+.zakaz-p {
+  color: var(--title-color, #01384d);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 10px 0;
 }
-.zakaz-btn{
-      border-radius: 5px;
-background: var(--title-color, #01384D);
-color: #FFF;
-text-align: center;
-font-family: Raleway;
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-padding: 12px 120px;
+.zakaz-btn {
+  border-radius: 5px;
+  background: var(--title-color, #01384d);
+  color: #fff;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 12px 120px;
 }

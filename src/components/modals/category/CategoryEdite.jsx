@@ -1,12 +1,11 @@
 import React from "react";
-import { CrossBtn } from "../../assets/style/imgs/icons/icons";
+import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
 import { useState } from "react";
 import { useRef } from "react";
-import axios from "axios";
 
-function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
+function CategoryAdd({ setCategoryAdd, idEdite, setCategory2  }) {
   const categoryInput = useRef("");
-//   const [category, setCategory] = useState();
+  //   const [category, setCategory] = useState();
   const [check, setCheck] = useState(true);
 
   const closeModal = () => {
@@ -15,31 +14,32 @@ function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
   const handleCheckbox = () => {
     setCheck(!check);
   };
-  const handlePost = (e) => {
-      setCategoryAdd(false)
+  const handleEdite = (e) => {
+    setCategoryAdd(false);
     let obj = {
       category: categoryInput.current.value,
       isActive: check,
     };
     e.preventDefault();
-    
-      fetch("http://localhost:1212/admin/categories", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization:
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
-        },
-        body: JSON.stringify(obj)
-      })
-         .then((res) => res.json())
-         .then((data) => setCategory2(data));
+
+    fetch(`http://localhost:1212/admin/categories/${idEdite}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((res) => res.json())
+      .then((data) => setCategory2(data));
+    //   console.log(category2);
   };
   return (
     <div className="fixed left-[40%] top-[15%] ">
       <form
         className="relative w-[270px] overflow-hidden rounded bg-slate-300 p-6"
-        onSubmit={handlePost}
+        onSubmit={handleEdite}
       >
         <h2 className="title mb-7 text-3xl font-bold">Qo'shish</h2>
         <label>
@@ -49,6 +49,7 @@ function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
             type="text"
             placeholder="masalan: Model A"
             ref={categoryInput}
+            // value=''
           />
         </label>
         <div className="mt-6 flex w-full items-center justify-between">

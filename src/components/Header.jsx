@@ -8,12 +8,16 @@ import { LogoIcon, TelIcon } from '../assets/style/imgs/icons/icons';
 import { IconHeader } from '../assets/style/imgNurjon/Img';
 import {NavLink } from 'react-router-dom';
 
-function Header() {
+function Header({setOpenZakaz}) {
   const [popoverOpen, setPopoverOpen] = useState(false);
 
   const togglePopover = () => {
     setPopoverOpen(!popoverOpen);
   };
+
+  const openOrder = ()=>{
+    setOpenZakaz(true);
+  }
 
   return (
     <header>
@@ -79,7 +83,7 @@ function Header() {
                   <TelIcon className="mr-2 h-5 w-5" />
                   <span className="tel">+998 90 123 45 67</span>
                 </div>
-                <button className="order__btn mt-4">Buyurtma berish</button>
+                <button className="order__btn mt-4" onClick={openOrder}>Buyurtma berish</button>
               </div>
 
 
@@ -89,7 +93,7 @@ function Header() {
                 <TelIcon className="w-5 h-5 mr-2" />
                 <span className="tel">+998 90 123 45 67</span>
               </div>
-              <button className="order__btn ml-4">Buyurtma berish</button>
+              <button className="order__btn ml-4" onClick={openOrder}>Buyurtma berish</button>
             </div>
           </div>
         </div>
