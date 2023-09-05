@@ -10,13 +10,9 @@ import Technologies from "../components/Technologies";
 import AboutUs from "../components/AboutUs";
 import Address from "../components/Address";
 import Hero from "../components/Hero";
-<<<<<<< HEAD
 // import { useDispatch, useSelector } from "react-redux";
 // import { getToken } from "../slice/token";
 // import { loginAdminStart } from "../slice/auth";
-=======
-// import Zakaz from "../components/modals/Zakaz";
->>>>>>> 11a9e73292543a776c16f82d202a5bfbe0891cdf
 // import Hometwo from "../components/Hometwo";
 
 function Home() {
@@ -50,12 +46,8 @@ function Home() {
       <div id="aloqa">
         <Footer />
       </div>
-<<<<<<< HEAD
 
 
-=======
-      {/* <Zakaz /> */}
->>>>>>> 11a9e73292543a776c16f82d202a5bfbe0891cdf
     </div>
 
   );

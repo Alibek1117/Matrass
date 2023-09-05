@@ -1,11 +1,12 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
+import Zakaz from "../modals/Zakaz";
+import ZakazDone from "../modals/ZakazDone";
 
 function Buyurtmalar() {
-
-  
-  const [order, setOrder] = useState(null)
-  useEffect(()=>{
+  const [order, setOrder] = useState(null);
+  useEffect(() => {
     fetch("http://localhost:1212/admin/orders/1", {
       method: "GET",
 
@@ -16,9 +17,9 @@ function Buyurtmalar() {
     })
       .then((res) => res.json())
       .then((data) => setOrder(data.data));
-    },[])
+  }, []);
 
-    console.log(order);
+  console.log(order);
 
   return (
     <div className="m-auto mt-10 w-[1086px]">
@@ -33,8 +34,7 @@ function Buyurtmalar() {
             <th>Qayta aloqa</th>
           </tr>
         </thead>
-        {
-        order ? (
+        {order ? (
           order.map((item) => (
             <tbody className="h-[59px] border text-center">
               <tr>
@@ -111,8 +111,15 @@ function Buyurtmalar() {
           </tr>
         </tbody> */}
       </table>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Zakaz />
+      <ZakazDone />
     </div>
   );
 }
 
-export default Buyurtmalar
+export default Buyurtmalar;
