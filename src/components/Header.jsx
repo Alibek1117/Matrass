@@ -81,8 +81,7 @@ function Header() {
             <button className="Icon-Header md:hidden sm:hidden" onClick={togglePopover}>
               <IconHeader />
             </button>
-            {popoverOpen && (
-              <div className="popover absolute top-14 right-0 bg-white border border-gray-300 shadow-md p-4 z-10 md:static md:w-auto md:bg-transparent md:border-none md:p-0">
+              <div className="popover absolute top-14 right-0 bg-white border border-gray-300 p-4 z-10 md:static md:w-auto md:bg-transparent md:border-none md:p-0">
                 <ul className="md:flex md:space-x-4 md:items-center">
                   <li><a href="#katalog">Katalog</a></li>
                   <li><a href="#aksiya">Aksiya</a></li>
@@ -97,7 +96,6 @@ function Header() {
                 </div>
                 <button className="order__btn mt-4">Buyurtma berish</button>
               </div>
-)}
             
 
           </div>
