@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { IconDelete, IconMell,  LocationIcon } from '../../assets/style/imgAdmin/IconAdmin';
+import LocatsionModal from '../modals/LocatsionModal';
 
 function LOcation() {
 
@@ -57,21 +58,6 @@ function LOcation() {
         ) : (
           <h2>Not Found</h2>
         )}
-        {/* <tbody className="h-[59px] border text-center">
-          <tr>
-            <td className="pl-1">Toshkent, Parken...</td>
-            <td className="pl-1">Enim urna... </td>
-            <td className="pl-20 "><LocationIcon/></td>
-            <td className="my-4 flex items-center justify-end gap-3 pr-2">
-              <span className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#E6ECEE]">
-                <IconMell />
-              </span>
-              <span className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#FBE9E9]">
-                <IconDelete />
-              </span>
-            </td>
-          </tr>
-        </tbody> */}
       </table>
       <div className="mt-10 w-full text-end">
         <NavLink>
@@ -80,6 +66,7 @@ function LOcation() {
           </button>
         </NavLink>
       </div>
+      <LocatsionModal/>
     </div>
   );
 }
