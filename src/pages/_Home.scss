@@ -509,7 +509,7 @@ span.ol__span__title {
     display: block;
   }
   .home-box{
-   display: block;
+    display: block;
     width: 100%;
   }
   .hometwo-hero{
@@ -523,49 +523,49 @@ span.ol__span__title {
     width: 100%;
     h1{
       color: var(--title-color, #01384D);
-font-family: Josefin Sans;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-text-align: left;
-line-height: 36px; /* 128.571% */
+      font-family: Josefin Sans;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      text-align: left;
+      line-height: 36px; /* 128.571% */
     }
     p{
       color: var(--title-color, #01384D);
-font-family: Josefin Sans;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 26px; /* 162.5% */
+      font-family: Josefin Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26px; /* 162.5% */
     }
     ul li{
       color: var(--title-color, #01384D);
-font-family: Josefin Sans;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 22px; /* 137.5% */
+      font-family: Josefin Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 137.5% */
     }
   }
   .home-card-title{
     color: var(--title-color, #01384D);
-text-align: center;
-font-family: Josefin Sans;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: 36px; /* 128.571% */
-
+    text-align: center;
+    font-family: Josefin Sans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 128.571% */
+    
   }
   .home-cards{
     .home-cards-title{
       color: var(--title-color, #01384D);
-text-align: center;
-font-family: Josefin Sans;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+      text-align: center;
+      font-family: Josefin Sans;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
     }
     .home-cardss{
       display: grid;
@@ -586,19 +586,19 @@ line-height: normal;
     padding: 0;
   }
   .footer-center{
-      display: grid;
-      grid-template-columns: repeat(1,1fr);
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
       padding: 20px 150px;
       
       ul{
         gap: 3px;
-      
+        
         color: var(--title-color, #01384D);
-font-family: Josefin Sans;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+        font-family: Josefin Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
     }
   .footer-bottom{
@@ -610,5 +610,68 @@ line-height: normal;
   
  
  
+  
+}
+@media only screen and (max-width:468px) {
+   .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+      }
+      .left__bottom{
+            display: none;
+      }
+      .Icon-Header{
+            display: flex;
+      }
+      .header__naw{
+            display: none;
+      }
+      .stat__card{
+        div{
+          color: var(--title-color, #01384D);
+text-align: center;
+font-family: Josefin Sans;
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+        }
+        p{
+          color: var(--title-color, #01384D);
+text-align: center;
+font-family: Josefin Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+        }
+      }
+      .products__title{
+        color: var(--title-color, #01384D);
+
+/* 28px title mobile */
+font-family: Josefin Sans;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+      }
+      .nav__model{
+        ul{
+          display: flex;
+          width: 100%;
+          li{
+            color: var(--title-color, #01384D);
+text-align: center;
+font-family: Josefin Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+          }
+        }
+      }
   
 }
