@@ -1,51 +1,50 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
-import {IconDelete, IconMell } from '../../assets/style/imgAdmin/IconAdmin';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { IconDelete, IconMell } from "../../assets/style/imgAdmin/IconAdmin";
+import { NavLink } from "react-router-dom";
 // import AddModal from '../../components/modals/AddModal';
-import DeleteCategory from '../modals/DeleteCategory';
-import CategoryAdd from '../modals/CategoryAdd';
-import CategoryEdite from '../modals/CategoryEdite';
+import DeleteCategory from "../modals/category/DeleteCategory";
+import CategoryAdd from "../modals/category/CategoryAdd";
+import CategoryEdite from "../modals/category/CategoryEdite";
 
-function Toifalar () {
-
+function Toifalar() {
   const [id, setId] = useState();
   const [idEdite, setIdEdite] = useState();
   const [category2, setCategory2] = useState([]);
   const [category, setCategory] = useState([]);
-    const [delCategory, setDelCategory] = useState(false)
-    const [categoryAdd, setCategoryAdd] = useState(false)
-    const [categoryEdite, setCategoryEdite] = useState(false)
-    useEffect(() => {
-      fetch("http://localhost:1212/admin/categories", {
-        method: "GET",
+  const [delCategory, setDelCategory] = useState(false);
+  const [categoryAdd, setCategoryAdd] = useState(false);
+  const [categoryEdite, setCategoryEdite] = useState(false);
+  useEffect(() => {
+    fetch("http://localhost:1212/admin/categories", {
+      method: "GET",
 
-        headers: {
-          Authorization:
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
-        },
-      })
-        .then((res) => res.json())
-        .then((data) => setCategory(data));
-    }, [delCategory, category2]);
+      headers: {
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setCategory(data));
+  }, [delCategory, category2]);
 
-    // console.log(category);
+  // console.log(category);
 
-    const handleDelete = (id) =>{
-      setId(id)
-      setDelCategory(true)
-    }
+  const handleDelete = (id) => {
+    setId(id);
+    setDelCategory(true);
+  };
 
-    const handleEdite = (id) =>{
-      setIdEdite(id)
-      setCategoryEdite(true)
-      console.log(id);
-    }
-    const addToifa =()=>{
-      setCategoryAdd(true);
-    }
+  const handleEdite = (id) => {
+    setIdEdite(id);
+    setCategoryEdite(true);
+    console.log(id);
+  };
+  const addToifa = () => {
+    setCategoryAdd(true);
+  };
   return (
     <div className="m-auto mt-10 w-[1086px]">
       <table className="w-[1086px]  border ">
@@ -112,4 +111,4 @@ function Toifalar () {
   );
 }
 
-export default Toifalar
+export default Toifalar;

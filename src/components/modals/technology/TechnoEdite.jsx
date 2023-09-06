@@ -1,34 +1,70 @@
 import { Link } from "react-router-dom";
-import { CrossBtn } from "../../assets/style/imgs/icons/icons";
+import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
+import { useRef } from "react";
 
 /* eslint-disable react/no-unescaped-entities */
-function TexnoloModal() {
+function TechnoEdite({ setOpenTechEdite, setTechEdite, idEdite }) {
+  const name = useRef();
+  const thumbnail = useRef();
+  const link = useRef();
+  const description = useRef();
+
+  const handlePost = (e) => {
+    e.preventDefault();
+      setOpenTechEdite(false);
+    let obj = {
+      name: name.current.value,
+      thumbnail: thumbnail.current.value,
+      link: link.current.value,
+      description: description.current.value,
+      isActive: true,
+    };
+
+    fetch(`http://localhost:1212/admin/technology/${idEdite}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjc1MzU2MTUwfQ.TSJs3Yomp3woiYfoUUwK2azBR0tBBE-Rwtaco33pfP0",
+        //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((res) => res.json())
+      .then((data) => setTechEdite(data));
+  };
+
   return (
-    <div className=" w-[500px]">
-      <div className="relative">
-        <Link className="absolute right-0 top-0"  to="/">
+    <div className=" relative left-[20%] top-[-140px] z-10 w-[580px] bg-white p-10 shadow-2xl shadow-black">
+      <div>
+        <div
+          className="absolute right-0 top-0"
+          onClick={() => setOpenTechEdite(false)}
+        >
           <CrossBtn />
-        </Link>
+        </div>
       </div>
       <div>
         <h2 className="mb-2 text-[18px] font-semibold">Qo'shish</h2>
         <div>
-          <form className="grid w-[500px] grid-cols-2">
+          <form className="grid w-[500px] grid-cols-2" onSubmit={handlePost}>
             <div>
               <label className="disp mt-4 block" htmlFor="Nomi">
                 Nomi
               </label>
               <input
                 className="mt-2 h-[40px] w-[220px] rounded border pl-3"
+                ref={name}
                 type="text"
                 placeholder="masalan:"
                 id="Nomi"
               />
               <label className="mt-4 block" htmlFor="Nomlari">
-                Nomi
+                Matn
               </label>
               <input
                 className="mt-2 h-[40px] w-[220px] rounded border pl-3"
+                ref={description}
                 type="text"
                 id="Nomlari"
                 placeholder="masalan:"
@@ -42,10 +78,11 @@ function TexnoloModal() {
             </div>
             <div>
               <label className="mt-4 block" htmlFor="Rasm">
-                Rasm
+                Thubnail
               </label>
               <input
                 className="mt-2 h-[40px] w-[220px] rounded border pl-3"
+                ref={thumbnail}
                 type="text"
                 id="Rasm"
                 placeholder=""
@@ -55,6 +92,7 @@ function TexnoloModal() {
               </label>
               <input
                 className="mt-2 h-[40px] w-[220px] rounded border pl-3"
+                ref={link}
                 type="text"
                 id="Video"
                 placeholder=""
@@ -70,4 +108,4 @@ function TexnoloModal() {
   );
 }
 
-export default TexnoloModal
+export default TechnoEdite;

@@ -10,22 +10,18 @@ import Technologies from "../components/Technologies";
 import AboutUs from "../components/AboutUs";
 import Address from "../components/Address";
 import Hero from "../components/Hero";
-// import { useDispatch, useSelector } from "react-redux";
-// import { getToken } from "../slice/token";
-// import { loginAdminStart } from "../slice/auth";
-// import Hometwo from "../components/Hometwo";
+import Zakaz from "../components/modals/Zakaz";
+import ZakazDone from "../components/modals/ZakazDone";
+import { useState } from "react";
 
 function Home() {
-  // const {isLoading} =  useSelector(state => state.auth)
-  // const {token} =  useSelector(state => state.token)
-  // const dispatch = useDispatch()
-  // console.log(token, dispatch(getToken()));
-  // console.log(isLoading, dispatch(loginAdminStart()));
+  const [openZakaz, setOpenZakaz] = useState(false);
+  const [openZakazDone, setOpenZakazDone] = useState(false);
   return (
     <div>
       <section className="hero__full">
-        <Header />
-        <Hero/>
+        <Header setOpenZakaz={setOpenZakaz} />
+        <Hero />
       </section>
       <Statistics />
       {/* <ZoomModal/> */}
@@ -46,16 +42,15 @@ function Home() {
       <div id="aloqa">
         <Footer />
       </div>
-
-
+      {openZakaz && (
+        <Zakaz
+          setOpenZakaz={setOpenZakaz}
+          setOpenZakazDone={setOpenZakazDone}
+        />
+      )}
+      {openZakazDone && <ZakazDone setOpenZakazDone={setOpenZakazDone} />}
     </div>
-
   );
-
-
-
-
-
 }
 
 export default Home;

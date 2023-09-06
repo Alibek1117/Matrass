@@ -3,44 +3,45 @@ import { Link } from "react-router-dom"
 import "./_Modal.scss"
 import { Exit } from "../../assets/style/imgNurjon/Img"
 import Zakaz from "../../assets/style/imgNurjon/Zakaz.png"
+import { CrossBtn } from "../../assets/style/imgs/icons/icons"
 
-const ZakazDone = () => {
+const ZakazDone = ({setOpenZakazDone}) => {
+
+
+  const closeSuccesModal = ()=>{
+    setOpenZakazDone(false);
+  }
+
   return (
-    <>
-     <div className="container done-zakaz">
-      <div className="flex justify-end px-4">
-         <span>
-          <Link to={"/"}>
-            <Exit />
-          </Link>
-
-         </span>
-         
+    <div className="fixed left-[30%] top-1 z-50 shadow-2xl shadow-black">
+      <div className=" done-zakaz relative mx-auto bg-[#F6FBFF]">
+        <div
+          className=" absolute right-0 top-0"
+          onClick={() => closeSuccesModal()}
+        >
+          <CrossBtn />
         </div>
-        <div className="zakaz-title text-center my-3">
+        <div className="zakaz-title my-3 text-center">
           <h1>Arizangiz muvaffaqiyatli yuborildi</h1>
         </div>
         <div className="flex justify-center">
-          
-            <img src={Zakaz} alt="" />
-          
+          <img src={Zakaz} alt="" />
         </div>
         <div className="flex justify-center">
           <div>
-            <p className="zakaz-p">Tez orada operatorlarimiz siz bilan bog’lanishadi</p>
-            <div className="flex justify-center my-3">
-            <button className="zakaz-btn">
-              Ok
-            </button>
-
+            <p className="zakaz-p">
+              Tez orada operatorlarimiz siz bilan bog’lanishadi
+            </p>
+            <div className="my-3 flex justify-center">
+              <button className="zakaz-btn" onClick={() => closeSuccesModal()}>
+                Ok
+              </button>
             </div>
           </div>
         </div>
-
-     </div>
-    
-    </>
-  )
+      </div>
+    </div>
+  );
 }
 
 export default ZakazDone

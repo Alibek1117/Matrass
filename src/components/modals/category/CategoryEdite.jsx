@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { CrossBtn } from "../../assets/style/imgs/icons/icons";
+import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
 import { useState } from "react";
 import { useRef } from "react";
 
@@ -38,7 +38,7 @@ function CategoryAdd({ setCategoryAdd, idEdite, setCategory2  }) {
     //   console.log(category2);
   };
   return (
-    <div className="fixed left-[40%] top-[15%] ">
+    <div className="fixed left-[40%] top-[15%] shadow-2xl shadow-black ">
       <form
         className="relative w-[270px] overflow-hidden rounded bg-slate-300 p-6"
         onSubmit={handleEdite}
