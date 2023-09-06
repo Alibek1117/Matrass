@@ -61,7 +61,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone }) => {
   };
 
   return (
-    <div className="fixed left-[30%] top-1 z-50">
+    <div className="fixed left-[30%] top-1 z-50 shadow-2xl shadow-black">
       <div className="zakaz relative mx-auto w-[420px] rounded-md bg-[#F6FBFF] p-10 ">
         <div
           className="absolute right-0 top-0"
@@ -76,20 +76,22 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone }) => {
         <form onSubmit={handlePostOrder}>
           <div className="my-3 flex justify-center">
             <input
-            ref={userName}
+              ref={userName}
               className="zakaz-input-one w-full p-4 "
               type="text"
               placeholder="Ismingizni yozing"
+              required
             />
           </div>
           <div className=" w-full">
             <div className="zakaz-input-tel flex justify-center ">
               <span className="p-4">+998</span>
               <input
-              ref={userTel}
+                ref={userTel}
                 className="p-4"
                 type="tel"
                 placeholder="raqamingizni yozing"
+                required
               />
             </div>
           </div>
@@ -97,7 +99,12 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone }) => {
             <label className="mt-8 text-[18px] font-[600] text-[#01384D]">
               Mahsulotlarni toifasini tanlang
             </label>
-            <select className="mt-2 w-full p-4" name="nma" id="" ref={productNamee}>
+            <select
+              className="mt-2 w-full p-4"
+              name="nma"
+              id=""
+              ref={productNamee}
+            >
               <option></option>
               {loader && <option>Loading...</option>}
               {category &&

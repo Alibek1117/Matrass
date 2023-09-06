@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 
 function DeleteCategory({id, setDelCategory}) {
@@ -17,9 +19,9 @@ function DeleteCategory({id, setDelCategory}) {
         setDelCategory(false);
     }
   return (
-    <div className="fixed left-[40%] top-[15%] w-[30%] rounded-md bg-[#f5f0e0]  p-6 text-center border-2 border-red-600">
-      <h3 className="font-medium text-xl">Haqiqatdan ham o'chirmoqchimisiz?</h3>
-      <div className="bttns mt-4 flex justify-end space-x-3 me-2">
+    <div className="fixed left-[40%] top-[15%] w-[30%] rounded-md border-2  border-red-600 bg-[#f5f0e0] p-6 text-center shadow-2xl shadow-black">
+      <h3 className="text-xl font-medium">Haqiqatdan ham o'chirmoqchimisiz?</h3>
+      <div className="bttns me-2 mt-4 flex justify-end space-x-3">
         <button
           className="no rounded border bg-red-200 px-6 py-1 font-medium"
           onClick={handleDeleteNo}

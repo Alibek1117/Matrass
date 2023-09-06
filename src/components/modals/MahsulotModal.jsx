@@ -1,98 +1,39 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React, { useRef, useState } from "react";
-import { ImageICons } from "../../../assets/style/imgAdmin/IconAdmin";
-import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
+import React from 'react'
+import { ImageICons } from '../../assets/style/imgAdmin/IconAdmin';
+import { CrossBtn } from '../../assets/style/imgs/icons/icons';
+import { Link } from 'react-router-dom';
 
-function ProductAdd({ setOpenProductAdd, product }) {
-
-  const name = useRef()
-  const category = useRef()
-  const weight = useRef()
-  // const images = useRef()
-  const warranty = useRef()
-  const size = useRef()
-  const capacity = useRef()
-  const body = useRef()
-  const cost = useRef()
-  const newCost = useRef()
-
-  const [products, setProducts]=useState('productlaar')
-
-  const handlePost = (e) => {
-    e.preventDefault();
-    let obj = {
-      name: name.current.value,
-      category: category.current.value,
-      weight: weight.current.value,
-      images: "/home/khaitbek/Downloads/1080.png",
-      is_active: true,
-      warranty: warranty.current.value,
-      size: size.current.value,
-      capacity: capacity.current.value,
-      body: body.current.value,
-      cost: cost.current.value,
-      new_cost: newCost.current.value,
-      discount: false,
-      new: true,
-    };
-    console.log(obj);
-
-    fetch("http://localhost:1212/admin/products/7", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjc1MzU2MTUwfQ.TSJs3Yomp3woiYfoUUwK2azBR0tBBE-Rwtaco33pfP0",
-      },
-      body:JSON.stringify(obj),
-    })
-    .then((res) => res.json())
-    .then((data) => setProducts(data));
-    console.log(products);
-    setOpenProductAdd(false);
-  };
+function MahsulotModal() {
   return (
-    <div
-      className="font-Montserrat     fixed
-    left-[120px] top-16 flex w-[1130px] justify-evenly  border bg-white p-6 shadow-2xl shadow-black "
-    >
-      <div>
+    <div className="font-Montserrat   absolute  top-0 flex w-[1130px]  justify-evenly bg-white p-6 ">
+      <div className="">
         <h3 className="mb-2 text-[18px] font-semibold">Qo'shish</h3>
         <span className="flex  h-[230px] w-[230px] items-center justify-center  rounded bg-[#013d4d2c]">
           <ImageICons />
         </span>
       </div>
       <div className="flex justify-between gap-4">
-        <form className="flex gap-4" onSubmit={handlePost}>
-          <div>
+        <div>
+          <form>
             <label className="block pt-8" htmlFor="Toifalar">
               Toifalar
             </label>
             <select
               className="mt-2 h-[40px] w-[220px] rounded border pl-3 "
-              ref={category}
-              required
               name="Toifalar border-none"
               id="Toifalar"
             >
-              {product ? (
-                product.map((item) => (
-                  <option className=" p-5" value="Model C" key={item.id}>
-                    {item.category}
-                  </option>
-                ))
-              ) : (
-                <option>Loding...</option>
-              )}
+              <option className=" p-5" value="Model C">
+                Model C
+              </option>
             </select>
             <label className="mt-4 block" htmlFor="Tovarnomi">
               Tovar nomi
             </label>
             <input
               className="mt-2 h-[40px] w-[220px] rounded border pl-3"
-              ref={name}
-              required
               type="text"
               placeholder="masalan: Lux Soft Memory"
               id="Tovarnomi"
@@ -102,8 +43,6 @@ function ProductAdd({ setOpenProductAdd, product }) {
             </label>
             <input
               className="mt-2 h-[40px] w-[220px] rounded border pl-3"
-              ref={cost}
-              required
               type="text"
               id="Narxi"
               placeholder="masalan: 20 000"
@@ -113,21 +52,19 @@ function ProductAdd({ setOpenProductAdd, product }) {
             </label>
             <input
               className="mt-2 h-[40px] w-[220px] rounded border pl-3"
-              ref={weight}
-              required
               type="text"
               id="Yuklama"
               placeholder="masalan: 200 kg"
             />
-          </div>
-          <div>
+          </form>
+        </div>
+        <div>
+          <form>
             <label className="mt-8 block " htmlFor="Razmeri">
               Razmeri
             </label>
             <input
               className="mt-2 h-[40px] w-[220px] rounded border pl-3"
-              ref={size}
-              required
               type="text"
               id="Razmeri"
               placeholder="masalan: 200 x 140 x 40"
@@ -141,8 +78,6 @@ function ProductAdd({ setOpenProductAdd, product }) {
             </label>
             <input
               className=" mt-2 h-[40px] w-[220px] rounded border pl-3"
-              ref={warranty}
-              required
               type="text"
               placeholder="masalan: 1 yil"
               id="Kafolat"
@@ -156,8 +91,6 @@ function ProductAdd({ setOpenProductAdd, product }) {
             </label>
             <input
               className="mt-2 h-[40px] w-[220px] rounded border pl-3"
-              ref={capacity}
-              required
               type="text"
               id="Sig’m"
               placeholder="masalan:2"
@@ -167,21 +100,19 @@ function ProductAdd({ setOpenProductAdd, product }) {
             </label>
             <input
               className="mt-2 h-[40px] w-[220px] rounded border pl-3"
-              ref={newCost}
-              required
               type="Text"
               id="Aksiya Narxi"
               placeholder="masalan: 1 200 000"
             />
-          </div>
-          <div>
+          </form>
+        </div>
+        <div>
+          <form>
             <label className="mt-8 block" htmlFor="Ma'lumot">
               Ma'lumot
             </label>
             <textarea
               className="mt-2 h-[127px] w-[220px] rounded border p-3"
-              ref={body}
-              required
               placeholder="info..."
               id="Ma'lumot"
             ></textarea>
@@ -200,14 +131,16 @@ function ProductAdd({ setOpenProductAdd, product }) {
             <button className="mt-[45px] h-[45px] w-[220px] rounded bg-[#01384D] text-white">
               Qo'shish
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-      <div onClick={() => setOpenProductAdd(false)}>
-        <CrossBtn />
+      <div>
+        <Link to="/">
+          <CrossBtn />
+        </Link>
       </div>
     </div>
   );
 }
 
-export default ProductAdd;
+export default MahsulotModal

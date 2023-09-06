@@ -85,6 +85,7 @@ function Header({setOpenZakaz}) {
                 </div>
                 <button className="order__btn mt-4" onClick={openOrder}>Buyurtma berish</button>
               </div>
+            
 
 
             )}

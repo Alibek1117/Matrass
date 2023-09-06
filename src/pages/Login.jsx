@@ -5,7 +5,7 @@ import {
   LoginManicon,
 } from "../assets/style/imgAdmin/IconAdmin";
 import { Link } from "react-router-dom";
-import { data } from "autoprefixer";
+// import { data } from "autoprefixer";
 import { CrossBtn } from "../assets/style/imgs/icons/icons";
 // import { useFetch } from "../hook/useFetch";
 // import { useDispatch, useSelector } from "react-redux";

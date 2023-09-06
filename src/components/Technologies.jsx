@@ -7,7 +7,7 @@ function Technologies() {
     const { data: tech, loader, error } = useFetch(url);
     // console.log(tech);
   return (
-    <div className='container'>
+    <div className="container">
       <div className="home-card">
         <h1 className="home-card-title">Ishlab chiqarish texnologiyalari</h1>
         <div className="home-boxs">
@@ -18,18 +18,18 @@ function Technologies() {
                   <h1>{item.name}</h1>
                 </div>
                 {/* <img src={Memoriform} alt="" /> */}
-               <div>
-                 <iframe
-                  width="407"
-                  height="300"
-                  src={item.link}
-                  title="YouTube video player"
-                  // eslint-disable-next-line react/no-unknown-property
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-               </div>
+                <div className=" overflow-hidden rounded-md">
+                  <iframe
+                    width="407"
+                    height="300"
+                    src={item.link}
+                    title="YouTube video player"
+                    // eslint-disable-next-line react/no-unknown-property
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
                 <div>
                   <p>{item.description}</p>
                 </div>
