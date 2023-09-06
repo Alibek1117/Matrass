@@ -18,7 +18,10 @@ function Hero() {
       <div className="hero container  flex items-center">
         <div className="hero__left">
           <div className="hero__title md:text-5xl">Kechalari sokin dam oling!</div>
-          <div className="categ__btn">
+            <div className="hero__right-two">
+          <img src={bed} alt="bed" />
+        </div>
+          <div className="categ__btn ">
             <div>
               <ArrowRight />
             </div>
