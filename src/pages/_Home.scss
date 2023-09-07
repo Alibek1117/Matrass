@@ -464,7 +464,8 @@ span.ol__span__title {
     display: none;
   }
   .hero__right-two{
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 500px;
   }
   .hero__right{
@@ -529,7 +530,7 @@ span.ol__span__title {
   .home-card{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(1, 2fr);
+    grid-template-columns: repeat(1, 100%);
   }
   .home-boxs{
     display: block;
@@ -601,23 +602,44 @@ span.ol__span__title {
       margin: 0 100px;
     }
     
-    
   }
+  // FOOTER
   .footer{
-    height: 500px;
+    height: 100%;
+    width: 100%;
   }
   .footers{
+    display: block;
+
+    width: 100%;
+    h1{
+      font-size: 33px;
+      text-align: center;
+    }p{
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  .foter{
+    padding: 50px 0;
     display: grid;
-    grid-template-columns: repeat(1 , 1fr);
-    padding: 0;
+    grid-template-columns: repeat(1,1fr);
   }
   .footer-center{
     display: grid;
-    grid-template-columns: repeat(1,1fr);
-      padding: 20px 150px;
+    grid-template-columns: repeat(1,100%);
+     .social{
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+     }
+  
       
       ul{
-        gap: 3px;
+        display: flex;
+        justify-content: center;
+        gap: 13px;
+        padding: 10px 0;
         
         color: var(--title-color, #01384D);
         font-family: Josefin Sans;
@@ -629,10 +651,57 @@ span.ol__span__title {
     }
     
   .footer-bottom{
-    display: grid;grid-template-columns: repeat(1,1fr);
+    display: grid;
+    grid-template-columns: repeat(1,100%);
     justify-content: center;
-    padding-left: 150px;
-    padding-top: 10px;
+    .foter-botom{
+      display: flex;
+      justify-content: center;
+    }
+    .foter-arrow{
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    .foter-vizitka{
+      display: flex;
+      justify-content: center;
+    }
+    
+  }
+
+  // ADRESS
+  .manzillarimiz{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+  }
+  .adress-is {
+    display: block;
+  }
+  .adres-top{
+    padding: 20px 0;
+    display: block;
+    h3{
+      font-size: 30px;
+      text-align: center;
+      padding: 7px 0;
+    }
+    p{
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+  .adres-bottom{
+    display: flex;
+    justify-content: center;
+  }
+  .adres-location{
+    display: flex;
+    justify-content: center;
+
+    
+    
   }
   .statistics {
   margin-top: 90px;
@@ -664,7 +733,7 @@ span.ol__span__title {
  
   
 }
-@media only screen and (max-width:468px) {
+@media only screen and (max-width:500px) {
    .header{
             display: flex;
             justify-content: space-between;
@@ -711,7 +780,8 @@ span.ol__span__title {
 }
     .hero__right-two{
       display: block;
-      width: 380px;
+     
+      width: 300px;
     }
     .hero__right{
       display: none;
@@ -748,5 +818,122 @@ line-height: normal;
           padding: 0;
         }
       }
+    .our__products{
+    display: grid;
+    grid-template-columns: repeat(1 , 300px);
+    .products__title{
+      font-size: 18px;
+    }
+  }
+  .nav__model{
+    ul{
+      display: grid;
+      grid-template-columns: repeat(3 , 1fr);
+      li{
+        font-size: 16px;
+        padding: 0;
+      }
+    }
+  }
+  .aksiya{
+    font-size: 16px;
+    margin: 0;
+    padding: 5px 15px;
+  }
+  
+  .product__card{
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+  }
+  .card__left{
+    width: 100%;
+  }
+  .footer{
+    height: 100%;
+    width: 100%;
+  }
+  .footers{
+    display: block;
+
+    width: 100%;
+    h1{
+      font-size: 28px;
+      text-align: center;
+    }p{
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  .foter{
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+  }
+  .footer-center{
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+     .social{
+      display: flex;
+      justify-content: center;
+      padding: 7px 0;
+     }
+  
+      
+      ul{
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 7px 0;
+        
+        color: var(--title-color, #01384D);
+        font-family: Josefin Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    
+  .footer-bottom{
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    justify-content: center;
+    .foter-botom{
+      display: flex;
+      justify-content: center;
+    }
+    .foter-arrow{
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    .foter-vizitka{
+      display: flex;
+      justify-content: center;
+    }
+    
+  }
+  //ADRESS 
+  .manzillarimiz{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+  }
+  .adress-is {
+    display: block;
+  }
+  .adres-top{
+    padding: 20px 0;
+    display: block;
+    h3{
+      font-size: 30px;
+      text-align: center;
+      padding: 7px 0;
+    }
+    p{
+      text-align: center;
+      font-size: 18px;
+    }
+  }
   
 }
