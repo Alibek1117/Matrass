@@ -16,8 +16,8 @@ function LocatsionModal() {
             <ImageICons />
           </span>
         </div>
+          <form className="flex gap-4 ">
         <div>
-          <form>
             <label className="mt-7 block" htmlFor="Manzil">
               Manzil
             </label>
@@ -40,10 +40,8 @@ function LocatsionModal() {
                 <span className="h-[13px]  w-[13px] rounded-[50px] bg-[#12AF18]"></span>
               </div>
             </div>
-          </form>
         </div>
         <div className="mt-7">
-          <form>
             <label className=" block" htmlFor="Matn">
               Matn
             </label>
@@ -51,11 +49,11 @@ function LocatsionModal() {
               className="mt-2 h-[127px] w-[220px] rounded border p-3"
               id="Matn"
             ></textarea>
-          </form>
           <button className="mt-8 h-[45px] w-[220px] rounded bg-[#01384D] text-white">
             Qo'shish
           </button>
         </div>
+          </form>
       </div>
     </div>
   );

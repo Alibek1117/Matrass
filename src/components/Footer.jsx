@@ -35,7 +35,7 @@ const Footer = () => {
                 onSubmit={ handleVizitka}
                 className=" flex items-center gap-5 "
                 >
-                <div className=" flex items-center justify-center gap-2 rounded-md bg-white ">
+                <div className=" flex items-center justify-center gap-2 rounded-md bg-white pl-[8px]">
                   <span className="tel__code">+998</span>
                   <div className=" h-[12px] w-[1px] bg-slate-600"></div>
                   <input

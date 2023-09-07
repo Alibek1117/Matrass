@@ -447,7 +447,15 @@ span.ol__span__title {
     line-height: normal;
   }
 }
-
+.Navbar__list{
+  transition: calc(0.2s);
+  font-family: Raleway;
+}
+.Navbar__list:hover{
+  transform: scale(1.9);
+  color:#0c5cefc5;
+  border-bottom: 1px solid #0c5cefc5;
+}
 
 //response styles start
 
@@ -467,6 +475,15 @@ span.ol__span__title {
   .statistics{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    .stat__number{
+      color: var(--title-color, #01384d);
+      text-align: center;
+      font-family: Raleway;
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
   }
   .our__products{
     display: grid;

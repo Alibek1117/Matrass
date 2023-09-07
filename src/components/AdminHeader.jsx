@@ -6,10 +6,10 @@ function AdminHeader() {
     <div className=" bg-[#01384D]  ">
       <div className="mx-auto w-[1340px]  text-white">
         <nav className="flex items-center justify-between">
-            <div className="flex h-[70px] w-[220px] items-center justify-center gap-2  border border-black">
-              <IconAdmin />
-              <h3 className="font-sail text-[22px] font-normal ">Matrassue</h3>
-            </div>
+          <div className="flex h-[70px] w-[220px] items-center justify-center gap-2 border-l-0 border-t-0  border border-black">
+            <IconAdmin />
+            <h3 className="font-[sail,Mulish] text-[25px]  ">Matrassue</h3>
+          </div>
 
           <form className="relative">
             <span className="absolute right-5 top-3 ">

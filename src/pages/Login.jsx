@@ -69,7 +69,7 @@ function Login() {
           <h2 className="font-Montserrat pt-5 text-[20px] font-bold">Kirish</h2>
           <form className="pt-[35px]">
             <div className="relative">
-              <span className="absolute left-9 top-3">
+              <span className="absolute left-9 top-4">
                 <LoginManicon />
               </span>
               <input

@@ -111,13 +111,6 @@ function Buyurtmalar() {
           </tr>
         </tbody> */}
       </table>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <Zakaz />
-      <ZakazDone />
     </div>
   );
 }
