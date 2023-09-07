@@ -21,14 +21,18 @@ function Hero() {
             <div className="hero__right-two">
           <img src={bed} alt="bed" />
         </div>
-          <div className="categ__btn ">
+          <div className='flex-categ'>
+            <div className="categ__btn ">
             <div>
               <ArrowRight />
             </div>
-            <span>Kategoriyalar</span>
+            <span className=' ml-7'>Kategoriyalar</span>
           </div>
-          <div className="line">
+          </div>
+          <div className=' flex-line '>
+            <div className="line ">
             <div className="span"></div>
+          </div>
           </div>
         </div>
         <div className="hero__right">

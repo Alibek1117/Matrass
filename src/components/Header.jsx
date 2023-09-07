@@ -57,11 +57,11 @@ function Header({setOpenZakaz}) {
                   <span className="tel">+998 90 123 45 67</span>
                 </div>
 
-                <button className="order__btn mt-4 bg-[#eabf9f] hover:bg-[#c98f6f] text-center py-1 px-4 rounded-full">
+                <button onClick={openOrder} className="order__btn mt-4 bg-[#eabf9f] hover:bg-[#c98f6f] text-center py-1 px-4 rounded-full">
                   Buyurtma berish
                 </button>
 
-                <button className="order__btn mt-4" onClick={openOrder}>Buyurtma berish</button>
+                
 
               </div>
               <div className={`left__bottom ${popoverOpen ? 'hidden' : ''}`}>
@@ -89,12 +89,12 @@ function Header({setOpenZakaz}) {
                   <TelIcon className="w-5 h-5 mr-2" />
                   <span className="tel">+998 90 123 45 67</span>
                 </div>
-                <button className="order__btn ml-4 bg-[#eabf9f] hover:bg-[#c98f6f] text-black py-1 px-4 rounded-full">
+                <button onClick={openOrder} className="order__btn ml-4 bg-[#eabf9f] hover:bg-[#c98f6f] text-black py-1 px-4 rounded-full">
                   Buyurtma berish
                 </button>
               </div>
 
-              <button className="order__btn ml-4" onClick={openOrder}>Buyurtma berish</button>
+             
 
             </div>
           </div>
