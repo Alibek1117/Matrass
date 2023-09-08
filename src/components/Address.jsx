@@ -31,11 +31,13 @@ function Address() {
               </div>
               
               
-                <img
+               <div className='adres-img'>
+                 <img
                   src={Homeabout}
                   alt="addrss"
                   className="h-[230px] w-[420px]"
                 />
+               </div>
                 {/* <img src={item.img} alt="addrss" className="w-[420px] h-[230px]" /> */}
               
             </div>

@@ -206,9 +206,7 @@
   border: 2px solid var(--title-color, #01384d);
   border-radius: 5px;
   background: #fff;
-  img {
-    border-radius: 5px;
-  }
+
 }
 .hometwo-hero {
   display: flex;
@@ -458,6 +456,7 @@ span.ol__span__title {
   .hero__title{
     font-size: 35px;
     padding-bottom: 50px;
+    width: 100%;
     
   }
   .left__bottom{
@@ -539,31 +538,51 @@ span.ol__span__title {
     display: block;
     width: 100%;
   }
+  //HOME_TWO
   .hometwo-hero{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .home-two-top{
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
+  .hero-cloud{
+    display: flex;
+    justify-content: center;
+  }
+  .cloud-hero{
+    display: none;
+  }
   .hometwo-hero-top{
-    display: grid;
-    grid-template-columns: repeat(1 , 2fr);
+    display: block ;
     width: 100%;
     h1{
       color: var(--title-color, #01384D);
       font-family: Josefin Sans;
-      font-size: 28px;
+      font-size: 32px;
       font-style: normal;
       font-weight: 700;
       text-align: left;
       line-height: 36px; /* 128.571% */
+      text-align: center;
+      .br{
+        display: none;
+      }
     }
     p{
       color: var(--title-color, #01384D);
       font-family: Josefin Sans;
       font-size: 16px;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 26px; /* 162.5% */
+      text-align: center;
+    }
+    ul{
+      margin-bottom: 15px;
     }
     ul li{
       color: var(--title-color, #01384D);
@@ -571,35 +590,46 @@ span.ol__span__title {
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
-      line-height: 22px; /* 137.5% */
+      line-height: 17px; /* 137.5% */
+     
     }
   }
-  .home-card-title{
-    color: var(--title-color, #01384D);
-    text-align: center;
-    font-family: Josefin Sans;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px; /* 128.571% */
-    
-  }
+  
   .home-cards{
-    .home-cards-title{
+    width: 100%;
+    .home-two-card{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+    h1{
       color: var(--title-color, #01384D);
       text-align: center;
       font-family: Josefin Sans;
-      font-size: 28px;
+      font-size: 33px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      margin: 3px 0;
+      width: 100%;
+      padding: 30px 0;
     }
     .home-cardss{
-      display: grid;
-      grid-template-columns: repeat(1 , 1fr);
+      display: block;
       width: 100%;
       text-align: center;
-      margin: 0 100px;
+      .home-two-card{
+        display: block;  
+        margin: 30px 0;
+        height: 100%;
+        padding-bottom: 30px;
+        a{
+          text-align: center;
+          padding: 0;
+        }
+        
+      }
     }
     
   }
@@ -671,10 +701,12 @@ span.ol__span__title {
   }
 
   // ADRESS
-  .manzillarimiz{
-    display: block;
-    text-align: center;
-    font-size: 25px;
+  .home-about{
+    h1{
+         font-size: 43px;
+         display: block;
+         text-align: center;
+    }
   }
   .adress-is {
     display: block;
@@ -702,6 +734,36 @@ span.ol__span__title {
 
     
     
+  }
+  .adres-img{
+    display: flex;
+    justify-content: center;
+  }
+
+  // TECHNOLOGIES
+  .home-card{
+    width: 100%;
+    display: block;
+    .home-card-title{
+      font-size: 35px;
+      text-align: center;
+    }
+    .home-box{
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      div h1{
+        text-align: center;
+      }
+      .iframe{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
   .statistics {
   margin-top: 90px;
@@ -914,10 +976,12 @@ line-height: normal;
     
   }
   //ADRESS 
-  .manzillarimiz{
-    display: block;
-    text-align: center;
-    font-size: 25px;
+  .home-about{
+    h1{
+         font-size: 33px;
+         display: block;
+         text-align: center;
+    }
   }
   .adress-is {
     display: block;
@@ -926,7 +990,20 @@ line-height: normal;
     padding: 20px 0;
     display: block;
     h3{
-      font-size: 30px;
+      font-size: 25px;
+      text-align: center;
+      padding: 7px 0;
+    }
+    p{
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+    .adres-top{
+    padding: 20px 0;
+    display: block;
+    h3{
+      font-size: 25px;
       text-align: center;
       padding: 7px 0;
     }
@@ -935,5 +1012,113 @@ line-height: normal;
       font-size: 18px;
     }
   }
+  .adres-bottom{
+    display: flex;
+    justify-content: center;
+  }
+  .adres-location{
+    display: flex;
+    justify-content: center;
+  }
+  .adres-img{
+    display: flex;
+    justify-content: center;
+  }
+  //HOME_TWO
+  .hometwo-hero{
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .home-two-top{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .hero-cloud{
+    display: flex;
+    justify-content: center;
+  }
+  .cloud-hero{
+    display: none;
+  }
+  .hometwo-hero-top{
+    display: block ;
+    width: 100%;
+    h1{
+      color: var(--title-color, #01384D);
+      font-family: Josefin Sans;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      text-align: left;
+      line-height: 36px; /* 128.571% */
+      text-align: center;
+      .br{
+        display: none;
+      }
+    }
+    p{
+      color: var(--title-color, #01384D);
+      font-family: Josefin Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px; /* 162.5% */
+      text-align: center;
+    }
+    ul{
+      margin-bottom: 15px;
+    }
+    ul li{
+      color: var(--title-color, #01384D);
+      font-family: Josefin Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 17px; /* 137.5% */
+     
+    }
+  }
+  
+  .home-cards{
+    width: 100%;
+    .home-two-card{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+    h1{
+      color: var(--title-color, #01384D);
+      text-align: center;
+      font-family: Josefin Sans;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 3px 0;
+      width: 100%;
+      padding: 30px 0;
+    }
+    .home-cardss{
+      display: block;
+      width: 100%;
+      text-align: center;
+      .home-two-card{
+        display: block;  
+        margin: 30px 0;
+        height: 100%;
+        padding-bottom: 30px;
+        a{
+          text-align: center;
+          padding: 0;
+        }
+        
+      }
+    }
+    
+  }
+  
   
 }
