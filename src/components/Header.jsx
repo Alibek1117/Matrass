@@ -95,11 +95,10 @@ function Header({setOpenZakaz}) {
                 </button>
               </div>
 
-<<<<<<< HEAD
               
-=======
+
              
->>>>>>> nurjon
+
 
             </div>
           </div>
