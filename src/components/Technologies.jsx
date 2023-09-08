@@ -18,7 +18,7 @@ function Technologies() {
                   <h1>{item.name}</h1>
                 </div>
                 {/* <img src={Memoriform} alt="" /> */}
-                <div className=" overflow-hidden rounded-md">
+                <div className="iframe overflow-hidden rounded-md">
                   <iframe
                     width="407"
                     height="300"

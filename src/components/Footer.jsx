@@ -26,16 +26,16 @@ const Footer = () => {
         <div className="container mx-auto p-4 px-8 ">
           {!vizitka && (
             <div className="footers ">
-              <div className=" ">
+              <div>
                 <h1>Sizni qiziqtirdimi?</h1>
                 <p>Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz</p>
               </div>
               <div>
                 <form
                 onSubmit={ handleVizitka}
-                className=" flex items-center gap-5 "
+                className=" foter flex items-center justify-between gap-5 "
                 >
-                <div className=" flex items-center justify-center gap-2 rounded-md bg-white ">
+                <div className=" flex items-center justify-center  gap-2 rounded-md bg-white ">
                   <span className="tel__code">+998</span>
                   <div className=" h-[12px] w-[1px] bg-slate-600"></div>
                   <input
@@ -58,7 +58,7 @@ const Footer = () => {
       </div>
 
       <div className="container  ">
-        <div className="footer-center flex justify-between  p-4 py-10">
+        <div className="footer-center flex justify-between ">
           <div>
             <ul className="flex items-center gap-20">
               <a href="#aboutUs" className="footer__nav">
@@ -75,23 +75,23 @@ const Footer = () => {
               </a>
             </ul>
           </div>
-          <div>
+          <div className="social">
             <img src={Social} alt="" />
           </div>
         </div>
         <hr />
         <div className="footer-bottom flex justify-between  p-4">
-          <div>
+          <div className="foter-botom">
             <p className="footer-bottom-title">
               © 2021 Dream Cloud. Barcha huquqlar himoyalangan.
             </p>
           </div>
-          <div>
+          <div className="foter-arrow">
             <button className="Arrow" onClick={handleArrowClick}>
               <Arrow />
             </button>
           </div>
-          <div>
+          <div className="foter-vizitka">
             <img src={vizitkaImg} alt="" />
           </div>
         </div>

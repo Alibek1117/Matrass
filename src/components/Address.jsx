@@ -9,29 +9,37 @@ function Address() {
   return (
     <div className='container'>
       <div className="home-about mt-10  justify-center gap-48" id="address">
-        <h1 className=''>Manzillarimiz</h1>
+        <h1 className='manzillarimiz'>Manzillarimiz</h1>
         {loaderr && <h2>Loading...</h2>}
         {address &&
           address.map((item) => (
-            <div className="flex items-center justify-around" key={item.id}>
-              <div>
+            <div className="adress-is flex items-center justify-around" key={item.id}>
+              <div className='adres-top'>
                 <h3>{item.location && item.location}</h3>
                 <p>{item.destination && item.destination}</p>
                 <a
                   href={item.geolocation && item.geolocation}
-                  className=" mt-4 flex items-center rounded justify-center gap-2 border border-slate-700 px-[50px] py-[10px]"
+                  className="adres-location mt-4 flex items-center rounded justify-center gap-2 border border-slate-700 px-[50px] py-[10px]"
                 >
+                  <div className='adres-location'>
+                    <div className='flex justify-center'>
                   <Img /> <span>Geolokatsiya</span>
+
+                    </div>
+                  </div>
                 </a>
               </div>
-              <div>
-                <img
+              
+              
+               <div className='adres-img'>
+                 <img
                   src={Homeabout}
                   alt="addrss"
                   className="h-[230px] w-[420px]"
                 />
+               </div>
                 {/* <img src={item.img} alt="addrss" className="w-[420px] h-[230px]" /> */}
-              </div>
+              
             </div>
           ))}
       </div>
