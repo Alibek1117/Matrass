@@ -20,6 +20,24 @@ function Customers() {
   // }, []);
 // console.log(contact);
 
+
+var myHeaders = new Headers();
+myHeaders.append(
+  "Authorization",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjc1MzU2MTUwfQ.TSJs3Yomp3woiYfoUUwK2azBR0tBBE-Rwtaco33pfP0",
+);
+
+var requestOptions = {
+  method: "GET",
+  headers: myHeaders,
+  redirect: "follow",
+};
+
+fetch("http://localhost:1212/admin/contact/2", requestOptions)
+  .then((response) => response.json())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
+
   return (
     <div className="m-auto mt-10 w-[1086px]">
       <table className="w-[1086px]  border ">

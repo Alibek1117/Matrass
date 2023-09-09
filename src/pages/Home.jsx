@@ -13,6 +13,8 @@ import Hero from "../components/Hero";
 import Zakaz from "../components/modals/Zakaz";
 import ZakazDone from "../components/modals/ZakazDone";
 import { useState } from "react";
+import ProductAdd from "../components/modals/products/ProductAdd";
+import ProductEdite from "../components/modals/products/ProductEdite";
 
 function Home() {
   const [openZakaz, setOpenZakaz] = useState(false);
@@ -49,6 +51,8 @@ function Home() {
         />
       )}
       {openZakazDone && <ZakazDone setOpenZakazDone={setOpenZakazDone} />}
+      {/* <ProductAdd/> */}
+      {/* <ProductEdite/> */}
     </div>
   );
 }

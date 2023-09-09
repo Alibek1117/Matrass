@@ -4,19 +4,19 @@ import { useRef } from "react";
 
 /* eslint-disable react/no-unescaped-entities */
 function TechnoAdd({ setOpenTechAdd, setTechAdd }) {
-    const name = useRef()
-    const thumbnail = useRef();
-    const link = useRef();
-    const description = useRef();
+  const name = useRef();
+  const thumbnail = useRef();
+  const link = useRef();
+  const description = useRef();
 
-    const handlePost = (e) => {
-      e.preventDefault();
-      setOpenTechAdd(false);
+  const handlePost = (e) => {
+    e.preventDefault();
+    setOpenTechAdd(false);
     let obj = {
       name: name.current.value,
-      thumbnail:thumbnail.current.value,
+      thumbnail: thumbnail.current.value,
       link: link.current.value,
-      description:description.current.value,
+      description: description.current.value,
       isActive: true,
     };
 
@@ -35,7 +35,7 @@ function TechnoAdd({ setOpenTechAdd, setTechAdd }) {
   };
 
   return (
-    <div className=" relative left-[20%] top-[-140px] z-10 w-[580px] bg-white p-10 shadow-2xl shadow-black">
+    <div className=" fixed left-[30%] top-[140px] z-10 w-[580px] bg-white p-10 shadow-2xl shadow-black">
       <div>
         <div
           className="absolute right-0 top-0"
@@ -58,16 +58,18 @@ function TechnoAdd({ setOpenTechAdd, setTechAdd }) {
                 type="text"
                 placeholder="masalan:"
                 id="Nomi"
+                required
               />
               <label className="mt-4 block" htmlFor="Nomlari">
-                Matn
+                Matin
               </label>
               <input
                 className="mt-2 h-[40px] w-[220px] rounded border pl-3"
                 ref={description}
                 type="text"
                 id="Nomlari"
-                placeholder="masalan:"
+                placeholder="Matin"
+                required
               />
               <div className="mt-10 flex w-[220px] items-center justify-between">
                 <p>Navinla</p>
@@ -86,6 +88,7 @@ function TechnoAdd({ setOpenTechAdd, setTechAdd }) {
                 type="text"
                 id="Rasm"
                 placeholder=""
+                required
               />
               <label className="mt-4 block" htmlFor="Video">
                 Video
@@ -95,7 +98,7 @@ function TechnoAdd({ setOpenTechAdd, setTechAdd }) {
                 ref={link}
                 type="text"
                 id="Video"
-                placeholder=""
+                placeholder="Link of video"
               />
               <button className="mt-8 h-[45px] w-[220px] rounded bg-[#01384D] text-white">
                 Qo'shish

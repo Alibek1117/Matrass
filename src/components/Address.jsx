@@ -26,7 +26,7 @@ function Address() {
               </div>
               <div>
                 <img
-                  src={Homeabout}
+                  src={item.images.name}
                   alt="addrss"
                   className="h-[230px] w-[420px]"
                 />

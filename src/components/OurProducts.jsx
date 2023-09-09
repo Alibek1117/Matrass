@@ -7,6 +7,7 @@ function OurProducts() {
   const url = "http://localhost:1212/api/products";
   const {data, loader, error} = useFetch(url)
   const category = data && data.categories;
+  console.log(data);
   // console.log(category[0].category.split(' ').join(''));
   return (
     <section className="our__products">

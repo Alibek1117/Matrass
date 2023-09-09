@@ -3,10 +3,19 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { IconDelete, IconMell,  LocationIcon } from '../../assets/style/imgAdmin/IconAdmin';
-import LocatsionModal from '../modals/LocatsionModal';
+import AddressAdd from '../modals/address/AddressAdd';
+import AddressDelete from '../modals/address/AddressDelete';
+import AddressEdite from '../modals/address/AddressEdite';
 
 function LOcation() {
-
+   const [idDel, setIdDel] = useState();
+   const [idEdite, setIdEdite] = useState();
+   const [openAddressAdd, setOpenAddressAdd] = useState(false);
+   const [addressAdd, setAddressAdd] = useState(false);
+   const [openAddressEdite, setOpenAddressEdite] = useState(false);
+  //  const [openTechEdite, setOpenTechEdite] = useState(false);
+   const [openAddressDel, setOpenAddressDel] = useState(false);
+   const [tech, setTech] = useState([]);
 
    const [location, setLocation] = useState([]);
    useEffect(() => {
@@ -20,9 +29,19 @@ function LOcation() {
      })
        .then((res) => res.json())
        .then((data) => setLocation(data));
-   }, []);
+   }, [addressAdd, openAddressDel, openAddressEdite]);
 
-   console.log(location);
+  //  console.log(location);
+  //  console.log(addressAdd);
+
+   const handleDelete = (id)=>{
+    setIdDel(id)
+    setOpenAddressDel(true)
+   }
+   const handleEdite = (id)=>{
+    setIdEdite(id)
+    setOpenAddressEdite(true)
+   }
 
   return (
     <div className="m-auto mt-10 w-[1086px]">
@@ -45,10 +64,16 @@ function LOcation() {
                   <LocationIcon />
                 </td>
                 <td className="my-4 flex items-center justify-end gap-3 pr-2">
-                  <span className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#E6ECEE]">
+                  <span
+                    className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#E6ECEE]"
+                    onClick={() => handleEdite(item.id)}
+                  >
                     <IconMell />
                   </span>
-                  <span className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#FBE9E9]">
+                  <span
+                    className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#FBE9E9]"
+                    onClick={() => handleDelete(item.id)}
+                  >
                     <IconDelete />
                   </span>
                 </td>
@@ -59,14 +84,26 @@ function LOcation() {
           <h2>Not Found</h2>
         )}
       </table>
-      <div className="mt-10 w-full text-end">
-        <NavLink>
-          <button className="h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white">
-            Qo'shish
-          </button>
-        </NavLink>
+      <div
+        className="mt-10 w-full text-end"
+        onClick={() => setOpenAddressAdd(true)}
+      >
+        <button className="h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white">
+          Qo'shish
+        </button>
       </div>
-      <LocatsionModal/>
+      {openAddressAdd && (
+        <AddressAdd
+          setOpenAddressAdd={setOpenAddressAdd}
+          setAddressAdd={setAddressAdd}
+        />
+      )}
+      {openAddressEdite && (
+        <AddressEdite setOpenAddressEdite={setOpenAddressEdite} idEdite={idEdite} />
+      )}
+      {openAddressDel && (
+        <AddressDelete setOpenAddressDel={setOpenAddressDel} idDel={idDel} />
+      )}
     </div>
   );
 }

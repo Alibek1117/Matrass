@@ -11,8 +11,8 @@ function Mahsulotlar() {
   const [id, setId] = useState();
   const [idEdite, setIdEdite] = useState();
   const [delProduct, setDelProduct] = useState(false);
-  const [openProductAdd, setOpenProductAdd] = useState(false);
   const [openProductEdite, setOpenProductEdite] = useState(false);
+  const [openProductAdd, setOpenProductAdd] = useState(false);
 
   const handleDelete = (id) => {
     setId(id);
@@ -21,6 +21,9 @@ function Mahsulotlar() {
   const handleEdite = (id) => {
     setIdEdite(id);
     setOpenProductEdite(true);
+  };
+  const handleAdd = (id) => {
+    setOpenProductAdd(true);
   };
 
   const [product, setProduct] = useState([]);
@@ -33,7 +36,7 @@ function Mahsulotlar() {
     })
       .then((res) => res.json())
       .then((data) => setProduct(data.products));
-  }, [delProduct]);
+  }, [delProduct, openProductAdd, openProductEdite]);
 
   console.log(product);
 
@@ -68,7 +71,10 @@ function Mahsulotlar() {
                   </div>
                 </td>
                 <td className="my-4 flex items-center justify-end gap-3 pr-2">
-                  <span className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#E6ECEE]" onClick={()=> handleEdite(item.id)}>
+                  <span
+                    className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#E6ECEE]"
+                    onClick={() => handleEdite(item.id)}
+                  >
                     <IconMell />
                   </span>
                   <span
@@ -86,20 +92,23 @@ function Mahsulotlar() {
         )}
       </table>
       <div className="mt-10 w-full text-end">
-        <NavLink>
-          <button className="h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white" onClick={() => setOpenProductAdd(true)}>
-            Qo'shish
-          </button>
-        </NavLink>
+        <button
+          className="h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white"
+          onClick={() => handleAdd()}
+        >
+          Qo'shish
+        </button>
       </div>
       {delProduct && <ProductDelete setDelProduct={setDelProduct} id={id} />}
-      {openProductAdd && <ProductAdd setOpenProductAdd = {setOpenProductAdd} product ={product} />}
-      {openProductEdite && <ProductEdite setOpenProductEdite = {setOpenProductEdite} idEdite ={idEdite} product ={product} />}
-
-      <br />
-      <br />
-      <br />
-      {/* <ProductAdd/> */}
+      {openProductEdite && (
+        <ProductEdite
+          setOpenProductEdite={setOpenProductEdite}
+          idEdite={idEdite}
+        />
+      )}
+      {openProductAdd && (
+        <ProductAdd setOpenProductAdd={setOpenProductAdd}  />
+      )}
     </div>
   );
 }

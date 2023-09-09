@@ -58,28 +58,13 @@ function Header({setOpenZakaz}) {
                 </div>
                 <button className="order__btn mt-4" onClick={openOrder}>Buyurtma berish</button>
               </div>
-<<<<<<< HEAD
-            
-
-
-            )}
-            <div className="left__bottom  ">
-              <div className="tel__number flex items-center">
-                <TelIcon className="w-5 h-5 mr-2" />
-                <span className="tel">+998 90 123 45 67</span>
-=======
               <div className={`left__bottom ${popoverOpen ? 'hidden' : ''}`}>
                 <div className="tel__number flex items-center">
                   <TelIcon className="w-5 h-5 mr-2" />
                   <span className="tel">+998 90 123 45 67</span>
                 </div>
                 <button className="order__btn ml-4">Buyurtma berish</button>
->>>>>>> nurjon
               </div>
-<<<<<<< HEAD
-              <button className="order__btn ml-4" onClick={openOrder}>Buyurtma berish</button>
-=======
->>>>>>> 8d7dcb5abde3778d6f2b1bbe6d294f7a373d08e3
             </div>
           </div>
         </div>

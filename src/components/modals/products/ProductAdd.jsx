@@ -1,70 +1,105 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
+
+
 import React, { useRef, useState } from "react";
 import { ImageICons } from "../../../assets/style/imgAdmin/IconAdmin";
 import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
+import { useFetch } from "../../../hook/useFetch";
 
-function ProductAdd({ setOpenProductAdd, product }) {
+function ProductAdd({ setOpenProductAdd, product}) {
+  const name = useRef();
+  const category = useRef();
+  const weight = useRef();
+  // const images = useRef();
+  const warranty = useRef();
+  const size = useRef();
+  const capacity = useRef();
+  const body = useRef();
+  const cost = useRef();
+  const newCost = useRef();
 
-  const name = useRef()
-  const category = useRef()
-  const weight = useRef()
-  // const images = useRef()
-  const warranty = useRef()
-  const size = useRef()
-  const capacity = useRef()
-  const body = useRef()
-  const cost = useRef()
-  const newCost = useRef()
+   const [img, setImg] = useState("");
+   const handleImg = (e) => {
+     setImg(e.target.files[0]);
+   };
 
-  const [products, setProducts]=useState('productlaar')
+  const [isNew, setIsNew ] = useState(true);
+  const [isActive, setIsActive ] = useState(true);
+
+  const cheekNew = ()=>{
+    setIsNew(!isNew)
+  }
+  const cheekActive = ()=>{
+    setIsActive(!isActive)
+  }
 
   const handlePost = (e) => {
-    e.preventDefault();
-    let obj = {
-      name: name.current.value,
-      category: category.current.value,
-      weight: weight.current.value,
-      images: "/home/khaitbek/Downloads/1080.png",
-      is_active: true,
-      warranty: warranty.current.value,
-      size: size.current.value,
-      capacity: capacity.current.value,
-      body: body.current.value,
-      cost: cost.current.value,
-      new_cost: newCost.current.value,
-      discount: false,
-      new: true,
-    };
-    console.log(obj);
+      e.preventDefault();
+      setOpenProductAdd(false);
 
-    fetch("http://localhost:1212/admin/products/7", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization:
+
+      const myHeaders = new Headers();
+      myHeaders.append(
+        "Authorization",
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjc1MzU2MTUwfQ.TSJs3Yomp3woiYfoUUwK2azBR0tBBE-Rwtaco33pfP0",
-      },
-      body:JSON.stringify(obj),
-    })
-    .then((res) => res.json())
-    .then((data) => setProducts(data));
-    console.log(products);
-    setOpenProductAdd(false);
+      );
+
+      var formdata = new FormData();
+      formdata.append("name", name.current.value);
+      formdata.append("category", category.current.value);
+      formdata.append("weight", weight.current.value);
+      formdata.append("images", img);
+      formdata.append("isActive", isActive );
+      formdata.append("warranty", warranty.current.value);
+      formdata.append("size", size.current.value);
+      formdata.append("capacity", capacity.current.value);
+      formdata.append("body", body.current.value);
+      formdata.append("cost", cost.current.value);
+      formdata.append("newCost", newCost.current.value);
+      formdata.append("discount", newCost.current.value ? true : false);
+      formdata.append("new", isNew);
+
+
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: formdata,
+        redirect: "follow",
+      };
+
+      fetch(
+        "http://localhost:1212/admin/products/1",
+        requestOptions,
+      )
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error));
+
   };
+
+
+  const url = "http://localhost:1212/api/products";
+  const { data, loader, error } = useFetch(url);
+  const categories = data && data.categories;
+
+
+
   return (
     <div
-      className="font-Montserrat     fixed
-    left-[120px] top-16 flex w-[1130px] justify-evenly  border bg-white p-6 shadow-2xl shadow-black "
+      className="font-Montserrat     fixed left-[120px]
+    top-16 flex w-[1130px] justify-evenly rounded-lg  border bg-white p-6 shadow-2xl shadow-black "
     >
-      <div>
-        <h3 className="mb-2 text-[18px] font-semibold">Qo'shish</h3>
-        <span className="flex  h-[230px] w-[230px] items-center justify-center  rounded bg-[#013d4d2c]">
-          <ImageICons />
-        </span>
-      </div>
-      <div className="flex justify-between gap-4">
-        <form className="flex gap-4" onSubmit={handlePost}>
+      <form className="flex gap-8" onSubmit={handlePost}>
+        <div>
+          <h3 className="mb-2 text-[18px] font-semibold">O'zgartirish</h3>
+          <input
+            type="file"
+            className="flex  h-[230px] w-[230px] items-center justify-center  rounded bg-[#013d4d2c]"
+            onChange={handleImg}
+            required
+            name="fileInput"
+          />
+        </div>
+        <div className="flex justify-between gap-4">
           <div>
             <label className="block pt-8" htmlFor="Toifalar">
               Toifalar
@@ -76,9 +111,9 @@ function ProductAdd({ setOpenProductAdd, product }) {
               name="Toifalar border-none"
               id="Toifalar"
             >
-              {product ? (
-                product.map((item) => (
-                  <option className=" p-5" value="Model C" key={item.id}>
+              {categories ? (
+                categories.map((item) => (
+                  <option className=" p-5" value={item.category} key={item.id}>
                     {item.category}
                   </option>
                 ))
@@ -168,7 +203,6 @@ function ProductAdd({ setOpenProductAdd, product }) {
             <input
               className="mt-2 h-[40px] w-[220px] rounded border pl-3"
               ref={newCost}
-              required
               type="Text"
               id="Aksiya Narxi"
               placeholder="masalan: 1 200 000"
@@ -186,23 +220,41 @@ function ProductAdd({ setOpenProductAdd, product }) {
               id="Ma'lumot"
             ></textarea>
             <div className="mt-4 flex items-center">
-              <p>Navinla</p>
-              <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
-                <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
+              <p>New</p>
+              <div
+                className="relative mx-auto flex  h-[17px] w-[38px] items-center rounded-[50px] bg-green-200 p-[0px]"
+                onClick={cheekNew}
+              >
+                <span
+                  className={
+                    isNew
+                      ? "absolute right-0 m-[2px]  h-[13px] w-[13px] rounded-[50px] bg-green-700"
+                      : "absolute left-0 m-[2px]  h-[13px] w-[13px] rounded-[50px] bg-green-400"
+                  }
+                ></span>
               </div>
             </div>
             <div className="mt-4 flex items-center">
               <p>Active</p>
-              <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
-                <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
+              <div
+                className="relative mx-auto flex h-[17px] w-[38px] items-center rounded-[50px] bg-green-200 p-[1px]"
+                onClick={cheekActive}
+              >
+                <span
+                  className={
+                    isActive
+                      ? "absolute right-0 m-[2px]  h-[13px] w-[13px] rounded-[50px] bg-green-700"
+                      : "absolute left-0 m-[2px]  h-[13px] w-[13px] rounded-[50px] bg-green-400"
+                  }
+                ></span>
               </div>
             </div>
             <button className="mt-[45px] h-[45px] w-[220px] rounded bg-[#01384D] text-white">
               Qo'shish
             </button>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
       <div onClick={() => setOpenProductAdd(false)}>
         <CrossBtn />
       </div>
