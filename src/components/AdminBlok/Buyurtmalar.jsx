@@ -28,7 +28,7 @@ function Buyurtmalar() {
       <table className="w-[1086px]  border ">
         <thead className="h-[50px] bg-[#01384D] text-white">
           <tr>
-            <th>ID</th>
+            <th className="pl-10">ID</th>
             <th>ismi</th>
             <th>telefon raqami</th>
             <th>mahsulot nomlari</th>
@@ -40,7 +40,7 @@ function Buyurtmalar() {
           order.map((item) => (
             <tbody className="h-[59px] border text-center" key={item.id}>
               <tr>
-                <td>{item.id}</td>
+                <td className="pl-10">{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.number}</td>
                 <td>{item.product_name}</td>
@@ -60,9 +60,7 @@ function Buyurtmalar() {
             </tr>
           </tbody>
         )}
-       
       </table>
-      
     </div>
   );
 }

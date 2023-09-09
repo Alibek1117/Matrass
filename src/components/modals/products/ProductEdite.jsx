@@ -218,7 +218,7 @@ function ProductEdite({ setOpenProductEdite, idEdite }) {
                   className={
                     isNew
                       ? "absolute right-0 m-[2px]  h-[13px] w-[13px] rounded-[50px] bg-green-700"
-                      : "absolute left-0 m-[2px]  h-[13px] w-[13px] rounded-[50px] bg-green-400"
+                      : "absolute left-0 m-[2px]  h-[13px] w-[13px] rounded-[50px] bg-white"
                   }
                 ></span>
               </div>

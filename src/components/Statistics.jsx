@@ -13,7 +13,7 @@ function Statistics() {
       {
         <section className="statistics container">
           <div className="stat__card">
-            <div className="stat__number">{data && data.experience}</div>
+            <div className="stat__number md:text-xl">{data && data.experience}</div>
             <p className="number__subtitle">yillik tajriba</p>
           </div>
           <div className="stat__card">

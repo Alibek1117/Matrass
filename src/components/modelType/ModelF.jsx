@@ -8,7 +8,7 @@ import Zakaz from "../modals/Zakaz";
 import ZakazDone from "../modals/ZakazDone";
 import ZoomModal from "../modals/ZoomModal";
 
-function ModelD() {
+function ModelF() {
   const [zoom, setZoom] = useState(false);
   const [id, setId] = useState(null);
   const [openZakaz, setOpenZakaz] = useState(false);
@@ -33,13 +33,13 @@ function ModelD() {
   return (
     <>
       <div className="container">
-        <div className="products__title">Toifa: Model D</div>
+        <div className="products__title">Toifa: Model F</div>
         {loader && <h2>Loading...</h2>}
         {error && <h2>{error}</h2>}
         {product &&
           product
             .filter((product) => {
-              return product.category === "Model D";
+              return product.category === "Model F";
             })
             .map((item) => (
               // item.filter(item =>{return item.new_cost})
@@ -134,4 +134,4 @@ function ModelD() {
   );
 }
 
-export default ModelD;
+export default ModelF;

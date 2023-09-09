@@ -9,14 +9,13 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 //ModelTypes
 import All from "./components/modelType/All";
-import ModelAPlus from "./components/modelType/ModelA+";
-import ModelBPlus from "./components/modelType/ModelB+";
-import ModelC from "./components/modelType/ModelC";
-import ModelCPlus from "./components/modelType/ModelC+";
-import ModelD from "./components/modelType/ModelD";
-import ModelYevro from "./components/modelType/ModelYevro";
-import YangiTovarlar from "./components/modelType/RangiTovarlar";
+import "./components/modelType/All";
 import ModelA from "./components/modelType/ModelA";
+import ModelB from "./components/modelType/ModelB";
+import ModelC from "./components/modelType/ModelC";
+import ModelD from "./components/modelType/ModelD";
+import ModelE from "./components/modelType/ModelE";
+import ModelF from "./components/modelType/ModelF";
 import Buyurtmalar from "./components/AdminBlok/Buyurtmalar";
 import Customers from "./components/AdminBlok/Customers";
 import LOcation from "./components/AdminBlok/Location";
@@ -25,6 +24,7 @@ import Texnology from "./components/AdminBlok/Texnology";
 import Toifalar from "./components/AdminBlok/Toifalar";
 import { useState } from "react";
 import NotFound from "./pages/NotFound";
+import { useFetch } from "./hook/useFetch";
 
 function App() {
   const [token, setToken] = useState(
@@ -32,6 +32,11 @@ function App() {
   );
   // const [token, setToken] = useState('');
   const [complate, IsComplate] = useState(false);
+
+  const url = "http://localhost:1212/api/products";
+  const { data, loader, error } = useFetch(url);
+  const category = data && data.categories;
+  //  console.log(category && category[0].join(' '));
 
   const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -42,14 +47,12 @@ function App() {
             element={<Login token={token} setToken={setToken} />}
           />
           <Route index element={<All />} />
-          <Route path="modelA+" element={<ModelAPlus />} />
-          <Route path="modelB+" element={<ModelBPlus />} />
-          <Route path="modelC" element={<ModelC />} />
-          <Route path="modelC+" element={<ModelCPlus />} />
-          <Route path="modelD" element={<ModelD />} />
-          <Route path="modelYevro" element={<ModelYevro />} />
-          <Route path="yangiTovarlar" element={<YangiTovarlar />} />
           <Route path="modelA" element={<ModelA />} />
+          <Route path="modelB" element={<ModelB />} />
+          <Route path="modelC" element={<ModelC />} />
+          <Route path="modelD" element={<ModelD />} />
+          <Route path="modelE" element={<ModelE />} />
+          <Route path="modelF" element={<ModelF />} />
         </Route>
         <Route index element={<Home />} />
         token ?

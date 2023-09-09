@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import './_Header.scss';
 import './_Response.scss';
@@ -30,8 +31,12 @@ function Header({setOpenZakaz}) {
             >
               <IconHeader />
             </button>
-            <div className='flex items-center gap-9 justify-between'>
-              <div className={`popover absolute left-0 top-20 bg-[#eabf9f] z-10    p-4 ${popoverOpen ? '' : 'hidden'} md:static md:w-auto md:border-none md:bg-transparent md:p-0`}>
+            <div className="flex items-center justify-between gap-9">
+              <div
+                className={`popover absolute right-0 top-14 z-10 bg-[#eabf9f] p-4 ${
+                  popoverOpen ? "" : "hidden"
+                } md:static md:w-auto md:border-none md:bg-transparent md:p-0`}
+              >
                 <ul className="md:flex md:items-center md:space-x-4">
                   <li>
                     <a href="#katalog">Katalog</a>
@@ -56,14 +61,49 @@ function Header({setOpenZakaz}) {
                   <TelIcon className="mr-2 h-5 w-5" />
                   <span className="tel">+998 90 123 45 67</span>
                 </div>
-                <button className="order__btn mt-4" onClick={openOrder}>Buyurtma berish</button>
+
+                <button
+                  onClick={openOrder}
+                  className="order__btn mt-4 rounded-full bg-[#eabf9f] px-4 py-1 text-center hover:bg-[#c98f6f]"
+                >
+                  Buyurtma berish
+                </button>
               </div>
-              <div className={`left__bottom ${popoverOpen ? 'hidden' : ''}`}>
-                <div className="tel__number flex items-center">
-                  <TelIcon className="w-5 h-5 mr-2" />
-                  <span className="tel">+998 90 123 45 67</span>
+              <div className={`left__bottom ${popoverOpen ? "hidden" : ""}`}>
+                <div className="tel__number flex items-end gap-6 flex-col" >
+                  <ul className="gap-3 md:flex md:items-center md:space-x-4">
+                    <li>
+                      <a href="#katalog">Katalog</a>
+                    </li>
+                    <li>
+                      <a href="#aksiya">Aksiya</a>
+                    </li>
+                    <li>
+                      <a href="#aboutUs">Biz haqimizda</a>
+                    </li>
+                    <li>
+                      <a href="#address">Manzilimiz</a>
+                    </li>
+                    <li>
+                      <a href="#aloqa">Aloqa</a>
+                    </li>
+                    <li>
+                      <NavLink to="/login">Admin</NavLink>
+                    </li>
+                  </ul>
+                  <div className='flex items-center'>
+                    <div className="flex gap-1">
+                      <TelIcon className="mr-2 h-5 w-5" />
+                      <span className="tel">+998 90 123 45 67</span>
+                    </div>
+                    <button
+                      onClick={openOrder}
+                      className="order__btn ml-4 rounded-full bg-[#eabf9f] px-4 py-1 text-black hover:bg-[#c98f6f]"
+                    >
+                      Buyurtma berish
+                    </button>
+                  </div>
                 </div>
-                <button className="order__btn ml-4">Buyurtma berish</button>
               </div>
             </div>
           </div>
@@ -74,4 +114,3 @@ function Header({setOpenZakaz}) {
 }
 
 export default Header;
-

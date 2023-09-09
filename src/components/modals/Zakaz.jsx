@@ -1,15 +1,13 @@
 import { useRef, useState } from "react";
 
-import { Exit } from "../../assets/style/imgNurjon/Img";
+
 import "./_Modal.scss";
-import { Link } from "react-router-dom";
-import ZakazDone from "./ZakazDone";
 import { CrossBtn } from "../../assets/style/imgs/icons/icons";
 import { useFetch } from "../../hook/useFetch";
-import axios from "axios";
+
 // import { options } from "prettier-plugin-tailwindcss";
 
-const Zakaz = ({ setOpenZakaz, setOpenZakazDone }) => {
+const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
   const [count, setCount] = useState(1); // count o'zgaruvchini va uning setCount funktsiyasini yaratamiz
 
   const handleIncrement = () => {
@@ -25,7 +23,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone }) => {
   const url = "http://localhost:1212/api/products";
   const { data, loader, error } = useFetch(url);
   const category = data && data.products;
-  // console.log(category);
+  // 
 
   const userName = useRef()
   const userTel = useRef()
@@ -73,7 +71,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone }) => {
           <h1>Buyurtma Qilish</h1>
         </div>
 
-        <form onSubmit={handlePostOrder}>
+        <form onSubmit={ handlePostOrder}>
           <div className="my-3 flex justify-center">
             <input
               ref={userName}
@@ -97,7 +95,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone }) => {
           </div>
           <div className="zakaz-form grid grid-cols-1 justify-center text-left">
             <label className="mt-8 text-[18px] font-[600] text-[#01384D]">
-              Mahsulotlarni toifasini tanlang
+              Mahsulotlarni nomini tanlang
             </label>
             <select
               className="mt-2 w-full p-4"
@@ -105,7 +103,9 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone }) => {
               id=""
               ref={productNamee}
             >
-              <option></option>
+              <option>
+                {id ? category && category.filter((item)=>{return item.id == id })[0].name:''}
+              </option>
               {loader && <option>Loading...</option>}
               {category &&
                 category.map((item) => (

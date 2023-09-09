@@ -9,9 +9,10 @@ function AboutUs() {
   return (
     <div className="container">
       <div className="hometwo-hero" id="aboutUs">
-        <div className="hometwo-hero-top mt-4 w-[45%]">
+        <div className="home-two-top">
+          <div className="hometwo-hero-top mt-4 w-[45%]">
           <h1>
-            Dream Cloud <br /> kompaniyasi haqida
+            Dream Cloud <br className="br" /> kompaniyasi haqida
           </h1>
           <p>
             Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a
@@ -25,12 +26,13 @@ function AboutUs() {
             </li>
           </ul>
         </div>
-        <div>
+        </div>
+        <div className="hero-cloud">
           <img src={Cloud} alt="" />
         </div>
       </div>
       <div className="hometwo-hero mt-16">
-        <div>
+        <div className="hero-cloud cloud-hero ">
           <img src={Cloud2} alt="" />
         </div>
         <div className="hometwo-hero-top mt-6  w-[45%]">
@@ -51,6 +53,9 @@ function AboutUs() {
             pharetra et luctus eget ut fames. A cursus elementum egestas eu
             scelerisque id.
           </span>
+        </div>
+        <div className="hero-cloud  hidden">
+          <img src={Cloud2} alt="" />
         </div>
       </div>
       <div className="home-cards">

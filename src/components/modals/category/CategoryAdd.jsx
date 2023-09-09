@@ -4,6 +4,7 @@ import React from "react";
 import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
 import { useState } from "react";
 import { useRef } from "react";
+import { useFetch } from "../../../hook/useFetch";
 // import axios from "axios";
 
 function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
@@ -17,6 +18,12 @@ function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
   const handleCheckbox = () => {
     setCheck(!check);
   };
+
+  const url = "http://localhost:1212/api/products";
+  const { data, loader, error } = useFetch(url);
+  const category = data && data.categories;
+  // console.log(category);
+
   const handlePost = (e) => {
       setCategoryAdd(false)
     let obj = {
@@ -24,19 +31,25 @@ function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
       isActive: check,
     };
     e.preventDefault();
-    
-      fetch("http://localhost:1212/admin/categories", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization:
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
-        },
-        body: JSON.stringify(obj)
-      })
-         .then((res) => res.json())
-         .then((data) => setCategory2(data));
+    const filteredCategory = category.filter(item =>{
+        return item.category === obj.category
+    })
+    {filteredCategory.length > 0
+      ? alert('Kechirasiz! Bu toifa mavjud🙄. Boshqa toifa tanlang.')
+      : fetch("http://localhost:1212/admin/categories", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization:
+              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+          },
+          body: JSON.stringify(obj),
+        })
+          .then((res) => res.json())
+          .then((data) => setCategory2(data));};
+      
   };
+
   return (
     <div className="fixed left-[40%] top-[15%] shadow-2xl shadow-black">
       <form
@@ -46,12 +59,19 @@ function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
         <h2 className="title mb-7 text-3xl font-bold">Qo'shish</h2>
         <label>
           <span className=" text-xl ">Kategoriya nomi:</span>
-          <input
-            className="mt-1 h-10 w-full rounded-md p-3"
+          <select
+            className="mt-1 h-14 w-full rounded-md p-3"
             type="text"
             placeholder="masalan: Model A"
             ref={categoryInput}
-          />
+          >
+            <option value="Model A">Model A</option>
+            <option value="Model B">Model B</option>
+            <option value="Model C">Model C</option>
+            <option value="Model D">Model D</option>
+            <option value="Model E">Model E</option>
+            <option value="Model F">Model F</option>
+          </select>
         </label>
         <div className="mt-6 flex w-full items-center justify-between">
           <h2 className="text-xl">Holat</h2>
