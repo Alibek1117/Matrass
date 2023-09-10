@@ -7,6 +7,7 @@ import { useFetch } from "../../hook/useFetch";
 import Zakaz from "../modals/Zakaz";
 import ZakazDone from "../modals/ZakazDone";
 import ZoomModal from "../modals/ZoomModal";
+import Loader1 from "../loader/Loader1";
 
 function ModelB() {
   const [zoom, setZoom] = useState(false);
@@ -34,7 +35,7 @@ function ModelB() {
     <>
       <div className="container">
         <div className="products__title">Toifa: Model B</div>
-        {loader && <h2>Loading...</h2>}
+        {loader && <Loader1 />}
         {error && <h2>{error}</h2>}
         {product &&
           product
@@ -46,12 +47,14 @@ function ModelB() {
               <div className="product__card flex p-8" key={item.id}>
                 <div className="card__left w-[45%]">
                   <div className="left__top flex items-center">
-                    {/* <span className="type">YANGI MAHSULOT</span> */}
+                    {item.status !== "0" && (
+                      <span className="type">YANGI MAHSULOT</span>
+                    )}
                     <div>
                       {item.new_cost && <span className="aksiya">AKSIYA</span>}
                     </div>
                     <div
-                      className="zoom rounded-full bg-[#D9E1E7]  p-3 "
+                      className="zoom mt-10 rounded-full bg-[#D9E1E7]  p-3 "
                       onClick={() => handleZoom()}
                     >
                       <Zoom />

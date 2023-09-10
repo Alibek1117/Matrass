@@ -31,7 +31,7 @@ $white: #fff;
 #container {
   position: relative;
   transform: scale(0.725);
-  left: 25%;
+  left: 30%;
   display: flex;
   
   
@@ -44,7 +44,7 @@ $white: #fff;
   left: 200px;
   width: 50px;
   height: 15px;
-  background: $white;
+//   background: $white;
 }
 
 .loading-text {
@@ -70,7 +70,7 @@ $white: #fff;
   .letter {
     display: inline-block;
     position: relative;
-    color: $black;
+    color: #01384d;
     letter-spacing: 8px;
     &:nth-child(1) {
       // For the letter "L"

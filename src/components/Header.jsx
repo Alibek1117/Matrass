@@ -37,7 +37,7 @@ function Header({setOpenZakaz}) {
                   popoverOpen ? "" : "hidden"
                 } md:static md:w-auto md:border-none md:bg-transparent md:p-0`}
               >
-                <ul className="md:flex md:items-center md:space-x-4">
+                <ul className=" md:flex md:items-center  md:space-x-4">
                   <li>
                     <a href="#katalog">Katalog</a>
                   </li>
@@ -69,8 +69,8 @@ function Header({setOpenZakaz}) {
                   Buyurtma berish
                 </button>
               </div>
-              <div className={`left__bottom ${popoverOpen ? "hidden" : ""}`}>
-                <div className="tel__number flex items-end gap-6 flex-col" >
+              <div className={`left__bottom  ${popoverOpen ? "hidden" : ""}`}>
+                <div className="tel__number flex flex-col items-end gap-6">
                   <ul className="gap-3 md:flex md:items-center md:space-x-4">
                     <li>
                       <a href="#katalog">Katalog</a>
@@ -91,7 +91,7 @@ function Header({setOpenZakaz}) {
                       <NavLink to="/login">Admin</NavLink>
                     </li>
                   </ul>
-                  <div className='flex items-center'>
+                  <div className="flex items-center">
                     <div className="flex gap-1">
                       <TelIcon className="mr-2 h-5 w-5" />
                       <span className="tel">+998 90 123 45 67</span>

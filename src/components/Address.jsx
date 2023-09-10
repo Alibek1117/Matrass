@@ -1,6 +1,7 @@
 import { useFetch } from '../hook/useFetch';
 import { Img } from '../assets/style/imgNurjon/Img';
 import Homeabout from "../assets/style/imgNurjon/home-about.png";
+import { Link } from 'react-router-dom';
 
 function Address() {
      const urlAddress = "http://localhost:1212/api/address";
@@ -15,10 +16,10 @@ function Address() {
           address.map((item) => (
             <div className="adress-is flex items-center justify-around" key={item.id}>
               <div className='adres-top'>
-                <h3>{item.location && item.location}</h3>
-                <p>{item.destination && item.destination}</p>
-                <a
-                  href={item.geolocation && item.geolocation}
+                <h3>{item && item.location}</h3>
+                <p>{item&& item.destination}</p>
+                <Link
+                  to={item?? item.geolocation}
                   className="adres-location mt-4 flex items-center rounded justify-center gap-2 border border-slate-700 px-[50px] py-[10px]"
                 >
                   <div className='adres-location'>
@@ -27,7 +28,7 @@ function Address() {
 
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
               
               

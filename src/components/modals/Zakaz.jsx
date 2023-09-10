@@ -82,7 +82,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
             />
           </div>
           <div className=" w-full">
-            <div className="zakaz-input-tel flex justify-center ">
+            <div className="zakaz-input-tel flex justify-left">
               <span className="p-4">+998</span>
               <input
                 ref={userTel}

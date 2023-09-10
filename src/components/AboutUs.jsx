@@ -9,29 +9,31 @@ function AboutUs() {
   return (
     <div className="container">
       <div className="hometwo-hero" id="aboutUs">
-        <div className="home-two-top">
+        <div className="home-two-top flex gap-10">
           <div className="hometwo-hero-top mt-4 w-[45%]">
-          <h1>
-            Dream Cloud <br className="br" /> kompaniyasi haqida
-          </h1>
-          <p>
-            Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a
-            est. Habitant adipiscing ut sed pulvinar tellus, ut urna, fermentum:
-          </p>
-          <ul className="home-two-ul">
-            <li>Penatibus viverra gravida rhoncus in.</li>
-            <li>Dolor integer in interdum viverra risus dolor enim.</li>
-            <li>
-              Turpis senectus eu, eget aenean nulla pellentesque sed ut tempor.
-            </li>
-          </ul>
-        </div>
-        </div>
-        <div className="hero-cloud">
-          <img src={Cloud} alt="" />
+            <h1>
+              Dream Cloud <br className="br" /> kompaniyasi haqida
+            </h1>
+            <p>
+              Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor
+              a est. Habitant adipiscing ut sed pulvinar tellus, ut urna,
+              fermentum:
+            </p>
+            <ul className="home-two-ul">
+              <li>Penatibus viverra gravida rhoncus in.</li>
+              <li>Dolor integer in interdum viverra risus dolor enim.</li>
+              <li>
+                Turpis senectus eu, eget aenean nulla pellentesque sed ut
+                tempor.
+              </li>
+            </ul>
+          </div>
+          <div className="hero-cloud">
+            <img src={Cloud} alt="" />
+          </div>
         </div>
       </div>
-      <div className="hometwo-hero mt-16">
+      <div className="hometwo-hero mt-16 flex gap-10">
         <div className="hero-cloud cloud-hero ">
           <img src={Cloud2} alt="" />
         </div>
@@ -91,4 +93,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs
+export default AboutUs;
