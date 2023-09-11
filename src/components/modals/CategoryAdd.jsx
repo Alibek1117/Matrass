@@ -1,8 +1,6 @@
-import React from "react";
 import { CrossBtn } from "../../assets/style/imgs/icons/icons";
 import { useState } from "react";
 import { useRef } from "react";
-import axios from "axios";
 
 function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
   const categoryInput = useRef("");

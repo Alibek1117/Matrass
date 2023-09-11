@@ -1,25 +1,32 @@
-import React from 'react'
+/* eslint-disable react/no-unescaped-entities */
 
-function DeleteCategory({id, setDelCategory}) {
-    const handleDelete =()=>{
-      fetch(`http://localhost:1212/admin/categories/${id}`, {
-        method: "DELETE",
-        headers: {
-          Authorization:
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
-        }
-      });
-      setDelCategory(false)
+import { useState } from "react";
+import Handle from "../../hook/hook";
 
-    //   console.log(id);
-    }
-    const handleDeleteNo =()=>{
-        setDelCategory(false);
-    }
+const [url, setUrl] = useState("http://localhost:1212");
+const [method , setMethod ] = useState("DELETE")
+
+
+function DeleteCategory({ id, setDelCategory }) {
+  const deleteUrl = `${url}/admin/products/${id}`;
+
+
+ {url && (
+     <Handle url={deleteUrl} method={method}  />
+)} 
+
+
+ const handleDelete = () => {
+  setDelCategory(true)
+ }
+
+  const handleDeleteNo = () => {
+    setDelCategory(false);
+  };
   return (
-    <div className="fixed left-[40%] top-[15%] w-[30%] rounded-md bg-[#f5f0e0]  p-6 text-center border-2 border-red-600">
-      <h3 className="font-medium text-xl">Haqiqatdan ham o'chirmoqchimisiz?</h3>
-      <div className="bttns mt-4 flex justify-end space-x-3 me-2">
+    <div className="fixed left-[40%] top-[15%] w-[30%] rounded-md border-2  border-red-600 bg-[#f5f0e0] p-6 text-center">
+      <h3 className="text-xl font-medium">Haqiqatdan ham o'chirmoqchimisiz?</h3>
+      <div className="bttns me-2 mt-4 flex justify-end space-x-3">
         <button
           className="no rounded border bg-red-200 px-6 py-1 font-medium"
           onClick={handleDeleteNo}
@@ -37,4 +44,4 @@ function DeleteCategory({id, setDelCategory}) {
   );
 }
 
-export default DeleteCategory
+export default DeleteCategory;

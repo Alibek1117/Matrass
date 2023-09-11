@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Vizitka() {
   return (
     <div className='vizitka'>

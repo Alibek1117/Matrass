@@ -1,4 +1,3 @@
-import React from "react";
 import { CrossBtn } from "../../assets/style/imgs/icons/icons";
 import { useState } from "react";
 import { useRef } from "react";
