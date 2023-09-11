@@ -35,7 +35,7 @@ function TechnoEdite({ setOpenTechEdite, setTechEdite, idEdite }) {
   };
 
   return (
-    <div className=" relative left-[20%] top-[-140px] z-10 w-[580px] bg-white p-10 shadow-2xl shadow-black">
+    <div className="  fixed left-[30%] top-[140px]  z-10 w-[580px] bg-white p-10 shadow-2xl shadow-black">
       <div>
         <div
           className="absolute right-0 top-0"

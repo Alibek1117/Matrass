@@ -160,7 +160,9 @@
 }
 .home-boxs {
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
+  gap: 20px;
+  overflow-x: auto;
 
   h1 {
     color: var(--title-color, #01384d);
@@ -394,7 +396,7 @@ span.ol__span__title {
     line-height: normal;
     margin-top: 30px;
   }
-  p {
+  p.subtitle {
     color: var(--title-color, #01384d);
     font-family: Raleway;
     font-size: 15px;
@@ -414,7 +416,7 @@ span.ol__span__title {
     line-height: normal;
     padding: 13px 20px;
   }
-  .tel__code {
+  .tel__code,input {
     color: #01384d;
     font-family: Raleway;
     font-size: 16px;

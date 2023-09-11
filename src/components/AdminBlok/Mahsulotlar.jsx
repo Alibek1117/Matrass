@@ -11,8 +11,8 @@ function Mahsulotlar() {
   const [id, setId] = useState();
   const [idEdite, setIdEdite] = useState();
   const [delProduct, setDelProduct] = useState(false);
-  const [openProductAdd, setOpenProductAdd] = useState(false);
   const [openProductEdite, setOpenProductEdite] = useState(false);
+  const [openProductAdd, setOpenProductAdd] = useState(false);
 
   const handleDelete = (id) => {
     setId(id);
@@ -21,6 +21,9 @@ function Mahsulotlar() {
   const handleEdite = (id) => {
     setIdEdite(id);
     setOpenProductEdite(true);
+  };
+  const handleAdd = (id) => {
+    setOpenProductAdd(true);
   };
 
   const [product, setProduct] = useState([]);
@@ -33,7 +36,7 @@ function Mahsulotlar() {
     })
       .then((res) => res.json())
       .then((data) => setProduct(data.products));
-  }, [delProduct]);
+  }, [delProduct, openProductAdd, openProductEdite]);
 
   console.log(product);
 
@@ -48,7 +51,7 @@ function Mahsulotlar() {
             <th>Yuklama</th>
             <th>Razmeri</th>
             <th>Status</th>
-            <th> </th>
+            <th className="mr-10"> </th>
           </tr>
         </thead>
         {product ? (
@@ -63,12 +66,24 @@ function Mahsulotlar() {
                 </td>
                 <td>{item.size}</td>
                 <td>
-                  <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
-                    <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
+                  <div
+                    className="relative mx-auto flex  h-[17px] w-[38px] items-center rounded-[50px] bg-green-200 p-[0px]"
+                    // onClick={cheekNew}
+                  >
+                    <span
+                      className={
+                        item.status !== "0"
+                          ? "absolute right-0 m-[2px]  h-[13px] w-[13px] rounded-[50px] bg-green-700"
+                          : "absolute left-0 m-[2px]  h-[13px] w-[13px] rounded-[50px] bg-white"
+                      }
+                    ></span>
                   </div>
                 </td>
-                <td className="my-4 flex items-center justify-end gap-3 pr-2">
-                  <span className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#E6ECEE]" onClick={()=> handleEdite(item.id)}>
+                <td className="my-4 flex items-center justify-end gap-3 pr-10">
+                  <span
+                    className="flex h-[34px] w-[34px] items-center justify-center rounded bg-[#E6ECEE]"
+                    onClick={() => handleEdite(item.id)}
+                  >
                     <IconMell />
                   </span>
                   <span
@@ -86,20 +101,21 @@ function Mahsulotlar() {
         )}
       </table>
       <div className="mt-10 w-full text-end">
-        <NavLink>
-          <button className="h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white" onClick={() => setOpenProductAdd(true)}>
-            Qo'shish
-          </button>
-        </NavLink>
+        <button
+          className="h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white"
+          onClick={() => handleAdd()}
+        >
+          Qo'shish
+        </button>
       </div>
       {delProduct && <ProductDelete setDelProduct={setDelProduct} id={id} />}
-      {openProductAdd && <ProductAdd setOpenProductAdd = {setOpenProductAdd} product ={product} />}
-      {openProductEdite && <ProductEdite setOpenProductEdite = {setOpenProductEdite} idEdite ={idEdite} product ={product} />}
-
-      <br />
-      <br />
-      <br />
-      {/* <ProductAdd/> */}
+      {openProductEdite && (
+        <ProductEdite
+          setOpenProductEdite={setOpenProductEdite}
+          idEdite={idEdite}
+        />
+      )}
+      {openProductAdd && <ProductAdd setOpenProductAdd={setOpenProductAdd} />}
     </div>
   );
 }

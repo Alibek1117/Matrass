@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Vizitka from "../components/Vizitka";
 import Social from "../assets/style/imgNurjon/social.png";
 import { Arrow } from "../assets/style/imgNurjon/Img";
@@ -9,9 +9,20 @@ import "../index.css";
 const Footer = () => {
 
   const [vizitka, setVizitka] = useState(false)
+  const [telNumber, setTelNumber] = useState('')
+  const [telValid, setTelValid] = useState(false)
+
+  const telRgx =/^[0-9]{9}$/;
+
+  useEffect(()=>{
+    const rusult = telRgx.test(telNumber)
+    setTelValid(rusult);
+    console.log(telValid, telNumber);
+  },[telNumber])
+
   const handleVizitka =(e)=>{
     e.preventDefault()
-    setVizitka(true)
+    setVizitka(telValid? true: false)
     setTimeout(() => {
       setVizitka(false)
     }, 3000);
@@ -28,18 +39,19 @@ const Footer = () => {
             <div className="footers ">
               <div>
                 <h1>Sizni qiziqtirdimi?</h1>
-                <p>Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz</p>
+                <p className="subtitle">Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz</p>
               </div>
               <div>
                 <form
-                onSubmit={ handleVizitka}
+                onSubmit={handleVizitka}
                 className=" foter flex items-center justify-between gap-5 "
                 >
                 <div className=" flex items-center justify-center  gap-2 rounded-md bg-white ">
-                  <span className="tel__code">+998</span>
+                  <span className="tel__code pl-3">+998</span>
                   <div className=" h-[12px] w-[1px] bg-slate-600"></div>
                   <input
-                    className="rounded-md p-2  outline-none"
+                    className="rounded-md p-3  outline-none"
+                    onChange={(e)=>setTelNumber(e.target.value)}
                     type="tel"
                     name="tel"
                     id=""
@@ -50,15 +62,16 @@ const Footer = () => {
                 </div>
                 <button>Yuborish</button>
               </form>
+                {!telValid && telNumber&& <p className="text-red-600 text-xs">Must be 9 numbrs</p>}
             </div>
               </div>
           )}
-          {vizitka && <Vizitka />}
+          {vizitka  && <Vizitka />}
         </div>
       </div>
 
       <div className="container  ">
-        <div className="footer-center flex justify-between ">
+        <div className="footer-center flex justify-between my-5 ">
           <div>
             <ul className="flex items-center gap-20">
               <a href="#aboutUs" className="footer__nav">
