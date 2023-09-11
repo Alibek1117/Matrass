@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap:0px;
     margin-top: 50px;
     width: 180px;
     height: 46px;
@@ -163,6 +163,16 @@
   // justify-content: space-evenly;
   gap: 20px;
   overflow-x: auto;
+  margin-bottom: 30px;
+
+  &::-webkit-scrollbar{
+    // display: none;
+    height:  10px;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(to right, rgb(37, 47, 68), #EABF9F);
+    border-radius: 50px;
+  }
 
   h1 {
     color: var(--title-color, #01384d);
@@ -182,7 +192,7 @@
     font-style: normal;
     font-weight: 300;
     line-height: 26px; /* 144.444% */
-    padding: 20px 0;
+    padding: 20px 0 10px;
   }
   img {
     width: 407px;
@@ -1124,3 +1134,43 @@ line-height: normal;
   
   
 }
+//Animatsiyalr uchuuun
+
+.zakaz-modal{
+  animation-timing-function: ease-in-out;
+  animation-name: zakazModal;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.zakaz-done-modal{
+   animation-timing-function: ease-in-out;
+  animation-name: zakazDoneModal;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+
+@keyframes zakazModal {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes zakazDoneModal {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+

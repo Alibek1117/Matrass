@@ -9,7 +9,16 @@ html{
 .container{
     margin: 0 auto;
     padding:  0 16px;
+    overflow: hidden;
 }
 .dnone{
     display: none;
 }
+
+/* html::-webkit-scrollbar{
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(to bottom,  rgb(37, 47, 68), #EABF9F);
+    border-radius: 50px;
+} */

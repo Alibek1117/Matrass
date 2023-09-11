@@ -13,7 +13,7 @@ const ZakazDone = ({setOpenZakazDone}) => {
   }
 
   return (
-    <div className="fixed left-[30%] top-1 z-50 shadow-2xl shadow-black">
+    <div className="fixed zakaz-done-modal left-[30%] top-1 z-50 shadow-2xl shadow-black">
       <div className=" done-zakaz relative mx-auto bg-[#F6FBFF]">
         <div
           className=" absolute right-0 top-0"

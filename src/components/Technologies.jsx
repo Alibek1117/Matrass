@@ -1,11 +1,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
 import { useFetch } from '../hook/useFetch';
+import { useEffect } from 'react';
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Technologies() {
     const url = "http://localhost:1212/api/technology";
     const { data: tech, loader, error } = useFetch(url);
     // console.log(tech);
+        useEffect(() => {
+          Aos.init();
+        }, []);
+
   return (
     <div className="container">
       <div className="home-card">
@@ -13,7 +21,11 @@ function Technologies() {
         <div className="home-boxs">
           {tech &&
             tech.map((item) => (
-              <div className="home-box" key={item.id}>
+              <div
+                className="home-box"
+                key={item.id}
+                
+              >
                 <div>
                   <h1>{item.name}</h1>
                 </div>

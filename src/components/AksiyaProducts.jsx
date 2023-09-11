@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Karzinka, Zoom } from '../assets/style/imgs/icons/icons';
 import matrasImg from "../assets/style/imgs/matras.png";
 import { useFetch } from '../hook/useFetch';
@@ -7,7 +7,12 @@ import Zakaz from './modals/Zakaz';
 import ZakazDone from './modals/ZakazDone';
 import ZoomModal from './modals/ZoomModal';
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 function AksiyaProducts() {
+
+
 
   const [zoom, setZoom] = useState(false);
   const [id, setId] = useState(null);
@@ -30,6 +35,10 @@ function AksiyaProducts() {
      const product = data && data.products;
     //  console.log(product);
 
+    useEffect(()=>{
+      Aos.init()
+    },[])
+
   return (
     <>
       <div className="container">
@@ -44,7 +53,7 @@ function AksiyaProducts() {
             .map((item) => (
               // item.filter(item =>{return item.new_cost})
               <div className="product__card flex p-8" key={item.id}>
-                <div className="card__left w-[45%]">
+                <div data-aos="zoom-in-right" className="card__left w-[45%]">
                   <div className="left__top flex items-center">
                     {/* <span className="type">YANGI MAHSULOT</span> */}
                     <div>
@@ -63,7 +72,7 @@ function AksiyaProducts() {
                     alt="matras"
                   />
                 </div>
-                <div className="card__right w-[55%]">
+                <div data-aos="zoom-in-left" className="card__right w-[55%]">
                   <h2 className="card__title ">{item && item.name}</h2>
                   <div className="product__info flex gap-20">
                     <div className="info__card">
@@ -112,6 +121,7 @@ function AksiyaProducts() {
                   </div>
                   <button
                     className="order__btn flex items-center"
+                    data-aos="zoom-out-right"
                     onClick={() => handleOrder(item.id)}
                   >
                     <p className="title">Buyurtma Berish</p>

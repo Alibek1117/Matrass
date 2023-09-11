@@ -7,7 +7,9 @@ import { useRef } from "react";
 import { useFetch } from "../../../hook/useFetch";
 // import axios from "axios";
 
-function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
+function CategoryAdd({ setCategoryAdd, setCategory2 }) {
+
+  
   const categoryInput = useRef("");
 //   const [category, setCategory] = useState();
   const [check, setCheck] = useState(true);

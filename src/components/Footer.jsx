@@ -6,6 +6,9 @@ import { Arrow } from "../assets/style/imgNurjon/Img";
 import vizitkaImg from "../assets/style/imgNurjon/vizitka.png"
 import "../index.css";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const Footer = () => {
 
   const [vizitka, setVizitka] = useState(false)
@@ -19,6 +22,10 @@ const Footer = () => {
     setTelValid(rusult);
     console.log(telValid, telNumber);
   },[telNumber])
+
+    useEffect(() => {
+      Aos.init();
+    }, []);
 
   const handleVizitka =(e)=>{
     e.preventDefault()
@@ -37,41 +44,58 @@ const Footer = () => {
         <div className="container mx-auto p-4 px-8 ">
           {!vizitka && (
             <div className="footers ">
-              <div>
+              <div data-aos="fade-right">
                 <h1>Sizni qiziqtirdimi?</h1>
-                <p className="subtitle">Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz</p>
+                <p className="subtitle">
+                  Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz
+                </p>
               </div>
               <div>
                 <form
-                onSubmit={handleVizitka}
-                className=" foter flex items-center justify-between gap-5 "
+                  onSubmit={handleVizitka}
+                  className=" foter flex items-center justify-between gap-5 "
                 >
-                <div className=" flex items-center justify-center  gap-2 rounded-md bg-white ">
-                  <span className="tel__code pl-3">+998</span>
-                  <div className=" h-[12px] w-[1px] bg-slate-600"></div>
-                  <input
-                    className="rounded-md p-3  outline-none"
-                    onChange={(e)=>setTelNumber(e.target.value)}
-                    type="tel"
-                    name="tel"
-                    id=""
-                    placeholder="Raqamingizni yozing"
-                    
-                    
-                  />
-                </div>
-                <button>Yuborish</button>
-              </form>
-                {!telValid && telNumber&& <p className="text-red-600 text-xs">Must be 9 numbrs</p>}
-            </div>
+                  <div
+                    data-aos="fade-down"
+                    className={
+                      !telValid && telNumber
+                        ? " flex items-center justify-center  gap-2 rounded-md border border-red-700 bg-white "
+                        : " flex items-center justify-center  gap-2 rounded-md border border-green-700 bg-white "
+                    }
+                  >
+                    <span className="tel__code pl-3">+998</span>
+                    <div className=" h-[12px] w-[1px] bg-slate-600"></div>
+                    <input
+                      className="rounded-md p-3  outline-none"
+                      onChange={(e) => setTelNumber(e.target.value)}
+                      type="tel"
+                      name="tel"
+                      autoComplete="off"
+                      placeholder="Raqamingizni yozing"
+                    />
+                  </div>
+                  <button data-aos="fade-up">Yuborish</button>
+                </form>
+                {
+                  <p
+                    className={
+                      !telValid && telNumber
+                        ? "text-xs text-red-600 "
+                        : "text-transparent"
+                    }
+                  >
+                    Must be 9 numbrs
+                  </p>
+                }
               </div>
+            </div>
           )}
-          {vizitka  && <Vizitka />}
+          {vizitka && <Vizitka />}
         </div>
       </div>
 
       <div className="container  ">
-        <div className="footer-center flex justify-between my-5 ">
+        <div className="footer-center my-5 flex justify-between ">
           <div>
             <ul className="flex items-center gap-20">
               <a href="#aboutUs" className="footer__nav">
@@ -101,7 +125,7 @@ const Footer = () => {
           </div>
           <div className="foter-arrow">
             <button className="Arrow" onClick={handleArrowClick}>
-              <Arrow />
+              <i className="fa-solid fa-arrow-up fa-bounce text-2xl text-[#01384D]"></i>
             </button>
           </div>
           <div className="foter-vizitka">

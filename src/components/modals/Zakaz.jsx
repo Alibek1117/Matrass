@@ -59,7 +59,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
   };
 
   return (
-    <div className="fixed left-[30%] top-1 z-50 shadow-2xl shadow-black">
+    <div className=" zakaz-modal fixed left-[30%] top-1 z-50 shadow-2xl shadow-black">
       <div className="zakaz relative mx-auto w-[420px] rounded-md bg-[#F6FBFF] p-10 ">
         <div
           className="absolute right-0 top-0"

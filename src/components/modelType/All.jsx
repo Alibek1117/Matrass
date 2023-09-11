@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Karzinka, Zoom } from '../../assets/style/imgs/icons/icons';
 // import './All.scss'
 import matrasImg from '../../assets/style/imgs/matras.png'
@@ -10,7 +10,14 @@ import Zakaz from '../modals/Zakaz';
 import ZakazDone from '../modals/ZakazDone';
 import Loader1 from '../loader/Loader1';
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 function All() {
+
+  useEffect(()=>{
+    Aos.init()
+  },[])
     
   const [zoom, setZoom] = useState(false)
   const [id, setId] = useState(null)
@@ -34,28 +41,52 @@ function All() {
    }
   return (
     <>
-      {loader && <Loader1/>}
+      {loader && <Loader1 />}
       {error && <h2>{error}</h2>}
       {product &&
         product.map((item) => (
           <div className="product__card flex p-8" key={item.id}>
             <div className="card__left w-[45%]">
               <div className="left__top flex items-center">
-                {item.status !== "0" && <span className="type">YANGI MAHSULOT</span>}
-                {item.new_cost && <span className="aksiya">AKSIYA</span>}
+                {item.status !== "0" && (
+                  <span
+                    data-aos="fade-down-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"
+                    className="type"
+                  >
+                    YANGI MAHSULOT
+                  </span>
+                )}
+                {item.new_cost && (
+                  <span data-aos="fade-down-right" className="aksiya">
+                    AKSIYA
+                  </span>
+                )}
                 <div
-                  className="zoom rounded-full bg-[#D9E1E7]  p-3 mt-10"
+                  className="zoom mt-10 rounded-full  bg-[#D9E1E7] p-3"
+                  data-aos="fade-down-right"
                   onClick={() => handleZoom()}
                 >
                   <Zoom />
                 </div>
               </div>
-              <img className="mt-16" src={matrasImg} alt="matras" />
+              <img
+                data-aos="fade-up-right"
+                className="mt-16"
+                src={matrasImg}
+                alt="matras"
+              />
             </div>
             <div className="card__right w-[55%]">
-              <h2 className="card__title ">{item && item.name}</h2>
-              <div className="product__info flex gap-20">
-                <div className="info__card">
+              <h2 data-aos="fade-down-left" className="card__title ">
+                {item && item.name}
+              </h2>
+              <div
+                data-aos="fade-down-left"
+                className="product__info flex gap-20"
+              >
+                <div data-aos="fade-down-left" className="info__card">
                   <p>Yuklama</p>
                   <h3 className="info__number">
                     <span className="number">{item.weight}</span> <sub>kg</sub>
@@ -81,8 +112,10 @@ function All() {
                   </h3>
                 </div>
               </div>
-              <p className="card__subtitle">{item.body}</p>
-              <div className="cost">
+              <p data-aos="fade-down-left" className="card__subtitle">
+                {item.body}
+              </p>
+              <div data-aos="fade-up-left" className="cost">
                 <span className="cost__title">Narxi</span>
                 {item.new_cost ? (
                   <h2 className="cost__quantity">
@@ -99,6 +132,7 @@ function All() {
                 )}
               </div>
               <button
+                data-aos="fade-up-left"
                 className="order__btn flex items-center"
                 onClick={() => handleOrder(item.id)}
               >

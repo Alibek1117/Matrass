@@ -14,7 +14,7 @@ function Admin() {
           <div className=" ">
             <AdminBtn />
           </div>
-          <div className=" h-[85vh] w-[100%] bg-white ">
+          <div className=" w-[100%] bg-white ">
             <Outlet />
           </div>
         </div>

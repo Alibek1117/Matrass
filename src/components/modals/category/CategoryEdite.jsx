@@ -36,8 +36,8 @@ function CategoryAdd({ setCategoryAdd, idEdite, setCategory2  }) {
     {
       filteredCategory.length > 0
         ? alert("Kechirasiz! Bu toifa mavjud🙄. Boshqa toifa tanlang.")
-        : fetch("http://localhost:1212/admin/categories", {
-            method: "POST",
+        : fetch("http://localhost:1212/admin/categories/1", {
+            method: "PUT",
             headers: {
               "Content-Type": "application/json",
               Authorization:
