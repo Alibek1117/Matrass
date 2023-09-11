@@ -15,8 +15,14 @@ function AboutUs() {
      }, []);
   return (
     <div className="container">
+
+      <div className="hometwo-hero " id="aboutUs">
+        <div className="heroes">
+          <div className="home-two-top">
+
       <div className="hometwo-hero" id="aboutUs">
         <div className="home-two-top flex gap-10">
+
           <div className="hometwo-hero-top mt-4 w-[45%]">
             <h1
               data-aos="fade-right"
@@ -58,6 +64,7 @@ function AboutUs() {
           >
             <img src={Cloud} alt="" />
           </div>
+        </div>
         </div>
       </div>
       <div className="hometwo-hero mt-16 flex gap-10">
@@ -147,6 +154,8 @@ function AboutUs() {
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import React from "react";
-
 function ProductDelete({ id, setDelProduct }) {
   const handleDeleteYes = () => {
     fetch(`http://localhost:1212/admin/products/${id}`, {
@@ -10,7 +8,7 @@ function ProductDelete({ id, setDelProduct }) {
       },
     });
     setDelProduct(false);
-      console.log(id);
+    console.log(id);
   };
   const handleDeleteNo = () => {
     setDelProduct(false);
