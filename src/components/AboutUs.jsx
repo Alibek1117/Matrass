@@ -8,8 +8,9 @@ import Card3 from "../assets/style/imgNurjon/Card3.png";
 function AboutUs() {
   return (
     <div className="container">
-      <div className="hometwo-hero" id="aboutUs">
-        <div className="home-two-top">
+      <div className="hometwo-hero " id="aboutUs">
+        <div className="heroes">
+          <div className="home-two-top">
           <div className="hometwo-hero-top mt-4 w-[45%]">
           <h1>
             Dream Cloud <br className="br" /> kompaniyasi haqida
@@ -29,6 +30,7 @@ function AboutUs() {
         </div>
         <div className="hero-cloud">
           <img src={Cloud} alt="" />
+        </div>
         </div>
       </div>
       <div className="hometwo-hero mt-16">
