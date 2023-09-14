@@ -26,7 +26,7 @@ function AboutUs() {
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                   >
-                    Dream Cloudd <br className="br" /> kompaniyasi haqida
+                    Dream Cloud <br className="br" /> kompaniyasi haqida
                   </h1>
                   <p
                     data-aos="fade-right"
