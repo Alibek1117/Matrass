@@ -19,7 +19,7 @@ function AboutUs() {
         <div className="heroes">
           <div className="home-two-top">
             <div className="hometwo-hero" id="aboutUs">
-              <div className="home-two-top flex gap-10">
+              <div className="home-two-top flex gap-10 ">
                 <div className="hometwo-hero-top mt-4 w-[45%]">
                   <h1
                     data-aos="fade-right"

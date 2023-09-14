@@ -21,7 +21,13 @@ function Technologies() {
         <div className="home-boxs">
           {tech &&
             tech.map((item) => (
-              <div data-aos="flip-up" className="home-box" key={item.id}>
+              <div
+                data-aos="flip-up"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                className="home-box"
+                key={item.id}
+              >
                 <div>
                   <h1>{item.name}</h1>
                 </div>

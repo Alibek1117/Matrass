@@ -57,7 +57,7 @@ function All() {
                     data-aos="fade-down-right"
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
-                    className="type"
+                    className="type block "
                   >
                     YANGI MAHSULOT
                   </span>

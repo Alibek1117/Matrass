@@ -56,7 +56,7 @@ const Footer = () => {
                   className=" foter flex items-center justify-between gap-5 "
                 >
                   <div
-                    data-aos="fade-down"
+                    // data-aos="fade-down"
                     className={
                       !telValid && telNumber
                         ? " flex items-center justify-center  gap-2 rounded-md border border-red-700 bg-white "
@@ -81,7 +81,7 @@ const Footer = () => {
                     className={
                       !telValid && telNumber
                         ? "text-xs text-red-600 "
-                        : "text-transparent"
+                        : "text-xs text-[#EABF9F]"
                     }
                   >
                     Must be 9 numbrs

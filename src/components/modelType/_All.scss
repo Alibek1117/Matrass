@@ -154,3 +154,15 @@
     line-height: normal;
   }
 }
+
+
+@media only  screen  and (max-width:640px) {
+   .card__left {
+  position: relative;
+  .zoom {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+}
+}

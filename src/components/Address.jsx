@@ -34,23 +34,23 @@ function Address() {
               </div>
 
               <div className="adres-img">
-                {/* <img
+                <img
                   src={Homeabout}
                   alt="addrss"
                   className="h-[230px] w-[420px]"
-                /> */}
+                />
 
-                {JSON.parse(item.images)?.length > 0 &&
+                {/* {JSON.parse(item.images)?.length > 0 &&
                   JSON.parse(item.images)?.map((image) => {
                     return (
                       <img
                         data-aos="fade-up-left"
                         className="mt-16 rounded-md"
-                        src={`http://localhost:1212/address/${image}`}
+                        src={`http://localhost:1212/api/address/${image}`}
                         alt='address'
                       />
                     );
-                  })}
+                  })} */}
               </div>
               {/* <img src={item.img} alt="addrss" className="w-[420px] h-[230px]" /> */}
             </div>

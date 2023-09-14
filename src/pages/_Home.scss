@@ -568,6 +568,7 @@ span.ol__span__title {
   }
   .home-two-top{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
   }
@@ -837,6 +838,7 @@ span.ol__span__title {
       .stat__number{
         font-size: 20px;
       }
+
       .statistics {
   margin-top: 50px;
   display: grid;
@@ -904,10 +906,11 @@ line-height: normal;
       }
     .our__products{
     display: grid;
-    grid-template-columns: repeat(1 , 300px);
+    // grid-template-columns: repeat(1 , 300px);
     .products__title{
       font-size: 18px;
     }
+   
   }
   .nav__model{
     ul{
