@@ -59,8 +59,8 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
   };
 
   return (
-    <div className=" zakaz-modal fixed left-[30%] top-1 z-50 shadow-2xl shadow-black">
-      <div className="zakaz relative mx-auto w-[420px] rounded-md bg-[#F6FBFF] p-10 ">
+    <div className=" zakaz-modal fixed left-[10%] sm:left-[30%] top-0 sm:top-1 z-50 shadow-2xl shadow-black">
+      <div className="zakaz relative mx-auto w-[360px] sm:w-[420px] rounded-md bg-[#F6FBFF] p-10 ">
         <div
           className="absolute right-0 top-0"
           onClick={() => setOpenZakaz(false)}
@@ -86,7 +86,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
               <span className="p-4">+998</span>
               <input
                 ref={userTel}
-                className="p-4"
+                className="p-4 w-full"
                 type="tel"
                 placeholder="raqamingizni yozing"
                 required
@@ -94,11 +94,11 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
             </div>
           </div>
           <div className="zakaz-form grid grid-cols-1 justify-center text-left">
-            <label className="mt-8 text-[18px] font-[600] text-[#01384D]">
+            <label className="mt-4 sm:mt-6 text-[18px] font-[600] text-[#01384D]">
               Mahsulotlarni nomini tanlang
             </label>
             <select
-              className="mt-2 w-full p-4"
+              className="mt-1 sm:mt-2 w-full p-4"
               name="nma"
               id=""
               ref={productNamee}
@@ -117,20 +117,20 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
           </div>
 
           <div className=" mt-4">
-            <div className="mt-6 text-[18px] font-[600] text-[#01384D]">
+            <div className="mt-3 sm:mt-6 text-[18px] font-[600] text-[#01384D]">
               Miqdorni kiriting
             </div>
-            <div className="zakaz-button mt-2 w-full ">
+            <div className="zakaz-button mt-1 sm:mt-2 w-full ">
               <span className="w-[25%] p-3" onClick={handleDecrement}>
                 -
               </span>
-              <span className="w-[50%] p-3">{count}</span>
-              <span className="w-[25%] p-3" onClick={handleIncrement}>
+              <span className="w-[50%] p-2">{count}</span>
+              <span className="w-[25%] p-2" onClick={handleIncrement}>
                 +
               </span>
             </div>
           </div>
-          <div className="buttons mt-12 flex justify-center">
+          <div className="buttons mt-8 flex justify-center">
             <button type="submit">Yuborish</button>
           </div>
         </form>

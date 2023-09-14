@@ -156,6 +156,16 @@
 }
 
 
+@media only  screen  and (max-width:1280px) {
+   .card__left {
+  position: relative;
+  .zoom {
+    position: absolute;
+    right: 30px;
+    top: 5px;
+  }
+}
+}
 @media only  screen  and (max-width:640px) {
    .card__left {
   position: relative;

@@ -13,8 +13,8 @@ const ZakazDone = ({setOpenZakazDone}) => {
   }
 
   return (
-    <div className="fixed zakaz-done-modal left-[30%] top-1 z-50 shadow-2xl shadow-black">
-      <div className=" done-zakaz relative mx-auto bg-[#F6FBFF]">
+    <div className="zakaz-done-modal fixed left-[10%] top-1 z-50 shadow-2xl shadow-black sm:left-[30%]">
+      <div className=" done-zakaz relative mx-auto w-[360px] bg-[#F6FBFF]  sm:w-[420px]">
         <div
           className=" absolute right-0 top-0"
           onClick={() => closeSuccesModal()}
@@ -32,7 +32,7 @@ const ZakazDone = ({setOpenZakazDone}) => {
             <p className="zakaz-p">
               Tez orada operatorlarimiz siz bilan bog’lanishadi
             </p>
-            <div className="my-3 flex justify-center">
+            <div className="my-2 flex justify-center">
               <button className="zakaz-btn" onClick={() => closeSuccesModal()}>
                 Ok
               </button>
