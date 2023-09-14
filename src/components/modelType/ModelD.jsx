@@ -60,11 +60,16 @@ function ModelD() {
                       <Zoom />
                     </div>
                   </div>
-                  <img
-                    className="mt-16 md:justify-center"
-                    src={matrasImg}
-                    alt="matras"
-                  />
+                  {JSON.parse(item.product_images)?.length > 0 &&
+                    JSON.parse(item.product_images)?.map((image) => {
+                      return (
+                        <img
+                          data-aos="fade-up-right"
+                          className="mt-16"
+                          src={`http://localhost:1212/products/${image}`}
+                        />
+                      );
+                    })}
                 </div>
                 <div className="card__right w-[55%]">
                   <h2 className="card__title ">{item && item.name}</h2>

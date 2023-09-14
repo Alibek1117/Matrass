@@ -84,7 +84,7 @@ function Toifalar() {
         <div className="mt-10 w-full text-end">
           <button
             onClick={addToifa}
-            className="btn h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white"
+            className="btn h-[40px] w-[135] rounded border bg-[#01384D] px-7  text-white"
           >
             Qo'shish
           </button>

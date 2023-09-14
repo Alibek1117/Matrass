@@ -27,5 +27,3 @@ const useFetch = (url) => {
 };
 
 export { useFetch };
-
-

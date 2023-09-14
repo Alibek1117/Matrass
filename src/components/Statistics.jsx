@@ -3,6 +3,9 @@ import {  useEffect } from "react";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Loader1 from './loader/Loader1';
+import Error from './loader/Error';
+import Loader2 from './loader/Loader2';
 
 function Statistics() {
 
@@ -12,13 +15,12 @@ function Statistics() {
 
     const { data, loader, error } = useFetch(
       "http://localhost:1212/api/statistics",
-    );
+    ); 
     // console.log(data);
   return (
-    // {loader  <h2>Loading...</h2>}
     <>
-      {loader && <h2>Loading...</h2>}
-      {error && <h2>{error}</h2>}
+      {loader && <Loader2/>}
+      {error && <h2 className='mt-10 flex justify-center'>Something is wrong😰</h2>}
       {
         <section className="statistics container">
           <div
@@ -62,7 +64,7 @@ function Statistics() {
         </section>
       }
     </>
-  );
+  )
 }
 
 export default Statistics

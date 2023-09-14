@@ -19,6 +19,19 @@ import ProductEdite from "../components/modals/products/ProductEdite";
 
 function Home() {
 
+  // function primeInRange(n1, n2) {
+  //   for (let i = n1; i <= n2; i++) {
+  //     for (let j = 2; j < n2 / 2; j++) {
+  //       if (i % j != 0) {
+  //         return true;
+  //       } else {
+  //         false;
+  //       }
+  //     }
+  //   }
+  // }
+  // console.log(primeInRange(10, 12));
+
 
   const [openZakaz, setOpenZakaz] = useState(false);
   const [openZakazDone, setOpenZakazDone] = useState(false);

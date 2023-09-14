@@ -21,11 +21,7 @@ function Technologies() {
         <div className="home-boxs">
           {tech &&
             tech.map((item) => (
-              <div
-                className="home-box"
-                key={item.id}
-                
-              >
+              <div data-aos="flip-up" className="home-box" key={item.id}>
                 <div>
                   <h1>{item.name}</h1>
                 </div>

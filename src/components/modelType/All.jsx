@@ -9,6 +9,7 @@ import { useFetch } from '../../hook/useFetch';
 import Zakaz from '../modals/Zakaz';
 import ZakazDone from '../modals/ZakazDone';
 import Loader1 from '../loader/Loader1';
+import Error from '../loader/Error';
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -20,6 +21,7 @@ function All() {
   },[])
     
   const [zoom, setZoom] = useState(false)
+  const [zoomId, setZoomId] = useState()
   const [id, setId] = useState(null)
   const [openZakaz, setOpenZakaz] = useState(false)
   const [openZakazDone, setOpenZakazDone] = useState(false)
@@ -28,10 +30,11 @@ function All() {
    const url = "http://localhost:1212/api/products";
    const { data, loader, error } = useFetch(url);
    const product = data && data.products;
-  //  console.log(product);
+   console.log(product);
 
-   const handleZoom = (e) => {
-    console.log(e);
+   const handleZoom = (id) => {
+    setZoomId(id)
+    // console.log(e);
     setZoom(true)
    }
    const handleOrder = (id) => {
@@ -39,10 +42,11 @@ function All() {
     setOpenZakaz(true)
     setId(id)
    }
+   
   return (
     <>
       {loader && <Loader1 />}
-      {error && <h2>{error}</h2>}
+      {error && <Error/>}
       {product &&
         product.map((item) => (
           <div className="product__card flex p-8" key={item.id}>
@@ -66,17 +70,28 @@ function All() {
                 <div
                   className="zoom mt-10 rounded-full  bg-[#D9E1E7] p-3"
                   data-aos="fade-down-right"
-                  onClick={() => handleZoom()}
+                  onClick={() => handleZoom(item.id)}
                 >
                   <Zoom />
                 </div>
               </div>
-              <img
+              {/* <img
                 data-aos="fade-up-right"
                 className="mt-16"
                 src={matrasImg}
+                
                 alt="matras"
-              />
+              /> */}
+
+              {JSON.parse(item.product_images)?.length > 0 &&
+                JSON.parse(item.product_images)?.map((image) => {
+                  return (
+                    <img data-aos="fade-up-right"
+                      className="mt-16"
+                      src={`http://localhost:1212/products/${image}`}
+                    />
+                  );
+                })}
             </div>
             <div className="card__right w-[55%]">
               <h2 data-aos="fade-down-left" className="card__title ">
@@ -143,7 +158,7 @@ function All() {
           </div>
         ))}
 
-      {zoom && <ZoomModal setZoom={setZoom} />}
+      {zoom && <ZoomModal setZoom={setZoom} zoomId = {zoomId} product = {product} />}
       {openZakaz && (
         <Zakaz
           setOpenZakaz={setOpenZakaz}

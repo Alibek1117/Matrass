@@ -102,7 +102,7 @@ function Mahsulotlar() {
       </table>
       <div className="mt-10 w-full text-end">
         <button
-          className="h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white"
+          className="h-[40px] w-[135] rounded border bg-[#01384D] px-7  text-white"
           onClick={() => handleAdd()}
         >
           Qo'shish

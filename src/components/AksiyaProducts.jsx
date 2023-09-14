@@ -9,18 +9,21 @@ import ZoomModal from './modals/ZoomModal';
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Error from './loader/Error';
 
 function AksiyaProducts() {
 
 
 
   const [zoom, setZoom] = useState(false);
+  const [zoomId, setZoomId] = useState();
   const [id, setId] = useState(null);
   const [openZakaz, setOpenZakaz] = useState(false);
   const [openZakazDone, setOpenZakazDone] = useState(false);
 
-   const handleZoom = (e) => {
-     console.log(e);
+   const handleZoom = (id) => {
+    setZoomId(id)
+    //  console.log(e);
      setZoom(true);
    };
 
@@ -44,7 +47,7 @@ function AksiyaProducts() {
       <div className="container">
         <div className="products__title">Aksiyadagi mahsulotlar</div>
         {loader && <h2>Loading...</h2>}
-        {error && <h2>{error}</h2>}
+        {error && <Error/>}
         {product &&
           product
             .filter((product) => {
@@ -61,16 +64,25 @@ function AksiyaProducts() {
                     </div>
                     <div
                       className="zoom rounded-full bg-[#D9E1E7]  p-3 "
-                      onClick={() => handleZoom()}
+                      onClick={() => handleZoom(item.id)}
                     >
                       <Zoom />
                     </div>
                   </div>
-                  <img
+                  {/* <img
                     className="mt-16 md:justify-center"
                     src={matrasImg}
                     alt="matras"
-                  />
+                  /> */}
+                  {JSON.parse(item.product_images)?.length > 0 &&
+                    JSON.parse(item.product_images)?.map((image) => {
+                      return (
+                        <img
+                          className="mt-16"
+                          src={`http://localhost:1212/products/${image}`}
+                        />
+                      );
+                    })}
                 </div>
                 <div data-aos="zoom-in-left" className="card__right w-[55%]">
                   <h2 className="card__title ">{item && item.name}</h2>
@@ -130,7 +142,7 @@ function AksiyaProducts() {
                 </div>
               </div>
             ))}
-        {zoom && <ZoomModal setZoom={setZoom} />}
+        {zoom && <ZoomModal setZoom={setZoom} zoomId ={zoomId} product = {product} />}
         {openZakaz && (
           <Zakaz
             setOpenZakaz={setOpenZakaz}

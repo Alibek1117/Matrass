@@ -16,7 +16,7 @@ function AdminHeader() {
               <Iconsearch />
             </span>
             <input
-              className=" h-[40px]  w-[400px] rounded-[7px] p-2"
+              className=" h-[40px]  w-[400px] rounded-[7px] text-black p-2"
               placeholder="User"
               type="text"
             />

@@ -88,7 +88,7 @@ function LOcation() {
         className="mt-10 w-full text-end"
         onClick={() => setOpenAddressAdd(true)}
       >
-        <button className="h-[40px] w-[135] rounded border bg-[#01384D] px-7 py-2 text-white">
+        <button className="h-[40px] w-[135] rounded border bg-[#01384D] px-7  text-white">
           Qo'shish
         </button>
       </div>
