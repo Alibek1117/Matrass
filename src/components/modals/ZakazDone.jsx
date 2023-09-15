@@ -21,7 +21,7 @@ const ZakazDone = ({setOpenZakazDone}) => {
         >
           <CrossBtn />
         </div>
-        <div className="zakaz-title my-3 text-center">
+        <div className="zakaz-title my-2 mt-0 text-center">
           <h1>Arizangiz muvaffaqiyatli yuborildi</h1>
         </div>
         <div className="flex justify-center">
