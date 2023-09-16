@@ -61,10 +61,13 @@ function Login() {
 
   return (
     <>
-      <div className="container fixed left-0 right-0 top-0 z-30 h-full w-full bg-white">
-        <div className="mx-auto mt-28 h-[332px] w-[330px] rounded border  text-center relative ">
-          <Link to="/" className=" right-0 rounded overflow-hidden  font-mono absolute">
-            <CrossBtn/>
+      <div className="container  fixed left-0 right-0 top-0 z-30 h-full w-full bg-white">
+        <div className="relative mx-auto mt-28  w-[330px] rounded border   text-center ">
+          <Link
+            to="/"
+            className=" absolute right-0 overflow-hidden  rounded font-mono"
+          >
+            <CrossBtn />
           </Link>
           <h2 className="font-Montserrat pt-5 text-[20px] font-bold">Kirish</h2>
           <form className="pt-[35px]">
@@ -94,7 +97,7 @@ function Login() {
               <button
                 onClick={() => loginSubmit()}
                 type="submit"
-                className="button btn mt-14 inline-block h-[50px] w-[270px] rounded bg-[#01384D] p-3 text-gray-100  opacity-70 hover:opacity-100"
+                className="button btn mt-14 mb-10 inline-block h-[50px] w-[270px] rounded bg-[#01384D] p-3 text-gray-100  opacity-70 hover:opacity-100"
               >
                 {<h3>Kirish</h3>}
               </button>
