@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { IconDelete, IconMell } from "../../assets/style/imgAdmin/IconAdmin";
@@ -79,7 +77,7 @@ function Texnology() {
             </tbody>
           ))
         ) : (
-          <h2>Not Found</h2>
+          <h2>Ma'lumotlar yo'q</h2>
         )}
       </table>
       <div className="mt-10 w-full text-end">
@@ -101,10 +99,7 @@ function Texnology() {
         />
       )}
       {openTechDel && (
-        <TechnoDelete
-          setOpenTechDel={setOpenTechDel}
-          idDel={idDel}
-        />
+        <TechnoDelete setOpenTechDel={setOpenTechDel} idDel={idDel} />
       )}
     </div>
   );

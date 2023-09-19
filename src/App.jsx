@@ -7,7 +7,6 @@ import {
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-//ModelTypes
 import All from "./components/modelType/All";
 import "./components/modelType/All";
 import ModelA from "./components/modelType/ModelA";
@@ -30,13 +29,11 @@ function App() {
   const [token, setToken] = useState(
     JSON.parse(localStorage.getItem("token")) || "",
   );
-  // const [token, setToken] = useState('');
   const [complate, IsComplate] = useState(false);
 
   const url = "http://localhost:1212/api/products";
   const { data, loader, error } = useFetch(url);
   const category = data && data.categories;
-  //  console.log(category && category[0].join(' '));
 
   const routes = createBrowserRouter(
     createRoutesFromElements(

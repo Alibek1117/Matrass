@@ -1,14 +1,10 @@
 import { useRef, useState } from "react";
-
-
 import "./_Modal.scss";
 import { CrossBtn } from "../../assets/style/imgs/icons/icons";
 import { useFetch } from "../../hook/useFetch";
 
-// import { options } from "prettier-plugin-tailwindcss";
-
 const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
-  const [count, setCount] = useState(1); // count o'zgaruvchini va uning setCount funktsiyasini yaratamiz
+  const [count, setCount] = useState(1);
 
   const handleIncrement = () => {
     setCount(count + 1);
@@ -23,44 +19,39 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
   const url = "http://localhost:1212/api/products";
   const { data, loader, error } = useFetch(url);
   const category = data && data.products;
-  // 
+  //
 
-  const userName = useRef()
-  const userTel = useRef()
-  const productNamee = useRef()
+  const userName = useRef();
+  const userTel = useRef();
+  const productNamee = useRef();
 
-
-  //POST request
   const handlePostOrder = (e) => {
     e.preventDefault();
-    setOpenZakaz(false)
-    setOpenZakazDone(true)
+    setOpenZakaz(false);
+    setOpenZakazDone(true);
     let obj = {
       name: userName.current.value,
       number: userTel.current.value,
       productName: productNamee.current.value,
       count: count,
     };
-    // console.log(obj);
 
     fetch("http://localhost:1212/api/orders", {
       method: "POST",
       body: JSON.stringify(obj),
       headers: {
         "Content-Type": "application/json",
-        Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
-        // "Authorization":
-        //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzOTExMzExfQ.EKV2yelCebB4nkGIT0t4-gBVUMEUPdQKUEgj5Hh2Cgo",
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
       },
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
-
   };
 
   return (
-    <div className=" zakaz-modal fixed left-[10%] sm:left-[30%] top-0 sm:top-1 z-50 shadow-2xl shadow-black">
-      <div className="zakaz relative mx-auto w-[360px] sm:w-[420px] rounded-md bg-[#F6FBFF] p-9 ">
+    <div className=" zakaz-modal fixed left-[10%] top-0 z-50 shadow-2xl shadow-black sm:left-[30%] sm:top-1">
+      <div className="zakaz relative mx-auto w-[360px] rounded-md bg-[#F6FBFF] p-9 sm:w-[420px] ">
         <div
           className="absolute right-0 top-0"
           onClick={() => setOpenZakaz(false)}
@@ -71,7 +62,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
           <h1>Buyurtma Qilish</h1>
         </div>
 
-        <form onSubmit={ handlePostOrder}>
+        <form onSubmit={handlePostOrder}>
           <div className="my-2 flex justify-center">
             <input
               ref={userName}
@@ -82,11 +73,11 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
             />
           </div>
           <div className=" w-full">
-            <div className="zakaz-input-tel flex justify-left">
+            <div className="zakaz-input-tel justify-left flex">
               <span className="p-4">+998</span>
               <input
                 ref={userTel}
-                className="p-4 w-full"
+                className="w-full p-4"
                 type="tel"
                 placeholder="raqamingizni yozing"
                 required
@@ -94,17 +85,22 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
             </div>
           </div>
           <div className="zakaz-form grid grid-cols-1 justify-center text-left">
-            <label className="mt-2 sm:mt-3 text-[18px] font-[600] text-[#01384D]">
+            <label className="mt-2 text-[18px] font-[600] text-[#01384D] sm:mt-3">
               Mahsulotlarni nomini tanlang
             </label>
             <select
-              className="mt-1 sm:mt-0 w-full p-3"
+              className="mt-1 w-full p-3 sm:mt-0"
               name="nma"
               id=""
               ref={productNamee}
             >
               <option>
-                {id ? category && category.filter((item)=>{return item.id == id })[0].name:''}
+                {id
+                  ? category &&
+                    category.filter((item) => {
+                      return item.id == id;
+                    })[0].name
+                  : ""}
               </option>
               {loader && <option>Loading...</option>}
               {category &&
@@ -117,10 +113,10 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
           </div>
 
           <div className=" mt-4">
-            <div className="mt-2 sm:mt-3 text-[18px] font-[600] text-[#01384D]">
+            <div className="mt-2 text-[18px] font-[600] text-[#01384D] sm:mt-3">
               Miqdorni kiriting
             </div>
-            <div className="zakaz-button mt-1 sm:mt-2 w-full ">
+            <div className="zakaz-button mt-1 w-full sm:mt-2 ">
               <span className="w-[25%] p-3" onClick={handleDecrement}>
                 -
               </span>
@@ -134,7 +130,6 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
             <button type="submit">Yuborish</button>
           </div>
         </form>
-        {/* <ZakazDone /> */}
       </div>
     </div>
   );

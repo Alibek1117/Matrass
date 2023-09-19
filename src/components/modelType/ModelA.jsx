@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import { Karzinka, Zoom } from "../../assets/style/imgs/icons/icons";
 import matrasImg from "../../assets/style/imgs/matras.png";
@@ -29,12 +27,6 @@ function ModelA() {
   const url = "http://localhost:1212/api/products";
   const { data, loader, error } = useFetch(url);
   const product = data && data.products;
-  //  console.log(product);
-  // if (product) {
-  //   const filtered = product.filter((product) => {
-  //     return product.category === "Model A";
-  //   });
-  // }
 
   return (
     <>
@@ -71,7 +63,6 @@ function ModelA() {
                       JSON.parse(item.product_images)?.map((image) => {
                         return (
                           <img
-                            data-aos="fade-up-right"
                             className="mt-16"
                             src={`http://localhost:1212/products/${image}`}
                           />

@@ -11,7 +11,7 @@ const Loader2 = () => {
     <div classN="shadow"></div>
     <div classN="shadow"></div>
     <div classN="shadow"></div>
-    <span>Loading</span>
+    <span>Yuklanmoqda</span>
   </div>
 </>);
 }

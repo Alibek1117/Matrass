@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import { Karzinka, Zoom } from "../../assets/style/imgs/icons/icons";
 import matrasImg from "../../assets/style/imgs/matras.png";
@@ -29,7 +27,6 @@ function ModelF() {
   const url = "http://localhost:1212/api/products";
   const { data, loader, error } = useFetch(url);
   const product = data && data.products;
-  //  console.log(product);
 
   return (
     <>
@@ -43,7 +40,6 @@ function ModelF() {
               return product.category === "Model F";
             })
             .map((item) => (
-              // item.filter(item =>{return item.new_cost})
               <div className="product__card flex p-8" key={item.id}>
                 <div className="card__left w-[45%]">
                   <div className="left__top flex items-center">
@@ -64,12 +60,11 @@ function ModelF() {
                     JSON.parse(item.product_images)?.map((image) => {
                       return (
                         <img
-                          data-aos="fade-up-right"
                           className="mt-16"
                           src={`http://localhost:1212/products/${image}`}
                         />
                       );
-                    })} 
+                    })}
                 </div>
                 <div className="card__right w-[55%]">
                   <h2 className="card__title ">{item && item.name}</h2>

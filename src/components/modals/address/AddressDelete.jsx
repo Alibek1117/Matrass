@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
 function AddressDelete({ setOpenAddressDel, idDel }) {
@@ -12,9 +10,8 @@ function AddressDelete({ setOpenAddressDel, idDel }) {
       },
     });
     setOpenAddressDel(false);
-
-};
-const handleDeleteNo = () => {
+  };
+  const handleDeleteNo = () => {
     setOpenAddressDel(false);
     console.log(id);
   };

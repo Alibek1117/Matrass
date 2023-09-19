@@ -1,10 +1,6 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { IconDelete, IconMell } from "../../assets/style/imgAdmin/IconAdmin";
 import { NavLink } from "react-router-dom";
-// import AddModal from '../../components/modals/AddModal';
 import DeleteCategory from "../modals/category/DeleteCategory";
 import CategoryAdd from "../modals/category/CategoryAdd";
 import CategoryEdite from "../modals/category/CategoryEdite";
@@ -29,8 +25,6 @@ function Toifalar() {
       .then((res) => res.json())
       .then((data) => setCategory(data));
   }, [delCategory, category2]);
-
-  // console.log(category);
 
   const handleDelete = (id) => {
     setId(id);
@@ -77,7 +71,7 @@ function Toifalar() {
             </tbody>
           ))
         ) : (
-          <h2>Not Found</h2>
+          <h2>Ma'lumotlar yo'q</h2>
         )}
       </table>
       <NavLink>
@@ -88,7 +82,6 @@ function Toifalar() {
           >
             Qo'shish
           </button>
-          {/* {complate && <AddModal />} */}
         </div>
       </NavLink>
       {delCategory && (

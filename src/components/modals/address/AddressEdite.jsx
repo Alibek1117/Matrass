@@ -1,8 +1,8 @@
-/* eslint-disable react/no-unescaped-entities */
+
 import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
 import { ImageICons } from "../../../assets/style/imgAdmin/IconAdmin";
 import { useRef, useState } from "react";
-// import axios, { toFormData } from "axios";
+
 
 function AddressEdite({ setOpenAddressEdite, idEdite }) {
   const location = useRef();
@@ -18,7 +18,6 @@ function AddressEdite({ setOpenAddressEdite, idEdite }) {
   const handlePost = (e) => {
     e.preventDefault();
     setOpenAddressEdite(false);
-    // console.log(e.target.files[0]);
 
     var myHeaders = new Headers();
     myHeaders.append(
@@ -67,7 +66,6 @@ function AddressEdite({ setOpenAddressEdite, idEdite }) {
               placeholder="Image link"
               className="flex  h-[230px] w-[230px] items-center justify-center  rounded bg-[#013d4d2c] text-center"
             />
-            {/* <ImageICons /> */}
           </div>
           <div>
             <label className="mt-7 block" htmlFor="Manzil">

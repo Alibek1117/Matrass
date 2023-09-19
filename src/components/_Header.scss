@@ -5,9 +5,17 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 30px;
+  ul {
+    li {
+      a:hover {
+        color: #fff;
+        transition: 0.5s ease;
+      }
+    }
+  }
   .header__naw {
     a {
-      color: var(--title-color, #01384d);
+      color: #01384d;
       font-family: Raleway;
       font-size: 14px;
       font-style: normal;
@@ -21,8 +29,41 @@
     height: 46px;
     flex-shrink: 0;
     border-radius: 5px;
-    border: 2px solid var(--title-color, #01384d);
+    border: 2px solid #01384d;
     background: #fff;
+    transition: 0.7s ease;
+    &:hover {
+      background: rgb(0, 3, 36);
+      background: linear-gradient(
+        90deg,
+        rgba(0, 3, 36, 1) 0%,
+        rgba(35, 9, 121, 1) 0%,
+        rgba(0, 212, 255, 1) 100%
+      );
+      color: #fff;
+      border: none;
+    }
   }
 }
-
+.flex-categ {
+  .categ__btn:hover {
+    background: rgb(0, 3, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 3, 36, 1) 0%,
+      rgba(35, 9, 121, 1) 0%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    transition: 0.4s ease;
+    color: #fff;
+    border: 2px solid #fff;
+    border: none;
+    span:hover {
+    }
+  }
+}
+.order__btn:hover {
+  .title:hover {
+    color: aqua;
+  }
+}

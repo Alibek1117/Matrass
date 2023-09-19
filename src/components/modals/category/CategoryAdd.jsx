@@ -1,17 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
 import React from "react";
 import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
 import { useState } from "react";
 import { useRef } from "react";
 import { useFetch } from "../../../hook/useFetch";
-// import axios from "axios";
 
 function CategoryAdd({ setCategoryAdd, setCategory2 }) {
-
-  
   const categoryInput = useRef("");
-//   const [category, setCategory] = useState();
   const [check, setCheck] = useState(true);
 
   const closeModal = () => {
@@ -24,33 +18,32 @@ function CategoryAdd({ setCategoryAdd, setCategory2 }) {
   const url = "http://localhost:1212/api/products";
   const { data, loader, error } = useFetch(url);
   const category = data && data.categories;
-  // console.log(category);
 
   const handlePost = (e) => {
-      setCategoryAdd(false)
+    setCategoryAdd(false);
     let obj = {
       category: categoryInput.current.value,
       isActive: check,
     };
     e.preventDefault();
-    const filteredCategory = category.filter(item =>{
-        return item.category === obj.category
-    })
-    {filteredCategory.length > 0
-      ? alert('Kechirasiz! Bu toifa mavjud🙄. Boshqa toifa tanlang.')
-      : 
-      fetch("http://localhost:1212/admin/categories", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization:
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
-          },
-          body: JSON.stringify(obj),
-        })
-          .then((res) => res.json())
-          .then((data) => setCategory2(data));};
-      
+    const filteredCategory = category.filter((item) => {
+      return item.category === obj.category;
+    });
+    {
+      filteredCategory.length > 0
+        ? alert("Kechirasiz! Bu toifa mavjud🙄. Boshqa toifa tanlang.")
+        : fetch("http://localhost:1212/admin/categories", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization:
+                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+            },
+            body: JSON.stringify(obj),
+          })
+            .then((res) => res.json())
+            .then((data) => setCategory2(data));
+    }
   };
 
   return (

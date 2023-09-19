@@ -1,47 +1,45 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
-import  { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import { IconDelete, IconMell,  LocationIcon } from '../../assets/style/imgAdmin/IconAdmin';
-import AddressAdd from '../modals/address/AddressAdd';
-import AddressDelete from '../modals/address/AddressDelete';
-import AddressEdite from '../modals/address/AddressEdite';
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import {
+  IconDelete,
+  IconMell,
+  LocationIcon,
+} from "../../assets/style/imgAdmin/IconAdmin";
+import AddressAdd from "../modals/address/AddressAdd";
+import AddressDelete from "../modals/address/AddressDelete";
+import AddressEdite from "../modals/address/AddressEdite";
 
 function LOcation() {
-   const [idDel, setIdDel] = useState();
-   const [idEdite, setIdEdite] = useState();
-   const [openAddressAdd, setOpenAddressAdd] = useState(false);
-   const [addressAdd, setAddressAdd] = useState(false);
-   const [openAddressEdite, setOpenAddressEdite] = useState(false);
-  //  const [openTechEdite, setOpenTechEdite] = useState(false);
-   const [openAddressDel, setOpenAddressDel] = useState(false);
-   const [tech, setTech] = useState([]);
+  const [idDel, setIdDel] = useState();
+  const [idEdite, setIdEdite] = useState();
+  const [openAddressAdd, setOpenAddressAdd] = useState(false);
+  const [addressAdd, setAddressAdd] = useState(false);
+  const [openAddressEdite, setOpenAddressEdite] = useState(false);
+  const [openAddressDel, setOpenAddressDel] = useState(false);
+  const [tech, setTech] = useState([]);
 
-   const [location, setLocation] = useState([]);
-   useEffect(() => {
-     fetch("http://localhost:1212/admin/address", {
-       method: "GET",
+  const [location, setLocation] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:1212/admin/address", {
+      method: "GET",
 
-       headers: {
-         Authorization:
-           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
-       },
-     })
-       .then((res) => res.json())
-       .then((data) => setLocation(data));
-   }, [addressAdd, openAddressDel, openAddressEdite]);
+      headers: {
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setLocation(data));
+  }, [addressAdd, openAddressDel, openAddressEdite]);
 
-  //  console.log(location);
-  //  console.log(addressAdd);
-
-   const handleDelete = (id)=>{
-    setIdDel(id)
-    setOpenAddressDel(true)
-   }
-   const handleEdite = (id)=>{
-    setIdEdite(id)
-    setOpenAddressEdite(true)
-   }
+  const handleDelete = (id) => {
+    setIdDel(id);
+    setOpenAddressDel(true);
+  };
+  const handleEdite = (id) => {
+    setIdEdite(id);
+    setOpenAddressEdite(true);
+  };
 
   return (
     <div className="m-auto mt-10 w-[1086px]">
@@ -99,7 +97,10 @@ function LOcation() {
         />
       )}
       {openAddressEdite && (
-        <AddressEdite setOpenAddressEdite={setOpenAddressEdite} idEdite={idEdite} />
+        <AddressEdite
+          setOpenAddressEdite={setOpenAddressEdite}
+          idEdite={idEdite}
+        />
       )}
       {openAddressDel && (
         <AddressDelete setOpenAddressDel={setOpenAddressDel} idDel={idDel} />
@@ -108,4 +109,4 @@ function LOcation() {
   );
 }
 
-export default LOcation
+export default LOcation;

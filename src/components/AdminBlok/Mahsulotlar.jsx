@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { IconDelete, IconMell } from "../../assets/style/imgAdmin/IconAdmin";
 import { NavLink } from "react-router-dom";
@@ -66,10 +64,7 @@ function Mahsulotlar() {
                 </td>
                 <td>{item.size}</td>
                 <td>
-                  <div
-                    className="relative mx-auto flex  h-[17px] w-[38px] items-center rounded-[50px] bg-green-200 p-[0px]"
-                    // onClick={cheekNew}
-                  >
+                  <div className="relative mx-auto flex  h-[17px] w-[38px] items-center rounded-[50px] bg-green-200 p-[0px]">
                     <span
                       className={
                         item.status !== "0"

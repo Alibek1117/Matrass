@@ -43,7 +43,6 @@ function ModelD() {
               return product.category === "Model D";
             })
             .map((item) => (
-              // item.filter(item =>{return item.new_cost})
               <div className="product__card flex p-8" key={item.id}>
                 <div className="card__left w-[45%]">
                   <div className="left__top flex items-center">
@@ -64,7 +63,6 @@ function ModelD() {
                     JSON.parse(item.product_images)?.map((image) => {
                       return (
                         <img
-                          data-aos="fade-up-right"
                           className="mt-16"
                           src={`http://localhost:1212/products/${image}`}
                         />

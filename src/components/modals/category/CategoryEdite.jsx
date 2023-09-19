@@ -1,14 +1,11 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
 import React from "react";
 import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
 import { useState } from "react";
 import { useRef } from "react";
 import { useFetch } from "../../../hook/useFetch";
 
-function CategoryAdd({ setCategoryAdd, idEdite, setCategory2  }) {
+function CategoryAdd({ setCategoryAdd, idEdite, setCategory2 }) {
   const categoryInput = useRef("");
-  //   const [category, setCategory] = useState();
   const [check, setCheck] = useState(true);
 
   const closeModal = () => {
@@ -18,9 +15,9 @@ function CategoryAdd({ setCategoryAdd, idEdite, setCategory2  }) {
     setCheck(!check);
   };
 
-   const url = "http://localhost:1212/api/products";
-   const { data, loader, error } = useFetch(url);
-   const category = data && data.categories;
+  const url = "http://localhost:1212/api/products";
+  const { data, loader, error } = useFetch(url);
+  const category = data && data.categories;
 
   const handleEdite = (e) => {
     setCategoryAdd(false);

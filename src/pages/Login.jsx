@@ -1,26 +1,19 @@
-/* eslint-disable react/prop-types */
 import { useRef, useState } from "react";
 import {
   LoginLockicon,
   LoginManicon,
 } from "../assets/style/imgAdmin/IconAdmin";
 import { Link } from "react-router-dom";
-// import { data } from "autoprefixer";
+
 import { CrossBtn } from "../assets/style/imgs/icons/icons";
-// import { useFetch } from "../hook/useFetch";
-// import { useDispatch, useSelector } from "react-redux";
 
 function Login() {
-  // eslint-disable-next-line no-unused-vars
-  const [token, setToken] = useState('');
-// console.log(data);
+  const [token, setToken] = useState("");
+
   const userName = useRef("");
   const userParol = useRef("");
 
   const loginSubmit = (e) => {
-    // e.preventDefault()
-    // console.log(token);
-
     const obj = {
       userName: userName.current.value,
       password: userParol.current.value,
@@ -34,30 +27,8 @@ function Login() {
     })
       .then((res) => res.json())
       .then((data) => setToken(data.token));
-      console.log(token);
+    console.log(token);
   };
-
-  // const handleLoginSumbit = () => {
-  //   e.preventDefault();
-  //   let obj = {
-  //     userName: userName.current.value,
-  //     password: userParol.current.value,
-  //   };
-  //   console.log(userName);
-  //   console.log(obj);
-  //   fetch('http://localhost:1212/admin/login', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(obj),
-  //   })
-  //     .then((res) => res.json())
-  //     .then(data =>{
-  //       setToken(data)
-  //       localStorage.setItem('token', JSON.stringify(data));
-  //     } );
-  // };
 
   return (
     <>
@@ -97,9 +68,9 @@ function Login() {
               <button
                 onClick={() => loginSubmit()}
                 type="submit"
-                className="button btn mt-14 mb-10 inline-block h-[50px] w-[270px] rounded bg-[#01384D] p-3 text-gray-100  opacity-70 hover:opacity-100"
+                className="button btn mb-10 mt-14 inline-block h-[50px] w-[270px] rounded bg-[#01384D] p-3 text-gray-100  opacity-70 hover:opacity-100"
               >
-                {<h3>Kirish</h3>}
+                <h3 className="italic">Kirish</h3>
               </button>
             </Link>
           </form>

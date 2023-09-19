@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-// Define the custom hook
 function usePostRequest(url, initialData = {}) {
   const [data, setData] = useState(initialData);
   const [isLoading, setLoading] = useState(false);
@@ -13,7 +12,7 @@ function usePostRequest(url, initialData = {}) {
       const response = await fetch(url, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json", // adjust as needed
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(postData),
       });
@@ -34,7 +33,6 @@ function usePostRequest(url, initialData = {}) {
   return { data, isLoading, error, postData };
 }
 
-// Example usage of the custom hook
 function MyComponent() {
   const { data, isLoading, error, postData } = usePostRequest(
     "https://api.example.com/post-endpoint",
@@ -55,7 +53,6 @@ function MyComponent() {
       )}
 
       <form onSubmit={handleFormSubmit}>
-        {/* Your form fields */}
         <button type="submit">Submit</button>
       </form>
     </div>

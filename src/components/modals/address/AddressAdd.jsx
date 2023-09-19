@@ -1,8 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
 import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
 import { ImageICons } from "../../../assets/style/imgAdmin/IconAdmin";
 import { useRef, useState } from "react";
-// import axios, { toFormData } from "axios";
 
 function AddressAdd({ setOpenAddressAdd, setAddressAdd }) {
   const location = useRef();
@@ -14,12 +12,10 @@ function AddressAdd({ setOpenAddressAdd, setAddressAdd }) {
   const handleImg = (e) => {
     setImg(e.target.files[0]);
   };
-  
 
   const handlePost = (e) => {
     e.preventDefault();
     setOpenAddressAdd(false);
-    // console.log(e.target.files[0]);
 
     var myHeaders = new Headers();
     myHeaders.append(
@@ -45,8 +41,6 @@ function AddressAdd({ setOpenAddressAdd, setAddressAdd }) {
       .then((response) => response.text())
       .then((result) => setAddressAdd(result))
       .catch((error) => console.log("error", error));
-
-    
   };
 
   return (
@@ -62,15 +56,14 @@ function AddressAdd({ setOpenAddressAdd, setAddressAdd }) {
           <div>
             <h3 className="mb-2 text-[18px] font-semibold">Tahrirlash</h3>
             <input
-            onChange={handleImg}
-            required
+              onChange={handleImg}
+              required
               name="fileInput"
               type="file"
               ref={images}
               placeholder="Upload image"
               className="flex  h-[230px] w-[230px] items-center justify-center  rounded bg-[#013d4d2c] text-center"
             />
-            {/* <ImageICons /> */}
           </div>
           <div>
             <label className="mt-7 block" htmlFor="Manzil">

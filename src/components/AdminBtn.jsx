@@ -1,15 +1,14 @@
-/* eslint-disable no-unused-vars */
-
-import { NavLink } from 'react-router-dom';
-import {  Iconhome,
+import { NavLink } from "react-router-dom";
+import {
+  Iconhome,
   IconMan,
   Iconfilter,
   Iconkorzina,
   Icontexno,
-  Iconlocation,}
-  from '../assets/style/imgAdmin/IconAdmin'
-import React from 'react'
-import './AdminBtn.css'
+  Iconlocation,
+} from "../assets/style/imgAdmin/IconAdmin";
+import React from "react";
+import "./AdminBtn.css";
 
 function AdminBtn() {
   return (
@@ -54,4 +53,4 @@ function AdminBtn() {
   );
 }
 
-export default AdminBtn
+export default AdminBtn;

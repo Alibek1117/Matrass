@@ -1,39 +1,31 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import Vizitka from "../components/Vizitka";
-import Social from "../assets/style/imgNurjon/social.png";
-import { Arrow } from "../assets/style/imgNurjon/Img";
-import vizitkaImg from "../assets/style/imgNurjon/vizitka.png"
+import Social from "../assets/style/images/social.png";
+import { Arrow } from "../assets/style/images/Img";
+import vizitkaImg from "../assets/style/images/vizitka.png";
 import "../index.css";
 
-import Aos from "aos";
-import "aos/dist/aos.css";
-
 const Footer = () => {
+  const [vizitka, setVizitka] = useState(false);
+  const [telNumber, setTelNumber] = useState("");
+  const [telValid, setTelValid] = useState(false);
 
-  const [vizitka, setVizitka] = useState(false)
-  const [telNumber, setTelNumber] = useState('')
-  const [telValid, setTelValid] = useState(false)
+  const telRgx = /^[0-9]{9}$/;
 
-  const telRgx =/^[0-9]{9}$/;
-
-  useEffect(()=>{
-    const rusult = telRgx.test(telNumber)
+  useEffect(() => {
+    const rusult = telRgx.test(telNumber);
     setTelValid(rusult);
     console.log(telValid, telNumber);
-  },[telNumber])
+  }, [telNumber]);
 
-    useEffect(() => {
-      Aos.init();
-    }, []);
-
-  const handleVizitka =(e)=>{
-    e.preventDefault()
-    setVizitka(telValid? true: false)
+  const handleVizitka = (e) => {
+    e.preventDefault();
+    setVizitka(telValid ? true : false);
     setTimeout(() => {
-      setVizitka(false)
+      setVizitka(false);
     }, 3000);
-  }
+  };
   const handleArrowClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -44,7 +36,7 @@ const Footer = () => {
         <div className="container mx-auto p-4 px-8 ">
           {!vizitka && (
             <div className="footers ">
-              <div data-aos="fade-right">
+              <div>
                 <h1>Sizni qiziqtirdimi?</h1>
                 <p className="subtitle">
                   Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz
@@ -56,7 +48,6 @@ const Footer = () => {
                   className=" foter flex items-center justify-between gap-5 "
                 >
                   <div
-                    // data-aos="fade-down"
                     className={
                       !telValid && telNumber
                         ? " flex items-center justify-center  gap-2 rounded-md border border-red-700 bg-white "
@@ -74,7 +65,7 @@ const Footer = () => {
                       placeholder="Raqamingizni yozing"
                     />
                   </div>
-                  <button data-aos="fade-up">Yuborish</button>
+                  <button>Yuborish</button>
                 </form>
                 {
                   <p
@@ -84,7 +75,7 @@ const Footer = () => {
                         : "text-xs text-[#EABF9F]"
                     }
                   >
-                    Must be 9 numbrs
+                    Dilmurod 9ta raqamdan iborat bo'lsin
                   </p>
                 }
               </div>
@@ -123,11 +114,7 @@ const Footer = () => {
               © 2021 Dream Cloud. Barcha huquqlar himoyalangan.
             </p>
           </div>
-          <div className="foter-arrow">
-            <button className="Arrow" onClick={handleArrowClick}>
-              <i className="fa-solid fa-arrow-up fa-bounce text-2xl text-[#01384D]"></i>
-            </button>
-          </div>
+          <div className="foter-arrow"></div>
           <div className="foter-vizitka">
             <img src={vizitkaImg} alt="" />
           </div>

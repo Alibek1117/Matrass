@@ -1,31 +1,23 @@
-/* eslint-disable react/no-unescaped-entities */
-import { useState, useEffect } from 'react';
-import { Karzinka, Zoom } from '../assets/style/imgs/icons/icons';
+import { useState, useEffect } from "react";
+import { Karzinka, Zoom } from "../assets/style/imgs/icons/icons";
 import matrasImg from "../assets/style/imgs/matras.png";
-import { useFetch } from '../hook/useFetch';
-import Zakaz from './modals/Zakaz';
-import ZakazDone from './modals/ZakazDone';
-import ZoomModal from './modals/ZoomModal';
-
-import Aos from "aos";
-import "aos/dist/aos.css";
-import Error from './loader/Error';
+import { useFetch } from "../hook/useFetch";
+import Zakaz from "./modals/Zakaz";
+import ZakazDone from "./modals/ZakazDone";
+import ZoomModal from "./modals/ZoomModal";
+import "./_Header.scss";
 
 function AksiyaProducts() {
-
-
-
   const [zoom, setZoom] = useState(false);
   const [zoomId, setZoomId] = useState();
   const [id, setId] = useState(null);
   const [openZakaz, setOpenZakaz] = useState(false);
   const [openZakazDone, setOpenZakazDone] = useState(false);
 
-   const handleZoom = (id) => {
-    setZoomId(id)
-    //  console.log(e);
-     setZoom(true);
-   };
+  const handleZoom = (id) => {
+    setZoomId(id);
+    setZoom(true);
+  };
 
   const handleOrder = (id) => {
     console.log(id);
@@ -33,32 +25,23 @@ function AksiyaProducts() {
     setId(id);
   };
 
-     const url = "http://localhost:1212/api/products";
-     const { data, loader, error } = useFetch(url);
-     const product = data && data.products;
-    //  console.log(product);
-
-    useEffect(()=>{
-      Aos.init()
-    },[])
+  const url = "http://localhost:1212/api/products";
+  const { data } = useFetch(url);
+  const product = data && data.products;
 
   return (
     <>
       <div className="container">
         <div className="products__title">Aksiyadagi mahsulotlar</div>
-        {loader && <h2>Loading...</h2>}
-        {error && <Error/>}
         {product &&
           product
             .filter((product) => {
               return product.new_cost;
             })
             .map((item) => (
-              // item.filter(item =>{return item.new_cost})
               <div className="product__card flex p-8" key={item.id}>
-                <div data-aos="zoom-in-right" className="card__left w-[45%]">
+                <div className="card__left w-[45%]">
                   <div className="left__top flex items-center">
-                    {/* <span className="type">YANGI MAHSULOT</span> */}
                     <div>
                       {item.new_cost && <span className="aksiya">AKSIYA</span>}
                     </div>
@@ -69,11 +52,6 @@ function AksiyaProducts() {
                       <Zoom />
                     </div>
                   </div>
-                  {/* <img
-                    className="mt-16 md:justify-center"
-                    src={matrasImg}
-                    alt="matras"
-                  /> */}
                   {JSON.parse(item.product_images)?.length > 0 &&
                     JSON.parse(item.product_images)?.map((image) => {
                       return (
@@ -84,7 +62,7 @@ function AksiyaProducts() {
                       );
                     })}
                 </div>
-                <div data-aos="zoom-in-left" className="card__right w-[55%]">
+                <div className="card__right w-[55%]">
                   <h2 className="card__title ">{item && item.name}</h2>
                   <div className="product__info flex gap-20">
                     <div className="info__card">
@@ -133,16 +111,17 @@ function AksiyaProducts() {
                   </div>
                   <button
                     className="order__btn flex items-center"
-                    data-aos="zoom-out-right"
                     onClick={() => handleOrder(item.id)}
                   >
-                    <p className="title">Buyurtma Berish</p>
+                    <p className="title ">Buyurtma Berish</p>
                     <Karzinka />
                   </button>
                 </div>
               </div>
             ))}
-        {zoom && <ZoomModal setZoom={setZoom} zoomId ={zoomId} product = {product} />}
+        {zoom && (
+          <ZoomModal setZoom={setZoom} zoomId={zoomId} product={product} />
+        )}
         {openZakaz && (
           <Zakaz
             setOpenZakaz={setOpenZakaz}
@@ -156,4 +135,4 @@ function AksiyaProducts() {
   );
 }
 
-export default AksiyaProducts
+export default AksiyaProducts;

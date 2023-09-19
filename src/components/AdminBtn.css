@@ -1,22 +1,32 @@
-
-.active{
-    background-color: #EABF9F;
+.active {
+  background: rgb(0, 3, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 3, 36, 1) 0%,
+    rgba(121, 75, 9, 1) 0%,
+    rgba(172, 255, 0, 1) 100%
+  );
+  border-radius: 5px;
 }
-.adminbtn{
-    /* background-color: #01384D; */
-    padding-left: 40px;
-    display: flex;
-    width: 100%;
-    height: 60px;
-    border: none;
-    align-items: center;
-    gap: 5px;
-    /* background-color: transparent; */
-    transition: calc(0.2s);
+.adminbtn {
+  padding-left: 40px;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  border: none;
+  align-items: center;
+  gap: 5px;
+  transition: 0.5s ease;
 }
-.adminbtn:hover{
-    background-color: #EABF9F;
+.adminbtn:hover {
+  background: rgb(0, 3, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 3, 36, 1) 0%,
+    rgba(121, 75, 9, 1) 0%,
+    rgba(172, 255, 0, 1) 100%
+  );
 }
-.adminbtnn{
-    width: 100%;
+.adminbtnn {
+  width: 100%;
 }

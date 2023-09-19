@@ -1,20 +1,16 @@
-@media only  screen  and (max-width:768px) {
-      .header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-      }
-      .left__bottom{
-            display: none;
-      }
-      .Icon-Header{
-            display: flex;
-      }
-      .header__naw{
-            display: none;
-      }
-      
-     
-      
+@media only screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left__bottom {
+    display: none;
+  }
+  .Icon-Header {
+    display: flex;
+  }
+  .header__naw {
+    display: none;
+  }
 }

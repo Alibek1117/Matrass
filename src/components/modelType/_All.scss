@@ -7,7 +7,7 @@
 .type {
   padding: 10px 30px;
   border-radius: 5px;
-  background: var(--red, #ff6b6b);
+  background: #ff6b6b;
   color: #fff;
   text-align: center;
   font-family: Raleway;
@@ -20,7 +20,7 @@
 .aksiya {
   padding: 10px 30px;
   border-radius: 5px;
-  background: var(--green, #1fca25);
+  background: #1fca25;
   color: #fff;
   text-align: center;
   font-family: Raleway;
@@ -41,7 +41,7 @@
 
 .card__right {
   .card__title {
-    color: var(--title-color, #01384d);
+    color: #01384d;
     font-family: Raleway;
     font-size: 40px;
     font-style: normal;
@@ -52,7 +52,7 @@
   .product__info {
     .info__card {
       p {
-        color: var(--title-color, #01384d);
+        color: #01384d;
         font-family: Raleway;
         font-size: 16px;
         font-style: normal;
@@ -62,7 +62,7 @@
       }
       .info__number {
         .number {
-          color: var(--title-color, #01384d);
+          color: #01384d;
           font-family: Raleway;
           font-size: 30px;
           font-style: normal;
@@ -70,7 +70,7 @@
           line-height: normal;
         }
         sub {
-          color: var(--title-color, #01384d);
+          color: #01384d;
           font-family: Raleway;
           font-size: 16px;
           font-style: normal;
@@ -83,18 +83,18 @@
   .card__subtitle {
     margin-top: 20px;
     width: 636px;
-    color: var(--title-color, #01384d);
+    color: #01384d;
     font-family: Open Sans;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
-    line-height: 26px; /* 162.5% */
+    line-height: 26px;
     opacity: 0.6;
   }
   .cost {
     margin-top: 25px;
     .cost__title {
-      color: var(--title-color, #01384d);
+      color: #01384d;
       font-family: Raleway;
       font-size: 16px;
       font-style: normal;
@@ -104,7 +104,7 @@
     }
     .cost__quantity {
       .number {
-        color: var(--title-color, #01384d);
+        color: #01384d;
         font-family: Raleway;
         font-size: 30px;
         font-style: normal;
@@ -121,7 +121,7 @@
         text-decoration-line: strikethrough;
       }
       .num__title {
-        color: var(--title-color, #01384d);
+        color: #01384d;
         font-family: Raleway;
         font-size: 16px;
         font-style: normal;
@@ -144,7 +144,7 @@
     margin-top: 25px;
     padding: 13px 20px;
     border-radius: 5px;
-    border: 2px solid var(--title-color, #01384d);
+    border: 2px solid #01384d;
     background: #fff;
     color: var(--title-color, #01384d);
     font-family: Raleway;
@@ -155,24 +155,23 @@
   }
 }
 
-
-@media only  screen  and (max-width:1280px) {
-   .card__left {
-  position: relative;
-  .zoom {
-    position: absolute;
-    right: 30px;
-    top: 5px;
+@media only screen and (max-width: 1280px) {
+  .card__left {
+    position: relative;
+    .zoom {
+      position: absolute;
+      right: 30px;
+      top: 5px;
+    }
   }
 }
-}
-@media only  screen  and (max-width:640px) {
-   .card__left {
-  position: relative;
-  .zoom {
-    position: absolute;
-    right: 0px;
-    top: 0px;
+@media only screen and (max-width: 640px) {
+  .card__left {
+    position: relative;
+    .zoom {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
   }
-}
 }

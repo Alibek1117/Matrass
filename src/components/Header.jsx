@@ -1,27 +1,27 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
-import './_Header.scss';
-import './_Response.scss';
-import { LogoIcon, TelIcon } from '../assets/style/imgs/icons/icons';
-import { IconHeader } from '../assets/style/imgNurjon/Img';
-import { NavLink } from 'react-router-dom';
+import { useState } from "react";
+import "./_Header.scss";
+import "./_Response.scss";
+import { LogoIcon, TelIcon } from "../assets/style/imgs/icons/icons";
+import { IconHeader } from "../assets/style/images/Img";
+import { NavLink } from "react-router-dom";
 
-function Header({setOpenZakaz}) {
+function Header({ setOpenZakaz }) {
   const [popoverOpen, setPopoverOpen] = useState(false);
 
   const togglePopover = () => {
     setPopoverOpen(!popoverOpen);
   };
 
-  const openOrder = ()=>{
+  const openOrder = () => {
     setOpenZakaz(true);
-  }
+  };
 
   return (
     <header>
       <div className="container mx-auto">
         <div className="header flex">
-          <div className="logo">
+          <div className="logo mt-12">
             <LogoIcon />
           </div>
           <div className="header__right flex items-center">

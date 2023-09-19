@@ -1,11 +1,8 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
-import ProductAdd from '../modals/products/ProductAdd';
+import React, { useEffect, useState } from "react";
+import ProductAdd from "../modals/products/ProductAdd";
 
 function Buyurtmalar() {
   const [order, setOrder] = useState(null);
-  
 
   useEffect(() => {
     fetch("http://localhost:1212/admin/orders/1", {
@@ -13,7 +10,7 @@ function Buyurtmalar() {
 
       headers: {
         "Content-Type": "application/json",
-        "Authorization":
+        Authorization:
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
       },
     })
@@ -24,7 +21,7 @@ function Buyurtmalar() {
   console.log(order);
 
   return (
-    <div className="m-auto mt-10 w-[1086px]">
+    <div className="m-auto mt-10 w-[1086px] ">
       <table className="w-[1086px]  border ">
         <thead className="h-[50px] bg-[#01384D] text-white">
           <tr>
@@ -47,7 +44,7 @@ function Buyurtmalar() {
                 <td>{item.count}</td>
                 <td>
                   <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
-                    <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
+                    <span className="ml-3 h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
                   </div>
                 </td>
               </tr>
@@ -56,7 +53,7 @@ function Buyurtmalar() {
         ) : (
           <tbody>
             <tr>
-              <td>not Found</td>
+              <td>Ma'lumotlar yo'q</td>
             </tr>
           </tbody>
         )}

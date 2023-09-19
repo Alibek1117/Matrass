@@ -1,9 +1,7 @@
 import "./_Home.scss";
-
 import Header from "../components/Header";
 import OurProducts from "../components/OurProducts";
 import AksiyaProducts from "../components/AksiyaProducts";
-// import ZoomModal from "../components/modals/ZoomModal";
 import Statistics from "../components/Statistics";
 import Footer from "../components/Footer";
 import Technologies from "../components/Technologies";
@@ -16,23 +14,7 @@ import { useState, useEffect } from "react";
 import ProductAdd from "../components/modals/products/ProductAdd";
 import ProductEdite from "../components/modals/products/ProductEdite";
 
-
 function Home() {
-
-  // function primeInRange(n1, n2) {
-  //   for (let i = n1; i <= n2; i++) {
-  //     for (let j = 2; j < n2 / 2; j++) {
-  //       if (i % j != 0) {
-  //         return true;
-  //       } else {
-  //         false;
-  //       }
-  //     }
-  //   }
-  // }
-  // console.log(primeInRange(10, 12));
-
-
   const [openZakaz, setOpenZakaz] = useState(false);
   const [openZakazDone, setOpenZakazDone] = useState(false);
   return (
@@ -42,21 +24,21 @@ function Home() {
         <Hero />
       </section>
       <Statistics />
-      {/* <ZoomModal/> */}
-      <div  id="katalog">
+
+      <div id="katalog">
         <OurProducts />
       </div>
       <div id="aksiya">
         <AksiyaProducts />
       </div>
       <Technologies />
-      <div  id="aboutUs">
+      <div id="aboutUs">
         <AboutUs />
       </div>
       <div id="address">
         <Address />
       </div>
-      {/* <Hometwo /> */}
+
       <div id="aloqa">
         <Footer />
       </div>
@@ -67,8 +49,6 @@ function Home() {
         />
       )}
       {openZakazDone && <ZakazDone setOpenZakazDone={setOpenZakazDone} />}
-      {/* <ProductAdd/> */}
-      {/* <ProductEdite/> */}
     </div>
   );
 }

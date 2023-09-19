@@ -1,16 +1,13 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import "./_Modal.scss";
+import { Exit } from "../../assets/style/images/Img";
+import Zakaz from "../../assets/style/images/Zakaz.png";
+import { CrossBtn } from "../../assets/style/imgs/icons/icons";
 
-import "./_Modal.scss"
-import { Exit } from "../../assets/style/imgNurjon/Img"
-import Zakaz from "../../assets/style/imgNurjon/Zakaz.png"
-import { CrossBtn } from "../../assets/style/imgs/icons/icons"
-
-const ZakazDone = ({setOpenZakazDone}) => {
-
-
-  const closeSuccesModal = ()=>{
+const ZakazDone = ({ setOpenZakazDone }) => {
+  const closeSuccesModal = () => {
     setOpenZakazDone(false);
-  }
+  };
 
   return (
     <div className="zakaz-done-modal fixed left-[10%] top-1 z-50 shadow-2xl shadow-black sm:left-[30%]">
@@ -42,6 +39,6 @@ const ZakazDone = ({setOpenZakazDone}) => {
       </div>
     </div>
   );
-}
+};
 
-export default ZakazDone
+export default ZakazDone;

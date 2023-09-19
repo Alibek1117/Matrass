@@ -1,92 +1,67 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react'
-import { Karzinka, Zoom } from '../../assets/style/imgs/icons/icons';
-// import './All.scss'
-import matrasImg from '../../assets/style/imgs/matras.png'
-import ZoomModal from '../modals/ZoomModal';
-import { useFetch } from '../../hook/useFetch';
-import Zakaz from '../modals/Zakaz';
-import ZakazDone from '../modals/ZakazDone';
-import Loader1 from '../loader/Loader1';
-import Error from '../loader/Error';
+import React, { useState, useEffect } from "react";
+import { Karzinka, Zoom } from "../../assets/style/imgs/icons/icons";
+import matrasImg from "../../assets/style/imgs/matras.png";
+import ZoomModal from "../modals/ZoomModal";
+import { useFetch } from "../../hook/useFetch";
+import Zakaz from "../modals/Zakaz";
+import ZakazDone from "../modals/ZakazDone";
+import Loader1 from "../loader/Loader1";
+import Error from "../loader/Error";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 function All() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
-  useEffect(()=>{
-    Aos.init()
-  },[])
-    
-  const [zoom, setZoom] = useState(false)
-  const [zoomId, setZoomId] = useState()
-  const [id, setId] = useState(null)
-  const [openZakaz, setOpenZakaz] = useState(false)
-  const [openZakazDone, setOpenZakazDone] = useState(false)
+  const [zoom, setZoom] = useState(false);
+  const [zoomId, setZoomId] = useState();
+  const [id, setId] = useState(null);
+  const [openZakaz, setOpenZakaz] = useState(false);
+  const [openZakazDone, setOpenZakazDone] = useState(false);
 
+  const url = "http://localhost:1212/api/products";
+  const { data, loader, error } = useFetch(url);
+  const product = data && data.products;
+  console.log(product);
 
-   const url = "http://localhost:1212/api/products";
-   const { data, loader, error } = useFetch(url);
-   const product = data && data.products;
-   console.log(product);
-
-   const handleZoom = (id) => {
-    setZoomId(id)
-    // console.log(e);
-    setZoom(true)
-   }
-   const handleOrder = (id) => {
+  const handleZoom = (id) => {
+    setZoomId(id);
+    setZoom(true);
+  };
+  const handleOrder = (id) => {
     console.log(id);
-    setOpenZakaz(true)
-    setId(id)
-   }
-   
+    setOpenZakaz(true);
+    setId(id);
+  };
+
   return (
     <>
       {loader && <Loader1 />}
-      {error && <Error/>}
+      {error && <Error />}
       {product &&
         product.map((item) => (
           <div className="product__card flex p-8" key={item.id}>
             <div className="card__left w-[45%]">
               <div className="left__top flex items-center">
                 {item.status !== "0" && (
-                  <span
-                    data-aos="fade-down-right"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine"
-                    className="type block "
-                  >
-                    YANGI MAHSULOT
-                  </span>
+                  <span className="type block ">YANGI MAHSULOT</span>
                 )}
-                {item.new_cost && (
-                  <span data-aos="fade-down-right" className="aksiya">
-                    AKSIYA
-                  </span>
-                )}
+                {item.new_cost && <span className="aksiya">AKSIYA</span>}
                 <div
                   className="zoom mt-10 rounded-full  bg-[#D9E1E7] p-3"
-                  data-aos="fade-down-right"
                   onClick={() => handleZoom(item.id)}
                 >
                   <Zoom />
                 </div>
               </div>
-              {/* <img
-                data-aos="fade-up-right"
-                className="mt-16"
-                src={matrasImg}
-                
-                alt="matras"
-              /> */}
 
               {JSON.parse(item.product_images)?.length > 0 &&
                 JSON.parse(item.product_images)?.map((image) => {
                   return (
-                    <img data-aos="fade-up-right"
+                    <img
                       className="mt-16"
                       src={`http://localhost:1212/products/${image}`}
                     />
@@ -94,14 +69,9 @@ function All() {
                 })}
             </div>
             <div className="card__right w-[55%]">
-              <h2 data-aos="fade-down-left" className="card__title ">
-                {item && item.name}
-              </h2>
-              <div
-                data-aos="fade-down-left"
-                className="product__info flex gap-20"
-              >
-                <div data-aos="fade-down-left" className="info__card">
+              <h2 className="card__title ">{item && item.name}</h2>
+              <div className="product__info flex gap-20">
+                <div className="info__card">
                   <p>Yuklama</p>
                   <h3 className="info__number">
                     <span className="number">{item.weight}</span> <sub>kg</sub>
@@ -127,10 +97,8 @@ function All() {
                   </h3>
                 </div>
               </div>
-              <p data-aos="fade-down-left" className="card__subtitle">
-                {item.body}
-              </p>
-              <div data-aos="fade-up-left" className="cost">
+              <p className="card__subtitle">{item.body}</p>
+              <div className="cost">
                 <span className="cost__title">Narxi</span>
                 {item.new_cost ? (
                   <h2 className="cost__quantity">
@@ -147,7 +115,6 @@ function All() {
                 )}
               </div>
               <button
-                data-aos="fade-up-left"
                 className="order__btn flex items-center"
                 onClick={() => handleOrder(item.id)}
               >
@@ -158,7 +125,9 @@ function All() {
           </div>
         ))}
 
-      {zoom && <ZoomModal setZoom={setZoom} zoomId = {zoomId} product = {product} />}
+      {zoom && (
+        <ZoomModal setZoom={setZoom} zoomId={zoomId} product={product} />
+      )}
       {openZakaz && (
         <Zakaz
           setOpenZakaz={setOpenZakaz}
@@ -171,4 +140,4 @@ function All() {
   );
 }
 
-export default All
+export default All;
